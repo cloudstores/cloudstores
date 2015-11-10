@@ -1,0 +1,274 @@
+/*
+ * One Convergence, Inc. CONFIDENTIAL
+ * Copyright (c) 2012-2014, One Convergence, Inc., USA
+ * All Rights Reserved.
+ * 
+ * All information contained herein is, and remains the property of
+ * One Convergence, Inc. and its suppliers, if any. The intellectual and
+ * technical concepts contained herein are proprietary to One Convergence,
+ * Inc. and its suppliers.
+ * 
+ * Dissemination of this information or reproduction of this material is
+ * strictly forbidden unless prior written permission is obtained from
+ * One Convergence, Inc., USA
+ * 
+ */
+package com.oc.nvp.nob.app.pluginhandler;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Iterator;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.eclipse.jetty.continuation.Continuation;
+import org.eclipse.jetty.continuation.ContinuationSupport;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import com.oc.nvp.nob.app.pluginhandler.NetworkMgmtServlet.PluginURIObject;
+import com.oc.nvp.nob.app.pluginhandler.PluginHandler.RequestTypes;
+import com.oc.nvp.nob.client.objects.AuthToken;
+import com.oc.nvp.nob.objects.NobCommon;
+
+public class LogInfoServlet extends HttpServlet implements RequestHandler{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final Logger logger = Logger.getLogger(LogInfoServlet.class);
+	
+	private static final String OC_URI_LOGINFO_STRING="/pluginhandler/ocplugin/loginfo/";
+	private String appName = null;
+	public LogInfoServlet() {
+		super();        
+	}
+
+	// GET /ocplugin/loginfo/(global/appname)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		logger.info("TenantId:"+" "+"Received Http GET Request.");
+
+		String request_uri = request.getRequestURI();
+
+		if(null == request_uri){
+			logger.error("TenantId:"+" "+"No URI found in the request: "+request);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		logger.info("TenantId:"+" "+"Requested URI is: " + request_uri);
+
+		String token_id = request.getParameter("authToken");
+
+		if(null == token_id){        	
+			logger.error("TenantId:"+" "+"Authentication token not found in the URI: "+request);               
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		final Continuation continuation = ContinuationSupport.getContinuation(request);
+		continuation.suspend(response);
+		if(!TokenHelper.ValidateToken(token_id))
+		{       
+			logger.warn("TenantId:"+" "+"Authentication Failure for request: "+request);
+			AuthToken authToken = new AuthToken();
+			AuthTokenSyncHelper handler = new AuthTokenSyncHelper(request,response,RequestTypes.GET,this,continuation);
+			authToken.reSyncFromDb(NobCommon.AuthTokenObjectUUID,false, handler);
+		}
+		else
+			handleGet(request,response,continuation);
+	}
+
+	public void handleGet(HttpServletRequest request, HttpServletResponse response, Continuation continuation) throws ServletException, IOException {
+		
+		String query_string = request.getQueryString();
+		String request_uri = request.getRequestURI();
+		getParamsFromURL(request_uri, query_string);
+		
+		if(appName == null || appName.equals("")) {
+			
+			LogInfoHandler liHandler = new LogInfoHandler();
+			liHandler.setContinuationObj(continuation);
+			
+			liHandler.getLogInfoList(false);
+		}
+		else {
+			logger.info("TenantId:"+" "+"Received get LogInfo request for app: " + appName);
+			
+			LogInfoHandler liHandler = new LogInfoHandler();
+			liHandler.setContinuationObj(continuation);
+			
+			liHandler.getLogInfo(appName);
+		}
+	}
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		logger.info("TenantId:"+" "+"Received Http PUT Request.");
+
+		String request_uri = request.getRequestURI();
+
+		if(null == request_uri){
+			logger.error("TenantId:"+" "+"No URI found in the request: "+request);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		logger.info("TenantId:"+" "+"Requested URI is: " + request_uri);
+
+		String token_id = request.getParameter("authToken");
+
+		if(null == token_id){        	
+			logger.error("TenantId:"+" "+"Authentication token not found in the URI: "+request);               
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		final Continuation continuation = ContinuationSupport.getContinuation(request);
+		continuation.suspend(response);
+		if(!TokenHelper.ValidateToken(token_id))
+		{  
+			logger.warn("TenantId:"+" "+"Authentication Failure for request: "+request);
+			AuthToken authToken = new AuthToken();
+			AuthTokenSyncHelper handler = new AuthTokenSyncHelper(request,response,RequestTypes.PUT,this,continuation);
+			authToken.reSyncFromDb(NobCommon.AuthTokenObjectUUID,false, handler);
+		}
+		else
+			handlePut(request, response,continuation);
+		
+	}
+public void handlePut(HttpServletRequest request, HttpServletResponse response, Continuation continuation) throws ServletException, IOException {
+	logger.debug("TenantId:"+" "+"Validation of Token Success.");
+	
+	String query_string = request.getQueryString();
+	String request_uri = request.getRequestURI();
+	if(!request_uri.endsWith(OC_URI_LOGINFO_STRING)) {
+		logger.error("TenantId: Bad request uri while updating loginfo");
+		sendBadRequest( response, continuation);
+		return;
+	}
+	else {
+		StringBuffer jb = new StringBuffer();
+		String line = null;
+		try {
+			BufferedReader reader = request.getReader();
+			while ((line = reader.readLine()) != null)
+				jb.append(line);
+		}catch (Exception e) {
+			logger.error("TenantId: "+e);
+			sendBadRequest( response, continuation);
+			return;
+		}
+
+		JSONObject jsonObject = new JSONObject();
+		jsonObject = (JSONObject) JSONValue.parse(jb.toString());
+				
+		Iterator<String> nameItr = jsonObject.keySet().iterator();
+		
+		HashMap<String, String> outMap = new HashMap<String, String>();
+		String appName, level = "warn";
+		if(jsonObject.containsKey("name") && jsonObject.containsKey("log_level")) {
+			appName = (String)jsonObject.get("name");
+			level = (String)jsonObject.get("log_level");
+		} else {
+			logger.error("TenantId: "+ "update loginfo requst doesnt have proper inputs.");
+			sendBadRequest( response, continuation);
+			return;
+		}
+		outMap.put(appName, level);
+		
+		
+		LogInfoHandler liHandler = new LogInfoHandler();
+		liHandler.setContinuationObj(continuation);
+		
+		liHandler.updateLogInfo(outMap);
+	}
+}
+	private void getParamsFromURL(String request_uri, String query_string) {
+		if(request_uri.startsWith(OC_URI_LOGINFO_STRING)) {
+			appName = request_uri.substring(OC_URI_LOGINFO_STRING.length(), request_uri.length());
+		}else {
+			logger.error("TenantId: Unsupported LogInfo URI :" + request_uri);
+			return;
+		}
+	}
+
+	@Override
+	public void handlePost(HttpServletRequest request,
+			HttpServletResponse response, Continuation continuation) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void handleDelete(HttpServletRequest request,
+			HttpServletResponse response, Continuation continuation) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void handleGenericRequest(HttpServletRequest request,
+			HttpServletResponse response, Continuation continuation,
+			RequestTypes reqType) throws ServletException, IOException {
+		switch(reqType) {
+		case POST:
+			handlePost(request,response,continuation);
+			break;
+		case GET:
+			handleGet(request, response,continuation);
+			break;
+		case DELETE:
+			handleDelete(request, response,continuation);
+			break;
+		case  PUT:
+			handlePut(request, response,continuation);
+			break;
+		default:
+			logger.error("TenantId: RequestType is unmatched");
+			sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid request type.", continuation);
+			break;
+		}
+	}
+	
+	public void sendErrorResponse(HttpServletResponse response, int errorCode, String message, Continuation continuation) {
+		response = (HttpServletResponse) continuation.getServletResponse();
+		try {
+			response.sendError(errorCode, message);
+		} catch (IOException e) {
+			logger.error("TenantId: Unable to send Error response, Error message is: "+message);
+		}finally {
+			continuation.complete();
+		}
+	}
+
+	@Override
+	public void sendFailedResponse(HttpServletResponse response, Continuation continuation) {
+		
+		response = (HttpServletResponse) continuation.getServletResponse();
+		logger.error("TenantId:"+" "+"Failed in Authentication");
+		try {
+			response.sendError(response.SC_UNAUTHORIZED);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			logger.error("Unable to send Error response to Plugin while Authentication failure");
+		}
+		continuation.complete();
+		
+	}
+	 
+	private void sendBadRequest(HttpServletResponse response, Continuation continuation) {
+		response = (HttpServletResponse) continuation.getServletResponse();
+		try {
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			logger.error("TenantId: Unable to send BAD_REQUEST response");
+		}
+		continuation.complete();
+	}
+
+
+}

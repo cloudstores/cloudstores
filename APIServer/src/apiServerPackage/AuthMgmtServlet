@@ -1,0 +1,281 @@
+/*
+ * One Convergence, Inc. CONFIDENTIAL
+ * Copyright (c) 2012-2014, One Convergence, Inc., USA
+ * All Rights Reserved.
+ * 
+ * All information contained herein is, and remains the property of
+ * One Convergence, Inc. and its suppliers, if any. The intellectual and
+ * technical concepts contained herein are proprietary to One Convergence,
+ * Inc. and its suppliers.
+ * 
+ * Dissemination of this information or reproduction of this material is
+ * strictly forbidden unless prior written permission is obtained from
+ * One Convergence, Inc., USA
+ * 
+ */
+package com.oc.nvp.nob.app.pluginhandler;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.BufferedReader;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+import java.util.UUID;
+
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.eclipse.jetty.continuation.Continuation;
+import org.eclipse.jetty.continuation.ContinuationSupport;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import com.oc.nvp.nob.client.objects.AuthToken;
+import com.oc.nvp.nob.objects.NobCommon;
+import com.oc.nvp.nob.objects.NobCommon.NobRpcCompletionStatus;
+import com.oc.nvp.nob.objects.NobObject.NobRpcCreateCallback;
+import com.oc.nvp.nob.objects.NobObject.NobRpcGetCallback;
+import com.oc.nvp.nob.objects.NobObject.NobRpcReSyncFromDbCallback;
+import com.oc.nvp.nob.objects.NobObject.NobRpcUpdateCallback;
+import com.oc.nvp.util.GlobalMapHelper;
+
+
+public class AuthMgmtServlet extends HttpServlet {
+	
+	protected static Logger logger = LoggerFactory.getLogger(AuthMgmtServlet.class);
+	
+	private static final long serialVersionUID = 1L;
+
+    private static final String login_uri = "/pluginhandler/ocplugin/authmgmt/login";
+    private static final String logout_uri = "/pluginhandler/ocplugin/authmgmt/logout";
+    
+    public AuthMgmtServlet() {
+        super();
+        
+    }
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+    	logger.debug("TenantId:"+" "+"Received Http GET Request.");
+    	
+    	String request_uri = request.getRequestURI();
+        
+        if(null == request_uri || !request_uri.equals(logout_uri))
+        {
+        	    logger.error("TenantId:"+" "+"No URI found.");
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+                return;
+        }
+
+        logger.debug("TenantId:"+" "+"URI received is " + request_uri);
+
+        String token_id = request.getParameter("authToken");
+        
+        if(null == token_id){
+        	    logger.error("TenantId:"+" "+"Authentication token not found in the URI: "+request);
+                response.sendError(response.SC_BAD_REQUEST);
+                return;
+        }
+
+        if(!TokenHelper.removeToken(token_id, request))
+        {
+        	  logger.error("TenantId:"+" "+"Failed to remove token_id from request "+request);
+        	  response.sendError(response.SC_UNAUTHORIZED);
+              return;
+        }
+        
+        response.setStatus(response.SC_OK);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+    	logger.debug("TenantId:"+" "+"Received Http POST Request.");
+
+        String request_uri = request.getRequestURI();
+        if(null == request_uri || !request_uri.equals(login_uri))
+        {
+        	    logger.error("TenantId:"+" "+"No URI found in request "+request);
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+                return;
+        }
+
+        logger.debug("TenantId:"+" "+"URI received " + request_uri);
+
+        StringBuffer jb = new StringBuffer();
+        String line = null;
+        try {
+                BufferedReader reader = request.getReader();
+            while ((line = reader.readLine()) != null)
+              jb.append(line);
+        }catch (Exception e) {
+        	logger.error("TenantId:"+"Exception is: "+e);
+        	response.sendError(response.SC_BAD_REQUEST);
+        	return;
+        }
+
+        logger.debug("TenantId:"+" "+"Received login user request.");
+
+        JSONObject jsonObject;
+        jsonObject = (JSONObject) JSONValue.parse(jb.toString());
+        if(null == jsonObject)
+        {
+        	    logger.error("TenantId:"+" "+"Failed in parsing authentication details like username and password.");
+                response.sendError(response.SC_BAD_REQUEST);
+                return;
+        }
+
+        String user_name = (String) jsonObject.get("user_name");
+        String passwd    = (String) jsonObject.get("passwd");
+
+        if(null == user_name && null == passwd)
+        {
+        	    logger.error("TenantId:"+" "+"Received username and password values as NULL");
+                response.sendError(response.SC_BAD_REQUEST);
+                return;
+        }
+
+        AuthDetails auth = new AuthDetails();
+        auth.putName(user_name);
+        auth.putPasswd(passwd);
+        logger.debug("TenantId:"+" "+"Received username : " + user_name);
+        if(!TokenHelper.authenticateUser(auth))
+        {               
+        	    logger.error("TenantId:"+" "+"Authentication failed for user "+user_name);
+                response.sendError(response.SC_UNAUTHORIZED);
+                return;
+        }   
+        
+        /* license verification */
+        
+        VerLicense verinstance = VerLicense.getVerLicenseInstance();
+		boolean verify_lic = verinstance.verifyLicense();
+		if(verify_lic){
+    	logger.debug("TenantId:"+" "+"Initialised network capacity after authenticating user to"+PluginHandler.networkCapacity);
+    	AuthToken authToken = new AuthToken();
+
+        RPCCallBack cb =  new RPCCallBack();
+        final Continuation continuation = ContinuationSupport.getContinuation(request); 
+		continuation.suspend(response);
+        cb.setContinuationObject(continuation);
+        authToken.reSyncFromDb(NobCommon.AuthTokenObjectUUID,false, cb);
+        
+		}//if verify
+		else{
+			logger.error("TenantId:"+" "+"License Failed for user "+user_name);
+        	PluginHandler.sendFailedResponse(response);			
+		}
+       
+		
+        
+    }
+}
+
+
+
+class RPCCallBack  implements NobRpcGetCallback<AuthToken>,NobRpcCreateCallback<AuthToken>,NobRpcUpdateCallback<AuthToken>,NobRpcReSyncFromDbCallback<AuthToken> {
+	
+	
+	private Continuation continuation;
+	protected static Logger logger = LoggerFactory.getLogger(RPCCallBack.class);
+	public void setContinuationObject(Continuation continuation) {
+		this.continuation=continuation;
+	}
+	@Override
+	public void onCreateObjectCompletion(AuthToken object,
+			NobRpcCompletionStatus status) {
+		logger.info("TenantId: created AuthToken "+object.getAuthTokenUUIDStr()+" with UUID"+object.getUUID()+" time stamp "+object.getTimeStamp().getTime());
+		if (NobCommon.clusterMode) 
+			GlobalMapHelper.getInstance().setNodeId("nvsd_api_token", object.getAuthTokenUUIDStr());
+		sendResponse(object);		
+	}
+
+	@Override
+	public void onGetObjectCompletion(AuthToken object,
+			NobRpcCompletionStatus status) {
+		
+	
+}
+	@Override
+	public void onUpdateObjectCompletion(AuthToken object,
+			NobRpcCompletionStatus status) {
+		logger.info("TenantId: updated AuthToken "+object.getAuthTokenUUIDStr()+" with UUID"+object.getUUID()+" time stamp "+object.getTimeStamp().getTime());
+
+		if (NobCommon.clusterMode) 
+		 	GlobalMapHelper.getInstance().setNodeId("nvsd_api_token", object.getAuthTokenUUIDStr());
+		 sendResponse(object);
+	}
+
+void sendResponse(AuthToken object) {
+	String session_uuid = object.getAuthToken().toString();
+     
+    JSONObject jsonObj = new JSONObject();
+    jsonObj.put("session_uuid", session_uuid);
+    HttpServletResponse response = (HttpServletResponse) this.continuation.getServletResponse();
+    response.setCharacterEncoding("UTF-8");
+    response.setContentType("application/json");
+
+    PrintWriter writer=null;
+	try {
+		writer = response.getWriter();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		
+	}
+
+    writer.write(jsonObj.toJSONString());
+    writer.close();
+    this.continuation.complete();
+    logger.error("Response sent");
+}
+@Override
+public void onReSyncFromDbCompletion(AuthToken object,
+		NobRpcCompletionStatus status) {
+	String objUUIDStr = NobCommon.AuthTokenObjectUUID.toString();
+	UUID objUUID = NobCommon.AuthTokenObjectUUID;
+	if(status != NobRpcCompletionStatus.Success) {
+		logger.error("Failed in get object status "+status);	
+		AuthToken authtoken= new AuthToken();
+		Date token_date = new Date();
+        token_date.setTime(System.currentTimeMillis());
+   		authtoken.setTimeStamp(token_date);
+		UUID tempAuthtoken= UUID.randomUUID();
+		authtoken.setAuthToken(tempAuthtoken);
+		TokenHelper.addToMap(tempAuthtoken.toString(),token_date);
+		logger.debug("TenantId: Added to map "+tempAuthtoken.toString());
+		authtoken.createObject(objUUID,  this);
+	}
+	
+	else {
+			    
+		 long lCurrentTime = System.currentTimeMillis();
+		 long lTokenTime = object.getTimeStamp().getTime();
+		 //if(lCurrentTime - lTokenTime > TokenHelper.AUTH_IDLE_TIMEOUT ){
+		 Date latestTime = new Date();
+		 latestTime.setTime(System.currentTimeMillis());
+		 object.setTimeStamp(latestTime);
+		 /*UUID newToken = UUID.randomUUID();
+		 object.setAuthToken(newToken);
+		 TokenHelper.addToMap(newToken.toString(),latestTime);	
+		 logger.debug("TenantId: Added to map "+newToken.toString());*/
+		 logger.debug("TenantId: Added to map, Auth-token timestamp updated");
+		 TokenHelper.addToMap(object.getAuthTokenUUIDStr(), latestTime);
+		 object.updateObject(this);
+		/*}
+		else
+		{
+			sendResponse(object);
+			if (NobCommon.clusterMode) 
+				GlobalMapHelper.getInstance().setNodeId("nvsd_api_token", object.getAuthTokenUUIDStr());
+			logger.debug("TenantId: AuthToken Exists and valid with token uuid"+object.getAuthTokenUUIDStr());
+		}*/
+	}
+}
+		
+	
+}

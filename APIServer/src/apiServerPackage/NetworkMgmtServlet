@@ -1,0 +1,1991 @@
+/*
+ * One Convergence, Inc. CONFIDENTIAL
+ * Copyright (c) 2012-2014, One Convergence, Inc., USA
+ * All Rights Reserved.
+ * 
+ * All information contained herein is, and remains the property of
+ * One Convergence, Inc. and its suppliers, if any. The intellectual and
+ * technical concepts contained herein are proprietary to One Convergence,
+ * Inc. and its suppliers.
+ * 
+ * Dissemination of this information or reproduction of this material is
+ * strictly forbidden unless prior written permission is obtained from
+ * One Convergence, Inc., USA
+ * 
+ */
+package com.oc.nvp.nob.app.pluginhandler;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.eclipse.jetty.continuation.Continuation;
+import org.eclipse.jetty.continuation.ContinuationSupport;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import com.oc.nvp.nob.app.pluginhandler.DependancyTreeLoader.ReqType;
+import com.oc.nvp.nob.app.pluginhandler.PluginHandler.RequestTypes;
+import com.oc.nvp.nob.client.NobClient;
+import com.oc.nvp.nob.client.objects.AuthToken;
+import com.oc.nvp.nob.client.objects.PhysSwitch;
+import com.oc.nvp.nob.objects.NobCommon;
+import com.oc.nvp.nob.objects.NobCommon.NobObjectTypes;
+import com.oc.nvp.nob.objects.NobCommon.PhysSwitchObjectState;
+import com.oc.nvp.nob.server.db.NOBDbTimeSeriesQuery;
+import com.oc.nvp.util.GlobalMapHelper;
+
+
+public class NetworkMgmtServlet extends HttpServlet implements RequestHandler{
+
+	protected static Logger logger = LoggerFactory.getLogger(NetworkMgmtServlet.class);
+	
+	private static final String OC_URI_TENANT_STRING="/pluginhandler/ocplugin/tenant/";
+	private static final String OC_URI_GET_ALL_NETWORKS="getallnetworks";
+	private static final String OC_URI_GET_ALL_SUBNETS="getallsubnets";
+	private static final String OC_URI_GET_ALL_PHYSPORTS="getallphysports";
+	private static final String OC_URI_GET_ALL_PORTS="getalldvsports";
+    private static final String OC_URI_NW_STRING="/lnetwork/";
+    private static final String OC_URI_SUBNET_STRING="/lsubnet/";
+    private static final String OC_URI_PORT_STRING="/lport/";
+    private static final String OC_URI_PORTSTATUS_STRING="/status";
+	private static final String OC_URI_TOPOLOGY_STRING="/topology";
+	private static final String OC_URI_OVERLAY_STRING="/overlay";
+	private static final String OC_URI_PHYSWITCHES_STRING="/physwitches";
+	private static final String OC_URI_PHYSWITCH_STRING="/physwitch/";
+	private static final String OC_URI_PHYSWITCH_REFRESH="/refresh";
+	private static final String OC_URI_PHYSWITCH_RESET="/reset";
+	private static final String OC_URI_PHYSWITCH_REMOVE="/remove";
+	private static final String OC_URI_STAT_STRING="/dvsportstat/";
+    private static final int OC_URI_NW_UUID_LENGTH = 36;
+    private static final int OC_URI_PORT_UUID_LENGTH = 36;
+    private static final int OC_URI_TEN_UUID_LENGTH = 32;
+    private static final int OC_URI_STAT_UUID_LENGTH = 36;
+    private static final String NO_UUID = "00000000-0000-0000-0000-000000000000";
+    /* For "dvsportstat" object */
+    class TimeForDB {
+    	private Date DbStartTime, DbEndTime;
+    }
+    public static boolean isCountAvailable;
+    public static int networkCount=0;
+    public static Object lock= new Object();
+	public NetworkMgmtServlet() {
+         super();         
+    }
+	
+	class PluginURIObject
+    {
+            String net_uuid;
+            String port_uuid;
+            String ten_uuid;
+            String full_url;
+            String query_string;
+            String dvsportstatuuid;
+            String physswitchuuid;
+            String subnetuuid;
+    }
+
+
+	public static String stringToUUIDstr(String st)
+	{	
+		StringBuilder sb = new StringBuilder();
+		int i;
+		for( i=0;i<st.length();i++)
+		{
+			sb.append(st.charAt(i));
+			if(i==7 || i==11 || i ==15 || i ==19)
+				sb.append("-");
+		}
+		return sb.toString();
+	}	
+
+	private String stripBaseStr(String uri) {
+		return (uri.substring(OC_URI_TENANT_STRING.length()));
+	}
+	
+	protected String[] getResourceFromURL(String uri) {
+		String remStr = stripBaseStr(uri);
+		String arr[] = remStr.split("/");
+		
+		return arr;
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+
+		logger.debug("TenantId:"+" "+"Received Http POST Request.");
+		
+		String request_uri = request.getRequestURI();
+
+		if(null == request_uri){
+			logger.error("TenantId:"+" "+"No URI found in the request: "+request);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		logger.debug("TenantId:"+" "+"Requested URI is: " + request_uri);
+
+		String token_id = request.getParameter("authToken");
+
+		if(null == token_id){        	
+			logger.error("TenantId:"+" "+"Authentication token not found in the URI: "+request);               
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		final Continuation continuation = ContinuationSupport.getContinuation(request); 
+		continuation.suspend(response);
+		
+		if(!TokenHelper.ValidateToken(token_id))
+		{       
+			logger.warn("TenantId:"+" "+"Authentication Failure for request: "+request);
+			/*response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+			return;*/
+			if(!PluginHandler.license_status){
+				logger.error("TenantId:"+" "+"License Failed for user "+request);
+	        	PluginHandler.sendFailedResponse(response, continuation);
+			}
+			else{
+			AuthToken authToken = new AuthToken();
+			AuthTokenSyncHelper handler = new AuthTokenSyncHelper(request,response,RequestTypes.POST,this,continuation);
+			
+			authToken.reSyncFromDb(NobCommon.AuthTokenObjectUUID,false, handler);
+			}//else
+		}
+
+		else
+			handleGenericRequest(request,response,continuation,RequestTypes.POST);
+	}
+	
+
+	public void handlePost(HttpServletRequest request, HttpServletResponse response, Continuation continuation) throws ServletException, IOException {
+			
+		
+		String full_url= null;
+        String nw_uuid = null;
+        String port_uuid = null;
+        String tenant_id = null;       
+        String subnet_id = null;
+
+        String query_string = request.getQueryString();
+        String request_uri = request.getRequestURI();
+        PluginURIObject my_uri_obj = new PluginURIObject();
+        try {
+        	getParamsFromURL(request_uri, query_string, my_uri_obj);
+        }
+        catch (Exception ex) {
+        	logger.error("TenantId: Exception while parsing URL "+request_uri+" Exception is:"+ex.toString());
+        	sendBadRequest(response, continuation);
+        	return;
+        }
+
+        full_url = my_uri_obj.full_url;
+        nw_uuid = my_uri_obj.net_uuid;        
+        port_uuid = my_uri_obj.port_uuid;
+        tenant_id = my_uri_obj.ten_uuid;
+        subnet_id = my_uri_obj.subnetuuid;
+		UUID tenantId = null;
+		UUID networkId = null;
+		UUID portId = null;
+		UUID subnetUUID = null;
+		if (null != tenant_id)
+			tenantId = UUID.fromString(tenant_id);
+		if(null != nw_uuid)
+			networkId = UUID.fromString(nw_uuid);
+		if(null != port_uuid)
+			portId = UUID.fromString(port_uuid);
+		if(null != subnet_id)
+			subnetUUID = UUID.fromString(subnet_id);
+
+		StringBuffer jb = new StringBuffer();
+		String line = null;
+		try
+		{
+			BufferedReader reader = request.getReader();
+			while ((line = reader.readLine()) != null)
+				jb.append(line);
+		}
+		catch(Exception e) { 
+			logger.error("TenantId:"+tenantId+" Exception is: "+e);
+			response.sendError(response.SC_BAD_REQUEST);
+			continuation.complete();
+			return;
+		}
+
+		logger.debug("TenantId:"+tenantId+" Parsing of the URI is done.");
+		logger.debug("TenantId:"+tenantId+" The json string is " + jb.toString());
+
+		JSONObject jsonObject = null;
+		jsonObject = (JSONObject) JSONValue.parse(jb.toString());
+		if(null == jsonObject)
+		{
+			logger.error("TenantId:"+tenantId+" jsonObject is NULL.");
+			sendBadRequest(response, continuation);
+			return;
+		}        	
+
+		/*
+		 * Handling l2gateway URIs separtely in l2gateway handler.
+		 */	
+		if(request_uri.contains("l2gateway")) {
+			logger.info("TenantId:"+tenantId.toString()+"Create l2gateway req");
+	        String resource[] = getResourceFromURL(request_uri);
+	        if(resource != null && resource[1].equals("l2gateways")) {
+	        	/* Handle the resource */
+	        	L2GatewayHandler gwHandler = new L2GatewayHandler(continuation);
+	        	gwHandler.handlePostRequest(tenantId, jsonObject, response);
+	        	return;
+	        }else {
+	        	logger.error("TenantId:"+tenantId.toString()+"Invalid resource: " +resource[1]);
+	        	sendBadRequest(response, continuation);
+	        	return;
+	        }
+		}
+
+		if(null == networkId)
+		{
+			/*
+			 * Create network.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork
+			 * JSON params 
+			 *      mandatory - 'name'
+			 *      optional  - 'admin_state_up','shared','router:external'
+			 */
+			
+			if(!checkCapacity(response)){
+				logger.error("TenantId: "+tenantId+" Network Creation Failed due to Network Capacity Exceeded");
+				return;
+			}
+			logger.info("TenantId:"+tenantId+" Received create network request.");
+
+			boolean admin_state_up = true, shared = false ,router_external=false;
+			
+			// provider params
+			boolean provider = false;
+			String provider_NetworkType = null;
+
+			String net_name = null, status = null;
+
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			
+			try {
+				net_name = (String) jsonObject.get("name");
+			}catch(Exception e){
+				logger.error("TenantId:"+tenantId+" Please verify that 'MANDATORY' parameter - 'name', to create a network, has been sent through JSON.");
+				 sendBadRequest(response, continuation);
+				return;
+			}
+
+			if(jsonObject.containsKey("admin_state_up"))
+			{
+				admin_state_up = (Boolean)jsonObject.get("admin_state_up");
+				map.put("admin_state_up",admin_state_up);
+			}
+
+			if(jsonObject.containsKey("shared"))
+			{
+				shared = (Boolean)jsonObject.get("shared"); 
+				map.put("shared",shared);
+			}
+
+			if(jsonObject.containsKey("router:external"))
+			{
+				router_external = (Boolean)jsonObject.get("router:external");
+				map.put("router:external",router_external);
+			}
+
+			if(jsonObject.containsKey("provider") ) {
+				provider = (Boolean)jsonObject.get("provider");
+				map.put("provider",provider);
+				
+				if(true == (Boolean)jsonObject.get("provider")) {
+					if(jsonObject.containsKey("provider:network_type")) {
+						provider_NetworkType = (String)jsonObject.get("provider:network_type");
+						map.put("provider:network_type",provider_NetworkType);
+					}
+					if(jsonObject.containsKey("provider:segmentation_id")) {
+						String provider_SegmentationId = String.valueOf(jsonObject.get("provider:segmentation_id"));
+						//provider_SegmentationId = (Integer.valueOf((String)jsonObject.get("provider:segmentation_id")));
+						map.put("provider:segmentation_id", provider_SegmentationId);
+					}
+				}
+			}
+
+			NetworkHandler netHandler = new NetworkHandler();
+
+			netHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) {
+				netHandler.create_network(tenantId, net_name, map);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while creating network");
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}	
+		else if(null != nw_uuid && request_uri.endsWith(this.OC_URI_PORT_STRING))
+		{
+			/*
+			 * Create quantum port.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/lport/
+			 * JSON params 
+			 *      mandatory - 'id','name','admin_state_up'
+			 *      optional  - 'device_id','device_owner','mac_address','ip_address','subnet_id','status'
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received create quantum port request.");
+			
+			String port_id,portName;
+			boolean adminStateUp ;
+
+			try {
+
+				port_id = (String) jsonObject.get("id");
+				portId = UUID.fromString(port_id);
+				portName = (String) jsonObject.get("name");
+				adminStateUp = (Boolean)jsonObject.get("admin_state_up");
+
+			}catch(Exception e){
+				logger.error("TenantId:"+tenantId+" Please verify that all 'MANDATORY' parameters - 'id,name,admin_state_up', to create a quantum port, has been sent through JSON.");
+				sendBadRequest(response, continuation);
+				return;
+			}
+
+			String id = null,deviceOwner=null,macAddr=null,ipAddr=null,status=null, subnetId=null;
+
+			if(jsonObject.containsKey("device_id"))
+			{
+				id = (String) jsonObject.get("device_id");
+			}
+
+			if(jsonObject.containsKey("device_owner"))
+			{
+				deviceOwner = null;
+				deviceOwner = (String) jsonObject.get("device_owner");
+			}
+
+			if(jsonObject.containsKey("mac_address"))
+			{
+				macAddr = null;
+				macAddr = (String) jsonObject.get("mac_address");
+			}
+
+			if(jsonObject.containsKey("ip_address"))
+			{
+				ipAddr = null;
+				ipAddr = (String) jsonObject.get("ip_address");
+			}
+
+			if(jsonObject.containsKey("subnet_id"))
+			{
+				subnetId = null;
+				subnetId = (String) jsonObject.get("subnet_id");
+			}
+
+			if(jsonObject.containsKey("status"))
+			{
+				status = null;
+				status = (String) jsonObject.get("status");
+			}
+
+			Map<String, String> args = null;             
+
+			PortHandler portHandler = new PortHandler();
+
+			portHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				portHandler.create_port(tenantId,networkId,portId,portName,id,deviceOwner,macAddr,ipAddr, adminStateUp,status,subnetId,args);
+			}
+			else { 
+				logger.error("TenantId:"+" "+"Tenant ID is null while creating port for network " + networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else if (null != nw_uuid && request_uri.endsWith(this.OC_URI_SUBNET_STRING)) {
+			NetworkHandler netHandler = new NetworkHandler();
+			netHandler.setContinuationObj(continuation);
+			if (null != tenantId)
+				netHandler.createSubnet(tenantId, networkId, jsonObject);
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while creating subnet");
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else
+		{
+			// Send the proper error response to controller
+			logger.error("TenantId:"+tenantId+" No HTTP POST request matched.");
+			sendBadRequest(response, continuation);
+			return;
+		}
+		
+	}
+
+	 private  boolean checkCapacity(HttpServletResponse response) {
+		synchronized (lock) {
+			
+			if(PluginHandler.networkCapacity==0)
+				return true;
+			int temp =networkCount;
+			NOBDbTimeSeriesQuery nobconfig = (NOBDbTimeSeriesQuery) NOBDbTimeSeriesQuery.getDbClientInstance();
+			try {
+				JSONArray jsonArray = nobconfig.getNobConfigQuery("DVSwitch", "count", NobObjectTypes.DVSwitch);
+				JSONObject json=(JSONObject) jsonArray.get(0);
+				String count=(String) json.get("count");
+				if(count!=null){
+					networkCount=Integer.parseInt(count);
+					isCountAvailable=true;
+				}
+			} catch (Exception e) {
+				logger.error("TenantId: Exception in Reading Network count From DB");
+				networkCount=temp;
+			}
+			if(networkCount>=PluginHandler.networkCapacity){
+				logger.warn("TenantId: Network capacity "+ networkCount+" Reached Network creation Failed");
+				sendFailedResponse(response);
+				return false;
+			}
+			return true;	
+		}
+	
+	}
+
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		logger.debug("TenantId:"+" "+"Received Http PUT Request.");
+
+		String request_uri = request.getRequestURI();
+
+		if(null == request_uri){
+			logger.error("TenantId:"+" "+"No URI found in the request: "+request);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		logger.debug("TenantId:"+" "+"Requested URI is: " + request_uri);
+
+		String token_id = request.getParameter("authToken");
+
+		if(null == token_id){        	
+			logger.error("TenantId:"+" "+"Authentication token not found in the URI: "+request);               
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		final Continuation continuation = ContinuationSupport.getContinuation(request);
+		continuation.suspend(response);
+		if(!TokenHelper.ValidateToken(token_id))
+		{   
+			logger.warn("TenantId:"+" "+"Authentication Failure for request: "+request);
+			/*response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+			return;*/
+			
+			if(!PluginHandler.license_status){
+				logger.error("TenantId:"+" "+"License Failed for user "+request);
+	        	PluginHandler.sendFailedResponse(response, continuation);
+			}
+			else{
+			AuthToken authToken = new AuthToken();
+			
+			AuthTokenSyncHelper handler = new AuthTokenSyncHelper(request,response,RequestTypes.PUT,this,continuation);
+			authToken.reSyncFromDb(NobCommon.AuthTokenObjectUUID,false, handler);
+			}
+		}
+		else
+			handleGenericRequest(request,response,continuation,RequestTypes.PUT);
+	}
+	
+
+	public void handlePut(HttpServletRequest request, HttpServletResponse response,Continuation continuation) throws ServletException, IOException {
+			
+		String full_url= null;
+        String nw_uuid = null;
+        String port_uuid = null;
+        String tenant_id = null;       
+        String subnet_id = null;
+        String physwitch_id = null;
+
+        String query_string = request.getQueryString();
+        String request_uri = request.getRequestURI();
+        PluginURIObject my_uri_obj = new PluginURIObject();
+        try {
+        	getParamsFromURL(request_uri, query_string, my_uri_obj);
+        }
+        catch (Exception ex) {
+        	logger.error("TenantId: Exception while parsing URL "+request_uri+" Exception is:"+ex.toString());
+        	sendBadRequest(response, continuation);
+        	return;
+        }
+
+        full_url = my_uri_obj.full_url;
+        nw_uuid = my_uri_obj.net_uuid;        
+        port_uuid = my_uri_obj.port_uuid;
+        tenant_id = my_uri_obj.ten_uuid;
+        subnet_id = my_uri_obj.subnetuuid;
+        physwitch_id = my_uri_obj.physswitchuuid; 
+		UUID tenantId = null;
+		UUID networkId = null;
+		UUID portId = null;
+		UUID subnetUUID = null;
+		UUID physwitchUUID = null;
+		if (null != tenant_id)
+			tenantId = UUID.fromString(tenant_id);
+		if(null != nw_uuid)
+			networkId = UUID.fromString(nw_uuid);
+		if(null != port_uuid)
+			portId = UUID.fromString(port_uuid);
+		if(null != subnet_id)
+			subnetUUID = UUID.fromString(subnet_id);
+		if(null != physwitch_id)
+			physwitchUUID=UUID.fromString(physwitch_id);
+		
+		StringBuffer jb = new StringBuffer();
+		String line = null;
+		try {
+			BufferedReader reader = request.getReader();
+			while ((line = reader.readLine()) != null)
+				jb.append(line);
+		}catch (Exception e) {
+			logger.error("TenantId:"+tenantId+" "+e);
+			sendBadRequest(response, continuation);
+			return;
+		}
+
+		JSONObject jsonObject = new JSONObject();
+		jsonObject = (JSONObject) JSONValue.parse(jb.toString());
+		
+		/*
+		 * Handling l2gateway URIs separtely in l2gateway handler.
+		 */			
+		if(request_uri.contains("l2gateway")) {
+			logger.info("TenantId:" +tenantId.toString() +"PUT req on l2gateway");
+			String resource[] = getResourceFromURL(request_uri);
+			if(resource != null && (resource[1].equals("l2gateway"))) {
+				/* Handle the resource */
+				L2GatewayHandler gwHandler = new L2GatewayHandler(continuation);
+				// PUT : "/pluginhandler/ocplugin/tenant/<id>/l2gateway/<id>/update <body>";
+				//PUT : "/pluginhandler/ocplugin/tenant/<id>/l2gateway/<id>/attach <body>";
+				//PUT : "/pluginhandler/ocplugin/tenant/<id>/l2gateway/<id>/detach <body>";
+				try {
+					String params[] = new String[3];
+					params[0] = stringToUUIDstr(resource[0]);
+					params[1] = resource[2];
+					params[2] = resource[3];
+					
+					logger.debug("TenantId:" +tenantId.toString() +"PUT req on l2gw with ID: " +params[2]);
+					gwHandler.handlePutRequest(params, jsonObject, response);
+				}catch(Exception e) {
+					logger.error("Exception : ", e);
+					sendBadRequest(response, continuation);
+				}
+				return;
+			}else {
+				logger.error("TenantId:" +tenantId.toString() +"Invalid resource : " +resource);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		
+		if(null != networkId && null == portId && null == subnet_id)
+		{
+			/*
+			 * Update network.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>
+			 * JSON params 
+			 *      mandatory - 'name'
+			 *      optional  - 'admin_state_up','shared','router:external'
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received update network request for network: "+networkId);
+
+			String new_name = null;
+			boolean admin_state_up=false, shared=false, router_external=false;
+
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			if(jsonObject.containsKey("name")) {
+				new_name = (String)jsonObject.get("name");
+			}
+
+			if(new_name!=null)
+				map.put("name",new_name);
+			if(jsonObject.containsKey("admin_state_up")) {
+				admin_state_up = ((Boolean) jsonObject.get("admin_state_up")).booleanValue();
+				if(admin_state_up)
+					map.put("admin_state_up", "true");
+				else
+					map.put("admin_state_up", "false");
+			}
+			if(jsonObject.containsKey("shared")) {
+				shared = ((Boolean) jsonObject.get("shared")).booleanValue();
+				if(shared)
+					map.put("shared", "true");
+				else
+					map.put("shared", "false");
+			}
+			if(jsonObject.containsKey("router:external")) {
+				router_external = ((Boolean) jsonObject.get("router:external")).booleanValue();
+				if(router_external)
+					map.put("router_external", "true");
+				else
+					map.put("router_external", "false");
+			}
+			
+			if(jsonObject.containsKey("provider") ) {
+				boolean provider = (Boolean)jsonObject.get("provider");
+				map.put("provider",provider);
+				
+				if(provider) {
+					if(jsonObject.containsKey("provider:network_type"))
+						map.put("provider:network_type",jsonObject.containsKey("provider:network_type"));
+					if(jsonObject.containsKey("provider:segmentation_id")) {
+						String segId = String.valueOf(jsonObject.get("provider:segmentation_id"));
+						map.put("provider:segmentation_id", segId);
+					}
+				}
+			}
+			
+			logger.debug("TenantId:"+tenantId+" Network Values to be updated are: [ "+
+									"name: "+new_name+",admin_state_up: "+admin_state_up+",shared: "+shared+",router_external: "+router_external +" ]");
+			
+			   	
+			NetworkHandler netHandler = new NetworkHandler( );
+
+			netHandler.setContinuationObj(continuation);		
+
+		
+			
+			if (null != tenantId) { 
+				netHandler.update_network(tenantId,networkId,map);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while updating network "+networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else if(null != networkId && null != portId && null == subnetUUID)
+		{
+
+			/*
+			 * Update quantum port.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/lport/<port_id>
+			 * JSON params 
+			 *      optional  - 'name','admin_state_up','device_id','device_owner','ip_address','subnet_id'
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received update quantum port request for port: "+portId+". Network id received is: "+networkId);
+
+			HashMap<String, String> hashMap = new HashMap<String, String>();
+			boolean admin_state_up;
+			if(jsonObject.containsKey("admin_state_up")) {
+				admin_state_up = ((Boolean) jsonObject.get("admin_state_up")).booleanValue();
+				if(admin_state_up)
+					hashMap.put("admin_state_up", "true");
+				else
+					hashMap.put("admin_state_up", "false");
+			}
+
+			if(jsonObject.containsKey("device_owner")) {
+				String device_owner = (String) jsonObject.get("device_owner");
+				if(device_owner!=null)
+					hashMap.put("device_owner", device_owner);
+			}
+
+			if(jsonObject.containsKey("device_id")) {
+				String device_id = (String) jsonObject.get("device_id");
+				if(device_id!=null)
+					hashMap.put("device_id", device_id);
+			}
+
+			if(jsonObject.containsKey("name")) {
+				String name = (String) jsonObject.get("name");
+				if(name!=null)
+					hashMap.put("name", name);
+			}
+
+			if(jsonObject.containsKey("ip_address"))
+			{
+				String ipAddr = (String) jsonObject.get("ip_address");
+				if(ipAddr!=null)
+					hashMap.put("ip_address", ipAddr);
+			}
+
+			if(jsonObject.containsKey("subnet_id"))
+			{
+				String subnetId = (String) jsonObject.get("subnet_id");
+				if(subnetId!=null)
+					hashMap.put("subnet_id", subnetId);
+			}
+
+			PortHandler portHandler = new PortHandler( );
+
+			portHandler.setContinuationObj(continuation);		
+
+			  
+
+			if (null != tenantId) { 
+				logger.debug("TenantId:"+tenantId+" DVSPort:"+portId+" Values to be updated are: [ "+
+						"name: "+hashMap.get("name")+",admin_state_up: "+hashMap.get("admin_state_up")+",device_owner: "+hashMap.get("device_owner")+",device_id: "+hashMap.get("device_id") +",ip_address: "+ hashMap.get("ip_address")+",subnet_id: "+hashMap.get("subnet_id")+" ]");
+				portHandler.update_port(tenantId,networkId,portId,hashMap);	
+			}
+			else { 
+				logger.error("TenantId:"+" "+"Tenant ID is null while updating port "+portId+" of a network "+networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}			
+		}
+		else if (null != networkId && null != subnetUUID && null == portId) // update subnet
+		{
+			NetworkHandler netHandler = new NetworkHandler( );
+			netHandler.setContinuationObj(continuation);
+			if (null != tenantId)
+				netHandler.updateSubnet(tenantId, networkId, subnetUUID, jsonObject);
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while updating network "+networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else if(request_uri.contains(OC_URI_PHYSWITCH_STRING)){
+			EdgeOverlayHandler physwitchEvent = new EdgeOverlayHandler();
+			physwitchEvent.setContinuationObj(continuation);
+			long swDpId = PhysSwitch.getDpid(physwitchUUID);
+			String ObjectState = GlobalMapHelper.getInstance().getSwitchState(""+swDpId);
+			
+			if(request_uri.contains(OC_URI_PHYSWITCH_REFRESH)){
+				if(ObjectState!=null) {
+					PhysSwitchObjectState switchState = PhysSwitchObjectState.valueOf(ObjectState);
+					if(switchState==PhysSwitchObjectState.ACTIVE || switchState==PhysSwitchObjectState.RECONNECTED){
+						physwitchEvent.PhysSwitchEvent(tenant_id,physwitchUUID,PhysSwitchObjectState.SWITCH_REFRESH);
+					}
+					else{
+						logger.error("TenantId:"+tenant_id+" requesting for switch event 'refresh'"+" for PhysSwitch"
+								+physwitchUUID+" on the state:"+switchState);
+						sendErrorResponse(response.SC_FORBIDDEN, "Can not execute the vswitch-action 'refresh' for "
+								+ "'inactive' switch"+physwitchUUID, continuation);
+						return;
+					}
+				}
+				else{
+					logger.error("TenantId:"+tenant_id+"SWITCH_REFRESH for PhysSwitch"+physwitchUUID+
+							" SwitchObject in redis:"+ObjectState);
+					sendErrorResponse(response.SC_NOT_FOUND, "Switch_info:"+physwitchUUID+" not found", continuation);
+					return;
+				}
+			}
+			else if(request_uri.contains(OC_URI_PHYSWITCH_RESET)){
+				if(ObjectState!=null) {
+					PhysSwitchObjectState switchState = PhysSwitchObjectState.valueOf(ObjectState);
+					if(switchState==PhysSwitchObjectState.ACTIVE || switchState==PhysSwitchObjectState.RECONNECTED){
+						physwitchEvent.PhysSwitchEvent(tenant_id,physwitchUUID,PhysSwitchObjectState.SWITCH_RESET);
+					}
+					else{
+						logger.error("TenantId:"+tenant_id+" requesting for switch event 'reset'"+" for PhysSwitch"
+								+physwitchUUID+" on the state:"+switchState);
+						sendErrorResponse(response.SC_FORBIDDEN, "Can not execute the vswitch-action 'reset' for "
+								+ "'inactive' switch"+physwitchUUID, continuation);
+						return;
+					}
+				}
+				else{
+					logger.error("TenantId:"+tenant_id+"SWITCH_RESET for PhysSwitch"+physwitchUUID+
+							" SwitchObject in redis:"+ObjectState);
+					sendErrorResponse(response.SC_NOT_FOUND, "Switch_info:"+physwitchUUID+" not found", continuation);
+					return;
+				}
+			}
+			else if(request_uri.contains(OC_URI_PHYSWITCH_REMOVE)){
+				if(ObjectState!=null) {
+					PhysSwitchObjectState switchState = PhysSwitchObjectState.valueOf(ObjectState);
+					if(switchState!=PhysSwitchObjectState.ACTIVE && switchState!=PhysSwitchObjectState.RECONNECTED){
+						physwitchEvent.PhysSwitchEvent(tenant_id,physwitchUUID, PhysSwitchObjectState.SWITCH_REMOVE);
+					}
+					else{
+						logger.error("TenantId:"+tenant_id+" requesting for switch event 'remove'"+" for PhysSwitch"
+								+physwitchUUID+" on the state:"+switchState);
+						sendErrorResponse(response.SC_FORBIDDEN, "Can not execute the vswitch-action 'remove' for "
+								+ "'active' switch"+physwitchUUID, continuation);
+						return;
+					}
+				}
+				else{
+					logger.error("TenantId:"+tenant_id+"SWITCH_REMOVE for PhysSwitch"+physwitchUUID+
+							" SwitchObject in redis:"+ObjectState);
+					sendErrorResponse(response.SC_NOT_FOUND, "Switch_info:"+physwitchUUID+" not found", continuation);
+					return;
+				}
+			}
+			else{
+				logger.error("TenantId:"+tenant_id+" The request doesn't match with any of the available vswitch-action");
+				sendBadRequest(response, continuation);
+			}
+			
+		}
+		else
+		{
+			 logger.error("TenantId:"+tenantId+" No HTTP PUT request matched.");
+			 sendBadRequest(response, continuation);
+             return;
+
+		}
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		logger.debug("TenantId:"+" "+"Received Http GET Request.");
+
+		String request_uri = request.getRequestURI();
+
+		if(null == request_uri){
+			logger.error("TenantId:"+" "+"No URI found in the request: "+request);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		logger.debug("TenantId:"+" "+"Requested URI is: " + request_uri);
+
+		String token_id = request.getParameter("authToken");
+
+		if(null == token_id){        	
+			logger.error("TenantId:"+" "+"Authentication token not found in the URI: "+request);               
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		final Continuation continuation = ContinuationSupport.getContinuation(request);
+		continuation.suspend(response);
+		if(!TokenHelper.ValidateToken(token_id))
+		{       
+			logger.warn("TenantId:"+" "+"Authentication Failure for request: "+request);
+			/*response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+			return;*/
+			
+			if(!PluginHandler.license_status){
+				logger.error("TenantId:"+" "+"License Failed for user "+request);
+	        	PluginHandler.sendFailedResponse(response, continuation);
+			}
+			else{
+			AuthToken authToken = new AuthToken();
+			AuthTokenSyncHelper handler = new AuthTokenSyncHelper(request,response,RequestTypes.GET,this,continuation);
+			authToken.reSyncFromDb(NobCommon.AuthTokenObjectUUID,false, handler);
+			}
+		}
+		else 
+			handleGenericRequest(request,response,continuation,RequestTypes.GET);
+		
+	}
+
+	public void handleGet(HttpServletRequest request, HttpServletResponse response,Continuation continuation)throws ServletException, IOException  {
+			
+		String full_url= null;
+		String nw_uuid = null;
+		String port_uuid = null;
+		String tenant_id = null;       
+		String subnet_id = null;
+	    String dvsportstat_uuid = null;
+		String physswitchuuid = null;
+
+		String query_string = request.getQueryString();
+        String request_uri = request.getRequestURI();
+        PluginURIObject my_uri_obj = new PluginURIObject();
+        try {
+        	getParamsFromURL(request_uri, query_string, my_uri_obj);
+        }
+        catch (Exception ex) {
+        	logger.error("TenantId: Exception while parsing URL "+request_uri+" Exception is:"+ex.toString());
+        	sendBadRequest(response, continuation);
+        	return;
+        }
+	
+		full_url = my_uri_obj.full_url;
+		nw_uuid = my_uri_obj.net_uuid;        
+		port_uuid = my_uri_obj.port_uuid;
+		tenant_id = my_uri_obj.ten_uuid;
+	    subnet_id = my_uri_obj.subnetuuid;
+	    dvsportstat_uuid = my_uri_obj.dvsportstatuuid;
+		physswitchuuid = my_uri_obj.physswitchuuid;
+		
+		UUID tenantId = null;
+		UUID networkId = null;
+		UUID portId = null;
+		UUID subnetUUID = null;
+		UUID dvsportstatuuid = null;
+	
+		if (null != tenant_id)
+			tenantId = UUID.fromString(tenant_id);
+		if(null != nw_uuid)
+			networkId = UUID.fromString(nw_uuid);
+		if(null != port_uuid)
+			portId = UUID.fromString(port_uuid);
+		if(null != subnet_id)
+			subnetUUID = UUID.fromString(subnet_id);
+
+		JSONObject jsonResp = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+
+		/*
+		 * Handling l2gateway URIs separtely in l2gateway handler.
+		 */
+		if(request_uri.contains("l2gateway")) {
+			boolean isAdminLogin = my_uri_obj.query_string.contains("isAdmin=True");
+
+			logger.info("TenantId:"+tenantId+"Req to List gateways/gateway of a tenant");
+			String rsrcinfo[] = getResourceFromURL(request_uri);
+			
+	        if(rsrcinfo != null) {
+	        	logger.debug("TenantId:"+tenantId.toString()+"GET Request - resource: " +rsrcinfo[1]);
+	        	if(rsrcinfo[1].equals("l2gateways") || rsrcinfo[1].equals("l2gateway")) {
+		        	/* Handle the resource */
+		        	L2GatewayHandler gwHandler = new L2GatewayHandler(continuation);
+		        	try {
+		        		gwHandler.handleGetRequest(	UUID.fromString(stringToUUIDstr(rsrcinfo[0])),
+		        								(rsrcinfo[1].equals("l2gateways") ? null : UUID.fromString((rsrcinfo[2]))),
+		        								response, isAdminLogin);
+		        	}catch(Exception e) {
+		        		logger.error("Exception: " ,e);
+		        		sendBadRequest(response, continuation);
+		        	}
+		        	return;
+	        	}else {
+	        		logger.error("TenantId:"+tenantId.toString()+"GET Request - Invalid resource: " +rsrcinfo[1]);
+	        		sendBadRequest(response, continuation);
+	        		return;
+	        	}
+	        }else {
+	        	logger.error("TenantId:"+tenantId.toString()+"GET Request - error parsing no rsource info: ");
+	        	sendBadRequest(response, continuation);
+	        	return;
+	        }
+		}
+		
+
+		if (request_uri.endsWith(OC_URI_TENANT_STRING+OC_URI_GET_ALL_NETWORKS)) {
+
+			/*
+			 * Get all networks of all tenants [NO tenant_id is sent through URI].
+			 * URI - /pluginhandler/ocplugin/tenant/getallnetworks
+			 */
+
+			logger.debug("TenantId:"+" "+"Received get all networks of all tenants request.");
+
+			    	
+
+			EdgeOverlayHandler edgeOverlayHandler = new EdgeOverlayHandler();
+
+			edgeOverlayHandler.setContinuationObj(continuation);
+
+			
+
+			edgeOverlayHandler.getAllDVSwitches();
+		}
+		else if(networkId == null && request_uri.endsWith(OC_URI_NW_STRING)) // Get all Networks
+		{
+			/*
+			 * Get all networks of a particular tenants
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get all networks of this tenant request.");
+
+			    	
+
+			NetworkHandler netHandler = new NetworkHandler( );
+
+			netHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				netHandler.get_networks(tenantId);		
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while retrieving networks of a tenant");
+				sendBadRequest(response, continuation);
+				return;
+			}			
+		}
+		else if(networkId != null && request_uri.endsWith(nw_uuid)) // Get Network
+		{
+
+			/*
+			 * Get network.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get network request for network "+nw_uuid);
+
+
+			    	
+
+			NetworkHandler netHandler = new NetworkHandler();
+
+			netHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				netHandler.get_network(tenantId,networkId);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while getting network "+networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else if(nw_uuid != null && request_uri.endsWith(OC_URI_PORT_STRING)) // Get Ports
+		{
+
+			/*
+			 * Get all quantum ports under a network.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/lport/
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get all ports request for network "+nw_uuid );
+
+
+			   	
+
+			PortHandler portHandler = new PortHandler( );
+
+			portHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				portHandler.get_ports(tenantId,networkId);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while retrieving ports of a network "+networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else if(networkId != null && port_uuid != null && request_uri.endsWith(OC_URI_PORT_STRING+port_uuid)) // Get Port
+		{
+
+			/*
+			 * Get a quantum port.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/lport/<port_id>
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get port request on port "+port_uuid+" of network "+nw_uuid);
+
+			   	
+
+			PortHandler portHandler = new PortHandler( );
+
+			portHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				portHandler.get_port(tenantId,networkId,portId);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while getting port "+portId+" of network "+networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}			
+		}else if(networkId != null && port_uuid != null && request_uri.endsWith(OC_URI_PORT_STRING+port_uuid+OC_URI_PORTSTATUS_STRING)){ //Get Port Status
+
+			/*
+			 * Get quantum port status.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/lport/<port_id>/status
+			 * returns - 'adminStateUp' value
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get port status request on port "+port_uuid+" of network "+nw_uuid);
+
+			  	
+
+			PortHandler portHandler = new PortHandler( );
+
+			portHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				portHandler.get_port_status(tenantId,networkId,portId);		
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while getting status of port "+portId+" of a network "+networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}			
+		}
+		else if(nw_uuid != null && request_uri.endsWith(this.OC_URI_TOPOLOGY_STRING)) { //Get topology
+
+			/*
+			 * Get all quantum ports which are associated to physical ports.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/topology
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get topology of network "+nw_uuid +" request");
+
+			    	
+
+			PortHandler portHandler = new PortHandler( );
+
+			portHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				portHandler.getTopology(tenantId,networkId);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while retrieving topology of a network " + networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else if(nw_uuid != null && request_uri.endsWith(this.OC_URI_OVERLAY_STRING)) { //Get overlay
+
+			/*
+			 * Get all tunnel ports of a network.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/overlay
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get overlay of network "+nw_uuid +" request.");
+
+
+			    	
+
+			EdgeOverlayHandler edgeOverlayHandler = new EdgeOverlayHandler( );
+
+			edgeOverlayHandler.setContinuationObj(continuation);
+
+			
+
+			if (null != tenantId) { 
+				edgeOverlayHandler.getOverlay(tenantId,networkId);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while retrieving overlay of a network " + networkId);
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else if(nw_uuid == null && physswitchuuid != null && request_uri.endsWith(OC_URI_TOPOLOGY_STRING)) {
+			//Get all physports under a switch
+
+			/*
+			 * Get all physical ports under a given switch.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/physwitch/<switchuuid>/topology
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get all physical ports request to show in Edge Network's Ports table.");
+
+			   	
+
+			EdgeOverlayHandler edgeOverlayHandler = new EdgeOverlayHandler( );
+
+			edgeOverlayHandler.setContinuationObj(continuation);
+
+			
+
+			edgeOverlayHandler.getAllPhysPorts(tenantId, physswitchuuid);
+		}
+		else if(nw_uuid == null && physswitchuuid == null && request_uri.endsWith(OC_URI_TENANT_STRING+OC_URI_GET_ALL_PHYSPORTS)) {
+			/*	Get all physports
+			 * 	this will just return ids of phys ports in a jsonarray.
+			 */
+			logger.debug("TenantId:"+tenantId+" Received get all physical ports request");
+			EdgeOverlayHandler edgeOverlayHandler = new EdgeOverlayHandler();
+			edgeOverlayHandler.setContinuationObj(continuation);
+			edgeOverlayHandler.getAllPhysPorts();
+		}
+		
+		else if(nw_uuid == null && request_uri.endsWith(this.OC_URI_PHYSWITCHES_STRING)) { //Get all physwitches
+
+			/*
+			 * Get all physical switches.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/physwitches
+			 *	
+			 * In later version of NVP, need to change the URI.
+			 * It should be /pluginhandler/ocplugin/tenant/physwitches - No need of <tenant_id>
+			 */
+
+			logger.debug("TenantId:"+tenantId+" Received get all physical switches request.");
+
+			    	
+
+			EdgeOverlayHandler edgeOverlayHandler = new EdgeOverlayHandler( );
+
+			edgeOverlayHandler.setContinuationObj(continuation);
+
+			
+
+			edgeOverlayHandler.getAllPhySwitches();
+		}
+		else if(request_uri.contains(this.OC_URI_STAT_STRING)) {
+
+
+			/*
+			 * Get quantum port statistics.
+			 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<network_id>/lport/<port_id>/dvsportstat/<dvsportstatuuid>?start_time=<start_time>&duration=<duration>&unit=<unit>
+			 *       where -   1. start_time = time in milliseconds
+			 *				   2. duration = integer (e.g. 2/3/4 etc)
+			 *				   3. unit = mins/hours/days/weeks/months/years	
+			 */
+
+
+			logger.debug("TenantId:"+tenantId+" Received get quantum port statistics of port "+port_uuid+" request");
+
+			if(dvsportstat_uuid == null || dvsportstat_uuid.equals("")) {
+				logger.error("TenantId:"+tenantId+" DVSPORTSTATUUID of port "+port_uuid+" is null or empty.This port may not have attached to any physical port.");
+				jsonResp.put("result","Unattached Quantum port");
+				jsonArray.add(jsonResp);
+				response = (HttpServletResponse) continuation.getServletResponse();
+				PortHandler.sendJsonResponseToPlugin(response,jsonArray.toJSONString());
+				continuation.complete();
+				return;
+			}
+			else {
+				TimeForDB dbTime = new TimeForDB();
+				if(getParameterForStatObject(request,response, dbTime)) {
+					
+					StatisticsHandler statHandler = new StatisticsHandler();
+					statHandler.setContinuationObj(continuation);
+					
+					dvsportstatuuid = UUID.fromString(dvsportstat_uuid);
+					statHandler.getDvsPortStat(dvsportstatuuid, dbTime.DbStartTime, dbTime.DbEndTime);
+				}
+				else {
+					return;
+				}
+			}
+
+		}
+		else if(request_uri.endsWith(this.OC_URI_GET_ALL_PORTS)) {
+
+			    	
+
+			EdgeOverlayHandler edgeOverlayHandler = new EdgeOverlayHandler( );
+
+			edgeOverlayHandler.setContinuationObj(continuation);
+
+			
+
+			if (tenantId == null) {	
+
+				/*
+				 * Get all quantum ports of all tenant.
+				 * URI - /pluginhandler/ocplugin/tenant/getalldvsports
+				 */
+
+				logger.debug("TenantId:"+" "+"Received get all dvs ports of all tenants request.");
+				edgeOverlayHandler.getAllDVSPorts();
+			}	
+			else {
+
+				/*
+				 * Get all quantum ports of a particular tenant.
+				 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/getalldvsports
+				 */
+
+				logger.debug("TenantId:"+tenantId+" Received get all dvs ports of this tenant request.");
+				edgeOverlayHandler.getTenantDVSPorts(tenantId);
+			}	
+		}
+		else if (request_uri.endsWith(OC_URI_GET_ALL_SUBNETS)) {
+			NetworkHandler netHandler = new NetworkHandler();
+			netHandler.setContinuationObj(continuation);
+			netHandler.getAllSubnets();
+		}
+		else if (networkId != null && portId == null && subnetUUID != null) {
+			NetworkHandler netHandler = new NetworkHandler();
+			netHandler.setContinuationObj(continuation);
+			netHandler.getSubnet(tenantId, networkId, subnetUUID);
+		}
+		else if (networkId != null && portId == null && request_uri.endsWith(OC_URI_SUBNET_STRING)) {
+			NetworkHandler netHandler = new NetworkHandler();
+			netHandler.setContinuationObj(continuation);
+
+			if (tenantId != null) {
+				if(nw_uuid.equals(NO_UUID)){
+					netHandler.getTenantSubnets(tenantId);
+				}
+				else
+					netHandler.getSubnets(tenantId, networkId);
+			}
+			else {
+				logger.error("TenantId:"+" "+"Tenant ID is null while retrieving subnet list ");
+				sendBadRequest(response, continuation);
+				return;
+			}
+		}
+		else
+		{
+			// Send the proper error response to controller
+			logger.error("TenantId:"+tenantId+" No HTTP GET request matched.");
+			sendBadRequest(response, continuation);
+			return;
+		}
+
+	}
+	/* Below two functions are needed for "stat" objects */
+
+	private boolean getParameterForStatObject(HttpServletRequest request, HttpServletResponse response, TimeForDB dbTime) {
+
+		long endTime = -1,startTime = -1;
+		String  unit = null;
+		long duration = -1;		
+		long calculated_duration;
+		try {
+			if(request.getParameter("start_time") != null && request.getParameter("start_time") != "")
+				startTime = Long.parseLong(request.getParameter("start_time"));
+
+			if(request.getParameter("duration") != null && request.getParameter("duration") != "")
+				duration = Long.parseLong(request.getParameter("duration"));
+
+			if(request.getParameter("unit") != null && request.getParameter("unit") != "")
+				unit = request.getParameter("unit");
+		}
+		catch( Exception e) {	
+
+			logger.error("TenantId:"+" "+"Error while parsing start_time, duration, unit."+e);
+			String error = " Error while parsing parameters quantum stat request params.";
+			sendErrorResponse(response, error);
+			return false;
+		}
+
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+		if(-1 == startTime && -1 != duration ) {
+			if(unit == null)
+				unit = "hours";
+			endTime = System.currentTimeMillis();
+			calculated_duration = getDurationInMillis(duration, unit);
+			if(calculated_duration > endTime)
+				startTime = 0;
+			else
+				startTime = endTime - calculated_duration;
+		}
+		else if(-1 != startTime && -1 == duration) {
+			if(startTime < 0)
+				startTime = 0;
+			endTime = System.currentTimeMillis();
+		}
+		else if(-1 != startTime && -1 != duration) {
+			if(unit == null)
+				unit = "hours";
+			if(startTime < 0)
+				startTime = 0;
+			endTime = startTime + getDurationInMillis(duration, unit);
+		}
+		/* When none of the parameters are coming from plugin. By default we are sending last 3 months data */
+		else if(-1 == startTime && -1 == duration) {
+			endTime = System.currentTimeMillis();
+			startTime = endTime - getDurationInMillis(3, "months");
+		}
+
+
+		try {
+			dbTime.DbStartTime = sdf.parse(sdf.format(new Date(startTime)));
+			dbTime.DbEndTime = sdf.parse(sdf.format(new Date(endTime)));
+		} catch (ParseException e) {
+			logger.error("TenantId:"+" "+"Exception in getParameterForStatObject() "+e);
+			String error = " Exception while converting  start time in yyyy-MM-dd HH:mm:ss format ";
+			sendErrorResponse(response, error);
+			return false;
+		}
+		return true;
+	}
+
+	private long getDurationInMillis(long duration, String lunit) {
+
+		long result = 0;
+		try {
+			if(lunit.equals("minutes")) {
+				result = (duration*60*1000);
+			}
+			else if(lunit.equals("hours")) {
+				result = (duration*60*60*1000);
+			}
+			else if(lunit.equals("days")) {
+				result = (duration*24*60*60*1000);
+			}
+			else if(lunit.equals("weeks")) {
+				result = (duration*7*24*60*60*1000);
+			}
+			else if(lunit.equals("months")) {
+				result = (duration*30*24*60*60*1000);
+			}
+			else if(lunit.equals("years")) {
+				result = (duration*365*24*60*60*1000);
+			}
+		}
+		catch (Exception e) {
+
+			logger.error("TenantId:"+" "+"Exception in getDurationInMillis() "+e);
+
+		}
+		return result;
+	}
+
+	public void sendErrorResponse(int errorCode, String message, Continuation continuation)
+	{
+		HttpServletResponse response = (HttpServletResponse) continuation.getServletResponse();
+
+		try {
+			response.sendError(errorCode, message);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			continuation.complete();
+		}
+	}
+	
+	public void sendErrorResponse(HttpServletResponse response, String jsonResp) {
+
+		JSONObject json = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+		json.put("Error",jsonResp);
+		jsonArray.add(json);
+		PortHandler.sendJsonResponseToPlugin(response, jsonArray.toJSONString());
+	}
+	
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		logger.debug("TenantId:"+" "+"Received Http DELETE Request.");
+
+		String request_uri = request.getRequestURI();
+
+		if(null == request_uri){
+			logger.error("TenantId:"+" "+"No URI found in the request: "+request);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		logger.debug("TenantId:"+" "+"Requested URI is: " + request_uri);
+
+		String token_id = request.getParameter("authToken");
+
+		if(null == token_id){        	
+			logger.error("TenantId:"+" "+"Authentication token not found in the URI: "+request);               
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+		final Continuation continuation = ContinuationSupport.getContinuation(request);
+		continuation.suspend(response);
+		if(!TokenHelper.ValidateToken(token_id))
+			
+		{       
+			logger.warn("TenantId:"+" "+"Authentication Failure for request: "+request);
+			/*response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+			return;*/
+			
+			if(!PluginHandler.license_status){
+				logger.error("TenantId:"+" "+"License Failed for user "+request);
+	        	PluginHandler.sendFailedResponse(response, continuation);
+			}
+			else{
+			AuthToken authToken = new AuthToken();
+			AuthTokenSyncHelper handler = new AuthTokenSyncHelper(request,response,RequestTypes.DELETE,this,continuation);
+			authToken.reSyncFromDb(NobCommon.AuthTokenObjectUUID,false, handler);
+			}
+		}
+		else
+			handleGenericRequest(request,response,continuation,RequestTypes.DELETE);
+
+	}
+
+	public void handleDelete(HttpServletRequest request, HttpServletResponse response,Continuation continuation) throws ServletException, IOException{
+	
+	
+	
+	String full_url= null;
+	String nw_uuid = null;
+	String port_uuid = null;
+	String tenant_id = null;
+	String subnet_id = null;
+	
+	String query_string = request.getQueryString();
+    String request_uri = request.getRequestURI();
+    PluginURIObject my_uri_obj = new PluginURIObject();
+    try {
+    	getParamsFromURL(request_uri, query_string, my_uri_obj);
+    }
+    catch (Exception ex) {
+    	logger.error("TenantId: Exception while parsing URL "+request_uri+" Exception is:"+ex.toString());
+    	sendBadRequest(response, continuation);
+    	return;
+    }
+	
+	full_url = my_uri_obj.full_url;
+	nw_uuid = my_uri_obj.net_uuid;
+	port_uuid = my_uri_obj.port_uuid;
+	tenant_id = my_uri_obj.ten_uuid;       
+	subnet_id = my_uri_obj.subnetuuid;
+
+	UUID tenantId = null;
+	UUID networkId = null;
+	UUID portId = null;
+	UUID subnetUUID = null;
+
+	if (null != tenant_id)
+		tenantId = UUID.fromString(tenant_id);
+	if(null != nw_uuid)
+		networkId = UUID.fromString(nw_uuid);
+	if(null != port_uuid)
+		portId = UUID.fromString(port_uuid);  
+	if(null != subnet_id)
+		subnetUUID = UUID.fromString(subnet_id);
+	
+	/*
+	 * Handling l2gateway URIs separtely in l2gateway handler.
+	 */	
+	if(request_uri.contains("l2gateway")) {
+		logger.info("TenantId:"+tenantId.toString()+"Delete L2gateway req for id: ");
+		String rsrcinfo[] = getResourceFromURL(request_uri);
+
+        if(rsrcinfo != null) {
+        	if(rsrcinfo[1].equals("l2gateway")) {
+        		logger.debug("TenantId:"+tenantId.toString()+"Deleting l2gateway : " +(rsrcinfo[2]));
+	        	/* Handle the resource */
+	        	L2GatewayHandler gwHandler = new L2GatewayHandler(continuation);
+	        	try {
+	        		gwHandler.handleDelRequest(UUID.fromString(stringToUUIDstr(rsrcinfo[0])),
+	        								UUID.fromString((rsrcinfo[2])), response);
+	        	}catch(Exception e) {
+	        		logger.error("Exception: ", e);
+	        		sendBadRequest(response, continuation);
+	        	}
+	        	return;
+        	}
+        }else {
+        	logger.error("TenantId:"+tenantId.toString()+"Invalid resource: " +rsrcinfo[2]);
+        	sendBadRequest(response, continuation);
+        	return;
+        }
+	}
+	
+	if(null != networkId && null == subnetUUID && null == portId) // delete dvswitch(network)
+	{       
+
+		/*
+		 * Delete a network.
+		 * URI - /pluginhandler/ocplugin/tenant/<tenantId>/lnetwork/<net_id>
+		 */
+
+		logger.debug("TenantId:"+tenantId+" Received delete network request for network "+nw_uuid);
+
+		    	
+
+		NetworkHandler netHandler = new NetworkHandler( );
+
+		netHandler.setContinuationObj(continuation);
+
+		
+
+		if (null != tenantId) { 
+			netHandler.delete_network(tenantId,networkId);
+		}
+		else {
+			logger.error("TenantId:"+" "+"Tenant ID is null while deleting network " + networkId);
+			sendBadRequest(response, continuation);
+			return;
+		}
+	}
+	else if(null != networkId && null != portId) // delete dvsport
+	{
+
+		/*
+		 * Delete a quantum port.
+		 * URI - /pluginhandler/ocplugin/tenant/<tenant_id>/lnetwork/<net_id>/lport/<port_id>
+		 */
+
+		logger.debug("TenantId:"+tenantId+" Received delete quantum port request for "+port_uuid+" of network "+nw_uuid);
+
+		   	
+
+		PortHandler portHandler = new PortHandler( );
+
+		portHandler.setContinuationObj(continuation);
+
+
+
+		if (null != tenantId) { 
+			portHandler.delete_port(tenantId,networkId,portId);
+		}
+		else {
+			logger.error("TenantId:"+" "+"Tenant ID is null while deleting port "+ portId + "of a network " + networkId);
+			sendBadRequest(response, continuation);
+			return;
+		}
+	}
+	else if (networkId != null && subnetUUID != null && portId == null) { //delete subnet
+		NetworkHandler netHandler = new NetworkHandler();
+		netHandler.setContinuationObj(continuation);
+
+		if (tenantId != null) {
+			netHandler.deleteSubnet(tenantId, networkId, subnetUUID);
+		}
+		else {
+			logger.error("TenantId:"+" "+"Tenant ID is null while retrieving subnet list ");
+			sendBadRequest(response, continuation);
+			return;
+		}
+	}
+	else
+	{
+		// Send the proper error response to controller
+		logger.error("TenantId:"+tenantId+" No HTTP DELETE request matched.");
+		sendBadRequest(response, continuation);
+		return;
+	}
+
+}
+
+	private void getParamsFromURL(String request_url, String query_string, PluginURIObject my_uri_obj) throws IllegalArgumentException
+	{
+
+		String net_id = null;
+		String ten_id = null;
+		String port_id = null;
+		String dvsportstatuuid = null;
+		String physswitchuuid = null;
+		UUID tenant_uuid = null;
+		String url_substring = null;
+		String [] parts = null;
+
+		String full_url = null;
+
+		if(query_string != null){
+
+			full_url = request_url + query_string;
+		}
+		// Extract Net_id, port_id and AuthToken from the URI and then validate it
+
+		logger.debug("TenantId:"+" "+"Inside getParamsFromURL()");
+		logger.debug("TenantId:"+" "+"query_string : " + query_string);
+		logger.debug("TenantId:"+" "+"full_url : " + full_url);
+
+		if(!request_url.startsWith(OC_URI_TENANT_STRING)){
+			logger.error("TenantId:"+" "+"URI doesn't start with tenant");
+			return;
+		}
+
+		if(request_url.startsWith(OC_URI_TENANT_STRING+OC_URI_GET_ALL_NETWORKS) ||
+				request_url.startsWith(OC_URI_TENANT_STRING+OC_URI_GET_ALL_PHYSPORTS)){ 
+			return;
+		}
+
+		if(request_url.endsWith(OC_URI_GET_ALL_PORTS)) {
+			String subUrl = request_url.substring(OC_URI_TENANT_STRING.length(), request_url.length());
+			if(subUrl.contains("/"))
+				my_uri_obj.ten_uuid = stringToUUIDstr(subUrl.substring(0, OC_URI_TEN_UUID_LENGTH));
+			else 
+				my_uri_obj.ten_uuid = null;
+			return;
+		}
+		else if (request_url.endsWith(OC_URI_GET_ALL_SUBNETS)) {
+			return;
+		}
+		else if (request_url.contains(OC_URI_SUBNET_STRING)) {
+			if(null != request_url.substring(OC_URI_TENANT_STRING.length())) {
+				parts = request_url.substring(OC_URI_TENANT_STRING.length()).split("/");
+			}else {
+				return;
+			}
+			List <String> list = new ArrayList<String>(Arrays.asList(parts));
+			if (parts[0].length() == OC_URI_TEN_UUID_LENGTH) {
+
+				my_uri_obj.ten_uuid = NetworkMgmtServlet.stringToUUIDstr(parts[0]);
+				list.remove(0);
+			} else
+				return;
+			Iterator it = list.iterator();
+			while(it.hasNext()) {
+				String cpart = (String)it.next();
+				String temp;
+				switch(cpart){
+				case "lnetwork":
+					if(it.hasNext()) {
+						temp = it.next().toString();
+						UUID uuid = UUID.fromString(temp);
+						my_uri_obj.net_uuid = temp;
+					}
+					break;
+				case "lsubnet":
+					if(it.hasNext()) {
+						temp = it.next().toString();
+						UUID uuid = UUID.fromString(temp);
+						my_uri_obj.subnetuuid = temp;
+					}
+					break;
+				default:
+					break;
+				}
+			}
+			return;
+		}
+		else if(request_url.substring(OC_URI_TENANT_STRING.length(),
+				OC_URI_TENANT_STRING.length() + OC_URI_TEN_UUID_LENGTH) != null){
+			// extract the tenant_id from the URI 
+			ten_id = request_url.substring(OC_URI_TENANT_STRING.length(),
+					OC_URI_TENANT_STRING.length() + OC_URI_TEN_UUID_LENGTH);
+			
+			if (null != ten_id)
+				tenant_uuid = UUID.fromString(stringToUUIDstr(ten_id));
+		}
+
+		url_substring = request_url.substring(OC_URI_TENANT_STRING.length() + ten_id.length());
+
+		
+		logger.debug("TenantId:"+tenant_uuid+" Got tenant ID: "+tenant_uuid);
+		logger.debug("TenantId:"+tenant_uuid+" Sub string of the URL: " + url_substring);
+
+		if((url_substring.contains(OC_URI_NW_STRING)) && (url_substring.length() >=   (OC_URI_NW_STRING.length() + OC_URI_NW_UUID_LENGTH)) &&
+				(url_substring.substring(OC_URI_NW_STRING.length(), OC_URI_NW_STRING.length() + OC_URI_NW_UUID_LENGTH) != null))
+			net_id = url_substring.substring(OC_URI_NW_STRING.length(), OC_URI_NW_STRING.length() + OC_URI_NW_UUID_LENGTH);
+
+		logger.debug("TenantId:"+tenant_uuid+" Got net_id : " + net_id);
+
+		//if(net_id != null && !url_substring.endsWith(net_id) && url_substring.contains(OC_URI_PORT_STRING))
+		if(net_id != null && !url_substring.endsWith(net_id) && !url_substring.endsWith(OC_URI_PORT_STRING) && !url_substring.endsWith(OC_URI_TOPOLOGY_STRING) && !url_substring.endsWith(OC_URI_OVERLAY_STRING))
+		{
+
+			logger.debug("TenantId:"+tenant_uuid+" Sub port str: " + url_substring.substring(url_substring.indexOf(OC_URI_PORT_STRING) + OC_URI_PORT_STRING.length()));
+
+
+			String mystring = url_substring.substring(url_substring.indexOf(OC_URI_PORT_STRING) +
+					OC_URI_PORT_STRING.length(),
+					url_substring.indexOf(OC_URI_PORT_STRING) +
+					OC_URI_PORT_STRING.length() +
+					OC_URI_PORT_UUID_LENGTH);
+
+
+			/* get the port id*/
+			if(url_substring.indexOf(OC_URI_PORT_STRING) != -1)
+			{
+				if((url_substring.length() >=  (url_substring.indexOf(OC_URI_PORT_STRING) +
+						OC_URI_PORT_STRING.length() + OC_URI_PORT_UUID_LENGTH))
+						&& (url_substring.substring(url_substring.indexOf(OC_URI_PORT_STRING) +
+								OC_URI_PORT_STRING.length(),
+								url_substring.indexOf(OC_URI_PORT_STRING) +
+								OC_URI_PORT_STRING.length() +
+								OC_URI_PORT_UUID_LENGTH) != null))
+
+					port_id = url_substring.substring(url_substring.indexOf(OC_URI_PORT_STRING)
+							+ OC_URI_PORT_STRING.length(),
+							url_substring.indexOf(OC_URI_PORT_STRING) +
+							OC_URI_PORT_STRING.length() +
+							OC_URI_PORT_UUID_LENGTH);
+			}
+
+			if(url_substring.indexOf(OC_URI_STAT_STRING) != -1)
+			{
+				if((url_substring.length() >=  (url_substring.indexOf(OC_URI_STAT_STRING) +
+						OC_URI_STAT_STRING.length() + OC_URI_STAT_UUID_LENGTH))
+						&& (url_substring.substring(url_substring.indexOf(OC_URI_STAT_STRING) +
+								OC_URI_STAT_STRING.length(),
+								url_substring.indexOf(OC_URI_STAT_STRING) +
+								OC_URI_STAT_STRING.length() +
+								OC_URI_STAT_UUID_LENGTH) != null))
+					dvsportstatuuid = url_substring.substring(url_substring.indexOf(OC_URI_STAT_STRING)
+							+OC_URI_STAT_STRING.length(),url_substring.indexOf(OC_URI_STAT_STRING) +
+							OC_URI_STAT_STRING.length() +
+							OC_URI_STAT_UUID_LENGTH);
+			}
+		}
+		
+		else if (url_substring.startsWith(OC_URI_PHYSWITCH_STRING) && url_substring.endsWith(OC_URI_TOPOLOGY_STRING))
+		{
+			physswitchuuid = url_substring.substring(OC_URI_PHYSWITCH_STRING.length(), OC_URI_PHYSWITCH_STRING.length() + 36);
+		}
+		else if (url_substring.startsWith(OC_URI_PHYSWITCH_STRING))
+		{ /* We just need to fetch PhysSwitch UUID from URI ~/physwitch/xxxxx-xxxx-xxxx-xxxxxx/[refresh|reset|remove]
+		 	*/
+			physswitchuuid = url_substring.substring(OC_URI_PHYSWITCH_STRING.length(), OC_URI_PHYSWITCH_STRING.length() + 36);
+		}
+
+		my_uri_obj.full_url = full_url;
+		my_uri_obj.net_uuid = net_id;
+		my_uri_obj.port_uuid = port_id;
+		my_uri_obj.ten_uuid = stringToUUIDstr(ten_id);	
+		my_uri_obj.dvsportstatuuid = dvsportstatuuid;
+		my_uri_obj.physswitchuuid = physswitchuuid;
+		my_uri_obj.query_string = query_string;
+	}
+
+	@Override
+	public void sendFailedResponse(HttpServletResponse response,Continuation continuation) {
+		
+		logger.error("TenantId:"+" "+"Failed in Authentication");
+		HttpServletResponse response1 = (HttpServletResponse) continuation.getServletResponse();
+		try {
+			response.sendError(response1.SC_UNAUTHORIZED);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			logger.error("Unable to send Error response to Plugin while Authentication failure ",e);
+		}
+		finally {
+			continuation.complete();
+		}
+	}
+
+	public void sendFailedResponse(HttpServletResponse response) {
+		
+		logger.error("TenantId:"+" "+"Capacity exceeded");
+		
+		try {
+			response.sendError(response.SC_FORBIDDEN);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			logger.error("Unable to send Error response to Plugin while Authentication failure ",e);
+		}
+		
+	}
+	public void sendBadRequest(HttpServletResponse response,Continuation continuation) {
+		response = (HttpServletResponse) continuation.getServletResponse();
+		try {
+			response.sendError(response.SC_BAD_REQUEST);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			logger.error("TenantId: Unable to send BAD_REQUEST response ",e);
+		}
+		finally {
+			continuation.complete();
+		}
+	}
+	
+	
+	public void handleGenericRequest (HttpServletRequest request, HttpServletResponse response, Continuation continuation,
+										RequestTypes reqType) throws ServletException, IOException {
+       
+		String query_string = request.getQueryString();
+        String request_uri = request.getRequestURI();
+        PluginURIObject my_uri_obj = new PluginURIObject();
+        try {
+        	getParamsFromURL(request_uri, query_string, my_uri_obj);
+        }
+        catch (Exception ex) {
+        	logger.error("TenantId: Exception while parsing URL "+request_uri+" Exception is:"+ex.toString());
+        	sendBadRequest(response, continuation);
+        	return;
+        }
+
+        String nw_uuid = null;
+        String tenant_id = null;       
+
+        nw_uuid = my_uri_obj.net_uuid;        
+        tenant_id = my_uri_obj.ten_uuid;
+
+		UUID tenantId = null;
+		UUID networkId = null;
+		
+		if (null != tenant_id)
+			tenantId = UUID.fromString(tenant_id);
+		if(null != nw_uuid)
+			networkId = UUID.fromString(nw_uuid);
+		
+		if(NobCommon.clusterMode ) {
+			
+			if(null != tenantId &&  (PluginHandlerConfig.getInstance().getClusterAffinity().equalsIgnoreCase("Tenant") ||
+									(null != networkId))) {
+				
+				logger.debug("TenantId: "+tenantId+ " Cluster: Handling reqType: "+reqType.toString()+" for netId: "+ networkId);
+				
+				ClusterHandler handler = new ClusterHandler(request,response,reqType,this,continuation , tenantId, networkId);
+				
+				DependancyTreeLoader loaderObj = new DependancyTreeLoader(tenantId, networkId, handler,ReqType.API_REQ);
+				loaderObj.handleClusterMode();			
+				return;
+			}
+		} 
+			
+			try{
+				switch(reqType) {
+					case POST :
+						handlePost(request,response,continuation);
+						break;
+					case GET:
+						handleGet(request, response,continuation);
+						break;
+					case DELETE:
+						handleDelete(request, response,continuation);
+						break;
+					case  PUT:
+						handlePut(request, response,continuation);
+						break;
+				default:
+					logger.error("TenantId: RequestType is unmatched");
+					sendBadRequest(response, continuation);
+					break;
+			
+		
+				}
+		}catch(Exception e){
+			logger.error("TenantId:"+tenantId+" Exception: ",e);
+			/*logger.error("TenantId:"+tenantId+" Exception is: "+e);
+			response.sendError(response.SC_INTERNAL_SERVER_ERROR);
+			continuation.complete();
+			return;*/
+		}
+			
+		
+
+	}
+/*
+	@Override
+	public void handlePost(HttpServletRequest request,
+			HttpServletResponse response, Continuation continuation)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.handleGenericReq(request,response,continuation, RequestTypes.POST);
+		
+	}
+
+	@Override
+	public void handleGet(HttpServletRequest request,
+			HttpServletResponse response, Continuation continuation)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.handleGenericReq(request,response,continuation, RequestTypes.GET);
+		
+	}
+
+	@Override
+	public void handlePut(HttpServletRequest request,
+			HttpServletResponse response, Continuation continuation)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.handleGenericReq(request,response,continuation, RequestTypes.PUT);
+		
+	}
+
+	@Override
+	public void handleDelete(HttpServletRequest request,
+			HttpServletResponse response, Continuation continuation)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.handleGenericReq(request,response,continuation, RequestTypes.DELETE);
+		
+	}*/
+		
+
+	
+}
