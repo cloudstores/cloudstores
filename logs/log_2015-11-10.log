@@ -1,0 +1,580 @@
+[2015-11-10 8:08:47.964550] [info] Connecting to db..
+[2015-11-10 8:08:47.964550] [info] Connecting to db..
+[2015-11-10 8:08:47.965049] [info] Connecting to db..
+[2015-11-10 8:08:48.276026] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:08:48.276222] [info] Connecting to db..
+[2015-11-10 8:08:48.276302] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:08:48.276355] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:08:48.281815] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:08:48.281974] [info] Connecting to db..
+[2015-11-10 8:08:48.282052] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:08:48.282105] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:08:48.304181] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:08:48.304366] [info] Connecting to db..
+[2015-11-10 8:08:48.304450] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:08:48.304506] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:08:48.376662] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:08:48.377888] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:08:48.381879] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:08:48.556051] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.lT1kIxX5tLF8T0gB/QUtXJD3FSpZuZG
+[2015-11-10 8:08:48.599201] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.lT1kIxX5tLF8T0gB/QUtXJD3FSpZuZG
+[2015-11-10 8:08:48.600939] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.lT1kIxX5tLF8T0gB/QUtXJD3FSpZuZG
+[2015-11-10 8:08:50.548790] [debug] Curl request completed!
+[2015-11-10 8:08:50.549063] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:08:50.549156] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:08:50.631951] [debug] Curl request completed!
+[2015-11-10 8:08:50.632219] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:08:50.632308] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:08:50.712824] [debug] Curl request completed!
+[2015-11-10 8:08:50.713062] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:08:50.713144] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:09:57.109692] [info] Connecting to db..
+[2015-11-10 8:09:57.119931] [info] Connecting to db..
+[2015-11-10 8:09:57.120261] [debug]  Welcome asfasdf
+[2015-11-10 8:09:57.120450] [info] Connecting to db..
+[2015-11-10 8:09:57.120554] [info] SELECT salt FROM credentials WHERE email='asfasdf' ALLOW FILTERING
+[2015-11-10 8:09:57.120639] [debug] query:SELECT salt FROM credentials WHERE email='asfasdf' ALLOW FILTERING
+[2015-11-10 8:09:57.129175] [info] Connecting to db..
+[2015-11-10 8:09:57.146471] [debug] userId:asfasdf salt:
+[2015-11-10 8:09:57.146987] [info] passwd:$1$POCyiftR$ft7zlnw6osRGZBDPCv35t1
+[2015-11-10 8:09:57.209594] [debug] Curl request completed!
+[2015-11-10 8:09:57.209868] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:09:57.209960] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:09:57.210129] [debug]  Welcome asfasdf
+[2015-11-10 8:09:57.210273] [info] Connecting to db..
+[2015-11-10 8:09:57.210349] [info] SELECT salt FROM credentials WHERE email='asfasdf' ALLOW FILTERING
+[2015-11-10 8:09:57.210400] [debug] query:SELECT salt FROM credentials WHERE email='asfasdf' ALLOW FILTERING
+[2015-11-10 8:09:57.215051] [debug] userId:asfasdf salt:
+[2015-11-10 8:09:57.215581] [info] passwd:$1$SEbrzQug$/JLBEAs8h.kiODEwPVpXB.
+[2015-11-10 8:09:57.234066] [debug] Curl request completed!
+[2015-11-10 8:09:57.234335] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:09:57.234430] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:09:57.234632] [debug]  Welcome asfasdf
+[2015-11-10 8:09:57.234824] [info] Connecting to db..
+[2015-11-10 8:09:57.234916] [info] SELECT salt FROM credentials WHERE email='asfasdf' ALLOW FILTERING
+[2015-11-10 8:09:57.234982] [debug] query:SELECT salt FROM credentials WHERE email='asfasdf' ALLOW FILTERING
+[2015-11-10 8:09:57.251153] [debug] userId:asfasdf salt:
+[2015-11-10 8:09:57.251702] [info] passwd:$1$motonnWe$LcLvfapEe8HLz6QpU8exx.
+[2015-11-10 8:09:57.271986] [debug] Curl request completed!
+[2015-11-10 8:09:57.272255] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:09:57.272346] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:12:24.963916] [info] Connecting to db..
+[2015-11-10 8:12:24.979950] [info] Connecting to db..
+[2015-11-10 8:12:24.983402] [info] Connecting to db..
+[2015-11-10 8:12:25.034632] [debug]  Welcome sgsgsdfg
+[2015-11-10 8:12:25.034792] [info] Connecting to db..
+[2015-11-10 8:12:25.034874] [info] SELECT salt FROM credentials WHERE email='sgsgsdfg' ALLOW FILTERING
+[2015-11-10 8:12:25.034935] [debug] query:SELECT salt FROM credentials WHERE email='sgsgsdfg' ALLOW FILTERING
+[2015-11-10 8:12:25.039407] [debug] userId:sgsgsdfg salt:
+[2015-11-10 8:12:25.039947] [info] passwd:$1$nOcCjhjm$EJleQkDCeF7Y7aATQ0jqB1
+[2015-11-10 8:12:25.068382] [debug] Curl request completed!
+[2015-11-10 8:12:25.068617] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:12:25.068706] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:12:25.073812] [debug]  Welcome sgsgsdfg
+[2015-11-10 8:12:25.074017] [info] Connecting to db..
+[2015-11-10 8:12:25.074105] [info] SELECT salt FROM credentials WHERE email='sgsgsdfg' ALLOW FILTERING
+[2015-11-10 8:12:25.074167] [debug] query:SELECT salt FROM credentials WHERE email='sgsgsdfg' ALLOW FILTERING
+[2015-11-10 8:12:25.078344] [debug] userId:sgsgsdfg salt:
+[2015-11-10 8:12:25.078869] [info] passwd:$1$5bYWr2Fs$cdOS3/hh7WiMszDVuSaeS/
+[2015-11-10 8:12:25.103585] [debug] Curl request completed!
+[2015-11-10 8:12:25.103847] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:12:25.103938] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:12:25.104187] [debug]  Welcome sgsgsdfg
+[2015-11-10 8:12:25.104351] [info] Connecting to db..
+[2015-11-10 8:12:25.104434] [info] SELECT salt FROM credentials WHERE email='sgsgsdfg' ALLOW FILTERING
+[2015-11-10 8:12:25.104496] [debug] query:SELECT salt FROM credentials WHERE email='sgsgsdfg' ALLOW FILTERING
+[2015-11-10 8:12:25.114331] [debug] userId:sgsgsdfg salt:
+[2015-11-10 8:12:25.114851] [info] passwd:$1$PeaBrp6h$v2HOEjV6oa3/EbFVLCHM7.
+[2015-11-10 8:12:25.137037] [debug] Curl request completed!
+[2015-11-10 8:12:25.137289] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:12:25.137377] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:12:43.830578] [info] Connecting to db..
+[2015-11-10 8:12:43.830765] [debug]  Welcome afsdfasdfasdf
+[2015-11-10 8:12:43.830864] [info] Connecting to db..
+[2015-11-10 8:12:43.830925] [info] SELECT salt FROM credentials WHERE email='afsdfasdfasdf' ALLOW FILTERING
+[2015-11-10 8:12:43.830975] [debug] query:SELECT salt FROM credentials WHERE email='afsdfasdfasdf' ALLOW FILTERING
+[2015-11-10 8:12:43.835704] [debug] userId:afsdfasdfasdf salt:
+[2015-11-10 8:12:43.836160] [info] passwd:$1$QMmqUrmp$0DQjkm9BtnOw34rdrQv.S1
+[2015-11-10 8:12:43.848468] [info] Connecting to db..
+[2015-11-10 8:12:43.851991] [info] Connecting to db..
+[2015-11-10 8:12:43.855128] [debug] Curl request completed!
+[2015-11-10 8:12:43.855393] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:12:43.855482] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:12:43.855676] [debug]  Welcome afsdfasdfasdf
+[2015-11-10 8:12:43.855851] [info] Connecting to db..
+[2015-11-10 8:12:43.855931] [info] SELECT salt FROM credentials WHERE email='afsdfasdfasdf' ALLOW FILTERING
+[2015-11-10 8:12:43.855982] [debug] query:SELECT salt FROM credentials WHERE email='afsdfasdfasdf' ALLOW FILTERING
+[2015-11-10 8:12:43.859628] [debug] userId:afsdfasdfasdf salt:
+[2015-11-10 8:12:43.860090] [info] passwd:$1$L2ERQzA8$kFeBKiKAjTg8tPOi70gqF.
+[2015-11-10 8:12:43.881278] [debug] Curl request completed!
+[2015-11-10 8:12:43.881525] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:12:43.881620] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:12:43.881803] [debug]  Welcome afsdfasdfasdf
+[2015-11-10 8:12:43.881989] [info] Connecting to db..
+[2015-11-10 8:12:43.882081] [info] SELECT salt FROM credentials WHERE email='afsdfasdfasdf' ALLOW FILTERING
+[2015-11-10 8:12:43.882138] [debug] query:SELECT salt FROM credentials WHERE email='afsdfasdfasdf' ALLOW FILTERING
+[2015-11-10 8:12:43.887859] [debug] userId:afsdfasdfasdf salt:
+[2015-11-10 8:12:43.888385] [info] passwd:$1$lfiLHAAJ$HzJE4ubGTpHxYcO8PXDBu1
+[2015-11-10 8:12:43.909224] [debug] Curl request completed!
+[2015-11-10 8:12:43.909463] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:12:43.909553] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:15:17.136327] [info] Connecting to db..
+[2015-11-10 8:15:17.137029] [debug]  Welcome asdfasdf
+[2015-11-10 8:15:17.137221] [info] Connecting to db..
+[2015-11-10 8:15:17.137284] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:15:17.137335] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:15:17.143569] [debug] userId:asdfasdf salt:
+[2015-11-10 8:15:17.144038] [info] passwd:$1$4ctQaHnU$MSVggWAy2nIzDg1686uC51
+[2015-11-10 8:15:17.144474] [info] Connecting to db..
+[2015-11-10 8:15:17.167855] [debug] Curl request completed!
+[2015-11-10 8:15:17.168075] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:15:17.168159] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:15:17.183523] [debug]  Welcome asdfasdf
+[2015-11-10 8:15:17.183665] [info] Connecting to db..
+[2015-11-10 8:15:17.183737] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:15:17.183789] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:15:17.187726] [debug] userId:asdfasdf salt:
+[2015-11-10 8:15:17.188256] [info] passwd:$1$NQ3T/RIH$vmMdXZE/yYu0K5ZBqNODe.
+[2015-11-10 8:15:17.201287] [info] Connecting to db..
+[2015-11-10 8:15:17.201558] [debug]  Welcome asdfasdf
+[2015-11-10 8:15:17.201674] [info] Connecting to db..
+[2015-11-10 8:15:17.201816] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:15:17.201886] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:15:17.205849] [debug] userId:asdfasdf salt:
+[2015-11-10 8:15:17.206309] [info] passwd:$1$TtYn8YPE$oR4btydaVWeN0Ls8xM9Hh0
+[2015-11-10 8:15:17.210146] [debug] Curl request completed!
+[2015-11-10 8:15:17.210414] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:15:17.210494] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:15:17.231298] [debug] Curl request completed!
+[2015-11-10 8:15:17.231525] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:15:17.231604] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:16:20.689924] [info] Connecting to db..
+[2015-11-10 8:16:20.690203] [debug]  Welcome adfasdf
+[2015-11-10 8:16:20.690314] [info] Connecting to db..
+[2015-11-10 8:16:20.690376] [info] SELECT salt FROM credentials WHERE email='adfasdf' ALLOW FILTERING
+[2015-11-10 8:16:20.690427] [debug] query:SELECT salt FROM credentials WHERE email='adfasdf' ALLOW FILTERING
+[2015-11-10 8:16:20.734364] [debug] userId:adfasdf salt:
+[2015-11-10 8:16:20.734868] [info] passwd:$1$LvHNw8.y$gJK8Qif5G9FL.ncZn.HYo1
+[2015-11-10 8:16:20.757100] [debug] Curl request completed!
+[2015-11-10 8:16:20.757337] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:16:20.757431] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:16:21.582954] [info] Connecting to db..
+[2015-11-10 8:16:21.583436] [debug]  Welcome adfasdf
+[2015-11-10 8:16:21.583578] [info] Connecting to db..
+[2015-11-10 8:16:21.583647] [info] SELECT salt FROM credentials WHERE email='adfasdf' ALLOW FILTERING
+[2015-11-10 8:16:21.583698] [debug] query:SELECT salt FROM credentials WHERE email='adfasdf' ALLOW FILTERING
+[2015-11-10 8:16:21.587137] [debug] userId:adfasdf salt:
+[2015-11-10 8:16:21.587605] [info] passwd:$1$BPu5TZzu$EZ1iEkJeBp4nM0zYcvxWU.
+[2015-11-10 8:16:21.602616] [info] Connecting to db..
+[2015-11-10 8:16:21.602819] [debug]  Welcome adfasdf
+[2015-11-10 8:16:21.602921] [info] Connecting to db..
+[2015-11-10 8:16:21.602989] [info] SELECT salt FROM credentials WHERE email='adfasdf' ALLOW FILTERING
+[2015-11-10 8:16:21.603039] [debug] query:SELECT salt FROM credentials WHERE email='adfasdf' ALLOW FILTERING
+[2015-11-10 8:16:21.606918] [debug] Curl request completed!
+[2015-11-10 8:16:21.607127] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:16:21.607203] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:16:21.611011] [debug] userId:adfasdf salt:
+[2015-11-10 8:16:21.611485] [info] passwd:$1$KbnjqRJf$8ZlbIF0pDoCwVFXU.6jTl/
+[2015-11-10 8:16:21.630881] [debug] Curl request completed!
+[2015-11-10 8:16:21.631117] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:16:21.631196] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:17:28.744324] [info] Connecting to db..
+[2015-11-10 8:17:28.800436] [debug]  Welcome asdfasdfasd
+[2015-11-10 8:17:28.800590] [info] Connecting to db..
+[2015-11-10 8:17:28.800671] [info] SELECT salt FROM credentials WHERE email='asdfasdfasd' ALLOW FILTERING
+[2015-11-10 8:17:28.800724] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdfasd' ALLOW FILTERING
+[2015-11-10 8:17:28.808672] [debug] userId:asdfasdfasd salt:
+[2015-11-10 8:17:28.809207] [info] passwd:$1$Co9MpLzE$oQkn8.VNus9vw1ZRe4Uh80
+[2015-11-10 8:17:28.828499] [debug] Curl request completed!
+[2015-11-10 8:17:28.828758] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:17:28.828845] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:17:29.240134] [info] Connecting to db..
+[2015-11-10 8:17:29.240317] [debug]  Welcome asdfasdfasd
+[2015-11-10 8:17:29.240412] [info] Connecting to db..
+[2015-11-10 8:17:29.240473] [info] SELECT salt FROM credentials WHERE email='asdfasdfasd' ALLOW FILTERING
+[2015-11-10 8:17:29.240525] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdfasd' ALLOW FILTERING
+[2015-11-10 8:17:29.244223] [debug] userId:asdfasdfasd salt:
+[2015-11-10 8:17:29.244693] [info] passwd:$1$9ch4WrCD$UP9aNM.TORaq.XGiW7eAM.
+[2015-11-10 8:17:29.260612] [debug] Curl request completed!
+[2015-11-10 8:17:29.260823] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:17:29.260900] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:17:29.393033] [info] Connecting to db..
+[2015-11-10 8:17:29.393289] [debug]  Welcome asdfasdfasd
+[2015-11-10 8:17:29.393642] [info] Connecting to db..
+[2015-11-10 8:17:29.393790] [info] SELECT salt FROM credentials WHERE email='asdfasdfasd' ALLOW FILTERING
+[2015-11-10 8:17:29.393851] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdfasd' ALLOW FILTERING
+[2015-11-10 8:17:29.400748] [debug] userId:asdfasdfasd salt:
+[2015-11-10 8:17:29.401199] [info] passwd:$1$p4t.L8Bw$lhgkK0lFNdy9sW9uGEqpP.
+[2015-11-10 8:17:29.417242] [debug] Curl request completed!
+[2015-11-10 8:17:29.417644] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:17:29.417737] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:17:45.575251] [info] Connecting to db..
+[2015-11-10 8:17:45.575426] [debug]  Welcome asdfasdf
+[2015-11-10 8:17:45.575522] [info] Connecting to db..
+[2015-11-10 8:17:45.575583] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:17:45.575635] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:17:45.580400] [debug] userId:asdfasdf salt:
+[2015-11-10 8:17:45.580882] [info] passwd:$1$CWvwIVJH$37xWo1lQ/zNGP0r5pv6wU.
+[2015-11-10 8:17:45.600492] [debug] Curl request completed!
+[2015-11-10 8:17:45.600739] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:17:45.600835] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:17:46.706361] [info] Connecting to db..
+[2015-11-10 8:17:46.706702] [debug]  Welcome asdfasdf
+[2015-11-10 8:17:46.706902] [info] Connecting to db..
+[2015-11-10 8:17:46.707030] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:17:46.707135] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:17:46.717694] [debug] userId:asdfasdf salt:
+[2015-11-10 8:17:46.718177] [info] passwd:$1$/JD.6.VC$wMpBXTgGhSGkaduH589601
+[2015-11-10 8:17:46.727202] [info] Connecting to db..
+[2015-11-10 8:17:46.727377] [debug]  Welcome asdfasdf
+[2015-11-10 8:17:46.727473] [info] Connecting to db..
+[2015-11-10 8:17:46.727534] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:17:46.727590] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:17:46.735522] [debug] userId:asdfasdf salt:
+[2015-11-10 8:17:46.735975] [info] passwd:$1$CtDzBiKZ$aAytLYo.pHptFxa8omZwz.
+[2015-11-10 8:17:46.738365] [debug] Curl request completed!
+[2015-11-10 8:17:46.738593] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:17:46.738677] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:17:46.763082] [debug] Curl request completed!
+[2015-11-10 8:17:46.763324] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:17:46.763410] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:18:04.763842] [info] Connecting to db..
+[2015-11-10 8:18:04.764053] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:18:04.764154] [info] Connecting to db..
+[2015-11-10 8:18:04.764219] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:18:04.764269] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:18:04.769807] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:18:04.900974] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.TIQAHS.gXPHN3I.Uch.01eMHkBfs.Ta
+[2015-11-10 8:18:04.995938] [debug] Curl request completed!
+[2015-11-10 8:18:04.996233] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:18:04.996429] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:18:05.590811] [info] Connecting to db..
+[2015-11-10 8:18:05.590997] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:18:05.591097] [info] Connecting to db..
+[2015-11-10 8:18:05.591172] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:18:05.591263] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:18:05.600703] [info] Connecting to db..
+[2015-11-10 8:18:05.603651] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:18:05.659527] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:18:05.659764] [info] Connecting to db..
+[2015-11-10 8:18:05.659925] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:18:05.660022] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:18:05.676003] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:18:05.771893] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.TIQAHS.gXPHN3I.Uch.01eMHkBfs.Ta
+[2015-11-10 8:18:05.834759] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.TIQAHS.gXPHN3I.Uch.01eMHkBfs.Ta
+[2015-11-10 8:18:05.877350] [debug] Curl request completed!
+[2015-11-10 8:18:05.877578] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:18:05.877664] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:18:05.972443] [debug] Curl request completed!
+[2015-11-10 8:18:05.972729] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:18:05.972822] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:23:45.084748] [info] Connecting to db..
+[2015-11-10 8:23:45.084940] [debug]  Welcome suhasdheeraskar
+[2015-11-10 8:23:45.085047] [info] Connecting to db..
+[2015-11-10 8:23:45.085114] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar' ALLOW FILTERING
+[2015-11-10 8:23:45.085169] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar' ALLOW FILTERING
+[2015-11-10 8:23:45.101809] [debug] userId:suhasdheeraskar salt:
+[2015-11-10 8:23:45.102277] [info] passwd:$1$o1.EAQ6r$loMOwIfOgKZ2BB4y8k.QF.
+[2015-11-10 8:23:45.134260] [debug] Curl request completed!
+[2015-11-10 8:23:45.134493] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:23:45.134574] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:23:45.594750] [info] Connecting to db..
+[2015-11-10 8:23:45.594927] [debug]  Welcome suhasdheeraskar
+[2015-11-10 8:23:45.595026] [info] Connecting to db..
+[2015-11-10 8:23:45.595089] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar' ALLOW FILTERING
+[2015-11-10 8:23:45.595139] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar' ALLOW FILTERING
+[2015-11-10 8:23:45.599009] [debug] userId:suhasdheeraskar salt:
+[2015-11-10 8:23:45.599468] [info] passwd:$1$uA5Fp25d$RCAyFYa1rG0q9cFyj46RH.
+[2015-11-10 8:23:45.625422] [debug] Curl request completed!
+[2015-11-10 8:23:45.625653] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:23:45.625746] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:23:45.734546] [info] Connecting to db..
+[2015-11-10 8:23:45.734724] [debug]  Welcome suhasdheeraskar
+[2015-11-10 8:23:45.734822] [info] Connecting to db..
+[2015-11-10 8:23:45.734886] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar' ALLOW FILTERING
+[2015-11-10 8:23:45.734936] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar' ALLOW FILTERING
+[2015-11-10 8:23:45.739842] [debug] userId:suhasdheeraskar salt:
+[2015-11-10 8:23:45.740346] [info] passwd:$1$WP5Apz.d$IzD53bgQ8AiedEYNyf2/k1
+[2015-11-10 8:23:45.757278] [debug] Curl request completed!
+[2015-11-10 8:23:45.757528] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:23:45.757618] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:24:32.523204] [info] Connecting to db..
+[2015-11-10 8:24:32.523386] [debug]  Welcome dfghj
+[2015-11-10 8:24:32.523485] [info] Connecting to db..
+[2015-11-10 8:24:32.523549] [info] SELECT salt FROM credentials WHERE email='dfghj' ALLOW FILTERING
+[2015-11-10 8:24:32.523597] [debug] query:SELECT salt FROM credentials WHERE email='dfghj' ALLOW FILTERING
+[2015-11-10 8:24:32.528671] [debug] userId:dfghj salt:
+[2015-11-10 8:24:32.529134] [info] passwd:$1$Xba6BVQ7$SpVQoKwOW7kWANgv5vXXs1
+[2015-11-10 8:24:32.535928] [info] Connecting to db..
+[2015-11-10 8:24:32.536375] [debug]  Welcome dfghj
+[2015-11-10 8:24:32.536478] [info] Connecting to db..
+[2015-11-10 8:24:32.536540] [info] SELECT salt FROM credentials WHERE email='dfghj' ALLOW FILTERING
+[2015-11-10 8:24:32.536717] [debug] query:SELECT salt FROM credentials WHERE email='dfghj' ALLOW FILTERING
+[2015-11-10 8:24:32.540724] [debug] userId:dfghj salt:
+[2015-11-10 8:24:32.541224] [info] passwd:$1$zF0wR/Zb$WYMz8yOk0KBYtERixvfdd/
+[2015-11-10 8:24:32.547478] [info] Connecting to db..
+[2015-11-10 8:24:32.547678] [debug]  Welcome dfghj
+[2015-11-10 8:24:32.547780] [info] Connecting to db..
+[2015-11-10 8:24:32.547847] [info] SELECT salt FROM credentials WHERE email='dfghj' ALLOW FILTERING
+[2015-11-10 8:24:32.547899] [debug] query:SELECT salt FROM credentials WHERE email='dfghj' ALLOW FILTERING
+[2015-11-10 8:24:32.551729] [debug] Curl request completed!
+[2015-11-10 8:24:32.551948] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:24:32.552025] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:24:32.558377] [debug] userId:dfghj salt:
+[2015-11-10 8:24:32.558860] [info] passwd:$1$8wDV1u//$XuXiBGMablOBy1g/y.O2/.
+[2015-11-10 8:24:32.586829] [debug] Curl request completed!
+[2015-11-10 8:24:32.587068] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:24:32.587146] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:24:32.597513] [debug] Curl request completed!
+[2015-11-10 8:24:32.597785] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:24:32.597881] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:24:40.993999] [info] Connecting to db..
+[2015-11-10 8:24:40.994184] [debug]  Welcome sdfgh
+[2015-11-10 8:24:40.994281] [info] Connecting to db..
+[2015-11-10 8:24:40.994344] [info] SELECT salt FROM credentials WHERE email='sdfgh' ALLOW FILTERING
+[2015-11-10 8:24:40.994395] [debug] query:SELECT salt FROM credentials WHERE email='sdfgh' ALLOW FILTERING
+[2015-11-10 8:24:40.998189] [info] Connecting to db..
+[2015-11-10 8:24:40.998372] [debug]  Welcome sdfgh
+[2015-11-10 8:24:40.998472] [info] Connecting to db..
+[2015-11-10 8:24:40.998537] [info] SELECT salt FROM credentials WHERE email='sdfgh' ALLOW FILTERING
+[2015-11-10 8:24:40.998588] [debug] query:SELECT salt FROM credentials WHERE email='sdfgh' ALLOW FILTERING
+[2015-11-10 8:24:41.002162] [debug] userId:sdfgh salt:
+[2015-11-10 8:24:41.002645] [info] passwd:$1$v0sO.rcR$9ZQpPLwfiMFehXOd/pL4B/
+[2015-11-10 8:24:41.010531] [debug] userId:sdfgh salt:
+[2015-11-10 8:24:41.010991] [info] passwd:$1$XLFNUbrD$kSkLcQkPHYe5.PBizbxl5.
+[2015-11-10 8:24:41.019474] [info] Connecting to db..
+[2015-11-10 8:24:41.019654] [debug]  Welcome sdfgh
+[2015-11-10 8:24:41.019751] [info] Connecting to db..
+[2015-11-10 8:24:41.019814] [info] SELECT salt FROM credentials WHERE email='sdfgh' ALLOW FILTERING
+[2015-11-10 8:24:41.019864] [debug] query:SELECT salt FROM credentials WHERE email='sdfgh' ALLOW FILTERING
+[2015-11-10 8:24:41.022505] [debug] Curl request completed!
+[2015-11-10 8:24:41.022728] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:24:41.022809] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:24:41.024565] [debug] userId:sdfgh salt:
+[2015-11-10 8:24:41.025048] [info] passwd:$1$NcmcAg5H$5LUeOzVElVciuohBm7Ur8/
+[2015-11-10 8:24:41.049025] [debug] Curl request completed!
+[2015-11-10 8:24:41.049274] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:24:41.049365] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:24:41.061655] [debug] Curl request completed!
+[2015-11-10 8:24:41.061897] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:24:41.061978] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:25:27.825685] [info] Connecting to db..
+[2015-11-10 8:25:27.825887] [debug]  Welcome asdfgh
+[2015-11-10 8:25:27.825988] [info] Connecting to db..
+[2015-11-10 8:25:27.826052] [info] SELECT salt FROM credentials WHERE email='asdfgh' ALLOW FILTERING
+[2015-11-10 8:25:27.826102] [debug] query:SELECT salt FROM credentials WHERE email='asdfgh' ALLOW FILTERING
+[2015-11-10 8:25:27.829843] [info] Connecting to db..
+[2015-11-10 8:25:27.830024] [debug]  Welcome asdfgh
+[2015-11-10 8:25:27.830121] [info] Connecting to db..
+[2015-11-10 8:25:27.830183] [info] SELECT salt FROM credentials WHERE email='asdfgh' ALLOW FILTERING
+[2015-11-10 8:25:27.830233] [debug] query:SELECT salt FROM credentials WHERE email='asdfgh' ALLOW FILTERING
+[2015-11-10 8:25:27.833713] [debug] userId:asdfgh salt:
+[2015-11-10 8:25:27.834197] [info] passwd:$1$qfZgYZPF$G3FovWSWWs81ZgCHkINMt.
+[2015-11-10 8:25:27.843858] [info] Connecting to db..
+[2015-11-10 8:25:27.844043] [debug]  Welcome asdfgh
+[2015-11-10 8:25:27.844141] [info] Connecting to db..
+[2015-11-10 8:25:27.844202] [info] SELECT salt FROM credentials WHERE email='asdfgh' ALLOW FILTERING
+[2015-11-10 8:25:27.844252] [debug] query:SELECT salt FROM credentials WHERE email='asdfgh' ALLOW FILTERING
+[2015-11-10 8:25:27.850375] [debug] Curl request completed!
+[2015-11-10 8:25:27.850595] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:25:27.850675] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:25:27.851574] [debug] userId:asdfgh salt:
+[2015-11-10 8:25:27.852041] [info] passwd:$1$lhBP5Q3W$bqpbLdkoFDdwuvscLGFAZ.
+[2015-11-10 8:25:27.875883] [debug] Curl request completed!
+[2015-11-10 8:25:27.876116] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:25:27.876199] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:25:27.878475] [debug] userId:asdfgh salt:
+[2015-11-10 8:25:27.878947] [info] passwd:$1$HiFgXAur$bLqzy5vXwBgu09krXZQMW/
+[2015-11-10 8:25:27.896934] [debug] Curl request completed!
+[2015-11-10 8:25:27.897156] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:25:27.897238] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:27:07.201077] [info] Connecting to db..
+[2015-11-10 8:27:07.201256] [debug]  Welcome asdfasdf
+[2015-11-10 8:27:07.201354] [info] Connecting to db..
+[2015-11-10 8:27:07.201416] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:07.201467] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:07.208268] [info] Connecting to db..
+[2015-11-10 8:27:07.222399] [info] Connecting to db..
+[2015-11-10 8:27:07.222569] [debug]  Welcome asdfasdf
+[2015-11-10 8:27:07.222665] [info] Connecting to db..
+[2015-11-10 8:27:07.222724] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:07.222774] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:07.229665] [debug] userId:asdfasdf salt:
+[2015-11-10 8:27:07.230164] [info] passwd:$1$SPJp8qFH$EuLzr9nL7NIKuL6LZPp.B.
+[2015-11-10 8:27:07.244343] [debug] userId:asdfasdf salt:
+[2015-11-10 8:27:07.244822] [info] passwd:$1$6tFPMDdv$KudFNv6/wEk2jEZRhYX9d.
+[2015-11-10 8:27:07.253530] [debug]  Welcome asdfasdf
+[2015-11-10 8:27:07.253655] [info] Connecting to db..
+[2015-11-10 8:27:07.253751] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:07.253809] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:07.256449] [debug] userId:asdfasdf salt:
+[2015-11-10 8:27:07.256969] [info] passwd:$1$VXJzU2CX$z3XQgE6Z20n6pdJ57lkrr1
+[2015-11-10 8:27:07.257191] [debug] Curl request completed!
+[2015-11-10 8:27:07.257381] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:27:07.257462] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:27:07.284085] [debug] Curl request completed!
+[2015-11-10 8:27:07.284305] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:27:07.284383] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:27:07.295063] [debug] Curl request completed!
+[2015-11-10 8:27:07.295305] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:27:07.295388] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:27:12.204262] [info] Connecting to db..
+[2015-11-10 8:27:12.204644] [debug]  Welcome asdfasdf
+[2015-11-10 8:27:12.204773] [info] Connecting to db..
+[2015-11-10 8:27:12.204854] [info] SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:12.204917] [debug] query:SELECT salt FROM credentials WHERE email='asdfasdf' ALLOW FILTERING
+[2015-11-10 8:27:12.208329] [debug] userId:asdfasdf salt:
+[2015-11-10 8:27:12.208940] [info] passwd:$1$5TK75NiV$leAicM7nOB8.mY23CXE381
+[2015-11-10 8:27:12.221774] [debug] Curl request completed!
+[2015-11-10 8:27:12.221992] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:27:12.222074] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:28:39.968295] [info] Connecting to db..
+[2015-11-10 8:28:39.968518] [debug]  Welcome asdfas
+[2015-11-10 8:28:39.968628] [info] Connecting to db..
+[2015-11-10 8:28:39.968696] [info] SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-10 8:28:39.968745] [debug] query:SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-10 8:28:39.971427] [info] Connecting to db..
+[2015-11-10 8:28:39.971620] [debug]  Welcome asdfas
+[2015-11-10 8:28:39.971718] [info] Connecting to db..
+[2015-11-10 8:28:39.971780] [info] SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-10 8:28:39.971831] [debug] query:SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-10 8:28:39.975087] [debug] userId:asdfas salt:
+[2015-11-10 8:28:39.975087] [debug] userId:asdfas salt:
+[2015-11-10 8:28:39.975542] [info] passwd:$1$xFTVTEN.$2xEykwWrjq87N/7ypsOme1
+[2015-11-10 8:28:39.975543] [info] passwd:$1$FsPpePpA$qmXo3mLbtmHM45OGwp8zo1
+[2015-11-10 8:28:39.982618] [info] Connecting to db..
+[2015-11-10 8:28:39.982812] [debug]  Welcome asdfas
+[2015-11-10 8:28:39.982909] [info] Connecting to db..
+[2015-11-10 8:28:39.982971] [info] SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-10 8:28:39.983021] [debug] query:SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-10 8:28:39.986876] [debug] userId:asdfas salt:
+[2015-11-10 8:28:39.987335] [info] passwd:$1$Xi2DD17/$4jRIXOrBEZ4YWKqa7OUnd0
+[2015-11-10 8:28:40.004461] [debug] Curl request completed!
+[2015-11-10 8:28:40.004705] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:28:40.004789] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:28:40.018290] [debug] Curl request completed!
+[2015-11-10 8:28:40.018503] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:28:40.018580] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:28:40.028352] [debug] Curl request completed!
+[2015-11-10 8:28:40.028954] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:28:40.029051] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:29:26.028376] [info] Connecting to db..
+[2015-11-10 8:29:26.028896] [debug]  Welcome dsasdfafsd
+[2015-11-10 8:29:26.029102] [info] Connecting to db..
+[2015-11-10 8:29:26.029166] [info] SELECT salt FROM credentials WHERE email='dsasdfafsd' ALLOW FILTERING
+[2015-11-10 8:29:26.029217] [debug] query:SELECT salt FROM credentials WHERE email='dsasdfafsd' ALLOW FILTERING
+[2015-11-10 8:29:26.032197] [debug] userId:dsasdfafsd salt:
+[2015-11-10 8:29:26.032658] [info] passwd:$1$PWAi7Yhu$l8Jiq25O/7Oe0VhsI8MYS1
+[2015-11-10 8:29:26.036427] [info] Connecting to db..
+[2015-11-10 8:29:26.036617] [debug]  Welcome dsasdfafsd
+[2015-11-10 8:29:26.036715] [info] Connecting to db..
+[2015-11-10 8:29:26.036777] [info] SELECT salt FROM credentials WHERE email='dsasdfafsd' ALLOW FILTERING
+[2015-11-10 8:29:26.036827] [debug] query:SELECT salt FROM credentials WHERE email='dsasdfafsd' ALLOW FILTERING
+[2015-11-10 8:29:26.043688] [debug] userId:dsasdfafsd salt:
+[2015-11-10 8:29:26.044154] [info] passwd:$1$8.aQfEKx$F7arDexHsgroT2UTRCdow0
+[2015-11-10 8:29:26.046211] [info] Connecting to db..
+[2015-11-10 8:29:26.046401] [debug]  Welcome dsasdfafsd
+[2015-11-10 8:29:26.046497] [info] Connecting to db..
+[2015-11-10 8:29:26.046557] [info] SELECT salt FROM credentials WHERE email='dsasdfafsd' ALLOW FILTERING
+[2015-11-10 8:29:26.046606] [debug] query:SELECT salt FROM credentials WHERE email='dsasdfafsd' ALLOW FILTERING
+[2015-11-10 8:29:26.049470] [debug] userId:dsasdfafsd salt:
+[2015-11-10 8:29:26.049967] [info] passwd:$1$4/QlviD8$6Q0LdNoaarorzz7cvpOO4.
+[2015-11-10 8:29:26.055195] [debug] Curl request completed!
+[2015-11-10 8:29:26.055447] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:29:26.055545] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:29:26.074147] [debug] Curl request completed!
+[2015-11-10 8:29:26.074384] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:29:26.074462] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:29:26.087078] [debug] Curl request completed!
+[2015-11-10 8:29:26.087352] [error] Credentials doesn't exist in the DB.
+[2015-11-10 8:29:26.087450] [error] {"error":{"code":401,"title":"Unauthorized","message":"The request you have made requires authentication."}}
+[2015-11-10 8:30:10.750082] [info] Connecting to db..
+[2015-11-10 8:30:10.750286] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:30:10.750396] [info] Connecting to db..
+[2015-11-10 8:30:10.750466] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:30:10.750521] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:30:10.751365] [info] Connecting to db..
+[2015-11-10 8:30:10.751588] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:30:10.751693] [info] Connecting to db..
+[2015-11-10 8:30:10.751760] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:30:10.751816] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:30:10.757280] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:30:10.763267] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:30:10.770939] [info] Connecting to db..
+[2015-11-10 8:30:10.771130] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:30:10.771229] [info] Connecting to db..
+[2015-11-10 8:30:10.771291] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:30:10.771341] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:30:10.778003] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:30:10.917325] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 8:30:11.040091] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 8:30:11.044332] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 8:30:11.180805] [debug] Curl request completed!
+[2015-11-10 8:30:11.181077] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:af67c1c403dc47a2bb828c34d7e87f90
+[2015-11-10 8:30:11.181153] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"af67c1c403dc47a2bb828c34d7e87f90"}}
+[2015-11-10 8:30:11.417140] [debug] Curl request completed!
+[2015-11-10 8:30:11.417463] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:ce690fc2d91d4d8d9a934d648ddd6c18
+[2015-11-10 8:30:11.417582] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"ce690fc2d91d4d8d9a934d648ddd6c18"}}
+[2015-11-10 8:30:11.458568] [debug] Curl request completed!
+[2015-11-10 8:30:11.458900] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:66fa392b5e7442b6a364b86c28c38a13
+[2015-11-10 8:30:11.458991] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"66fa392b5e7442b6a364b86c28c38a13"}}
+[2015-11-10 8:33:36.819282] [info] Connecting to db..
+[2015-11-10 8:33:36.819462] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:33:36.819559] [info] Connecting to db..
+[2015-11-10 8:33:36.819621] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:33:36.819669] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:33:36.823678] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:33:36.832865] [info] Connecting to db..
+[2015-11-10 8:33:36.833101] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:33:36.833236] [info] Connecting to db..
+[2015-11-10 8:33:36.833318] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:33:36.833384] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:33:36.838067] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:33:36.848686] [info] Connecting to db..
+[2015-11-10 8:33:36.848864] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 8:33:36.848962] [info] Connecting to db..
+[2015-11-10 8:33:36.849024] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:33:36.849072] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 8:33:36.853965] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 8:33:37.001539] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 8:33:37.037452] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 8:33:37.047223] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 8:33:37.272679] [debug] Curl request completed!
+[2015-11-10 8:33:37.273014] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:7bc05c4dc1cf4086a40d559ab95761b9
+[2015-11-10 8:33:37.273108] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"7bc05c4dc1cf4086a40d559ab95761b9"}}
+[2015-11-10 8:33:37.438364] [debug] Curl request completed!
+[2015-11-10 8:33:37.438642] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:d3bb73fc33ff4d0cb57dc774c04aa495
+[2015-11-10 8:33:37.438718] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"d3bb73fc33ff4d0cb57dc774c04aa495"}}
+[2015-11-10 8:33:37.469979] [debug] Curl request completed!
+[2015-11-10 8:33:37.470242] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:c860a86329cf48e1bfe3012b3ec7914f
+[2015-11-10 8:33:37.470319] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"c860a86329cf48e1bfe3012b3ec7914f"}}
+[2015-11-10 11:29:08.429303] [info] Connecting to db..
+[2015-11-10 11:29:08.429497] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 11:29:08.429599] [info] Connecting to db..
+[2015-11-10 11:29:08.429661] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 11:29:08.429711] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 11:29:08.435523] [info] Connecting to db..
+[2015-11-10 11:29:08.435719] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 11:29:08.435817] [info] Connecting to db..
+[2015-11-10 11:29:08.435878] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 11:29:08.435925] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 11:29:08.441687] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 11:29:08.441868] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 11:29:08.501807] [info] Connecting to db..
+[2015-11-10 11:29:08.502001] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-10 11:29:08.502096] [info] Connecting to db..
+[2015-11-10 11:29:08.502159] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 11:29:08.502207] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-10 11:29:08.504786] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-10 11:29:08.595179] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 11:29:08.640273] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 11:29:08.682578] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-10 11:29:08.957298] [debug] Curl request completed!
+[2015-11-10 11:29:08.957568] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:d7e830555f5849d4b807e3e9f2e7a44b
+[2015-11-10 11:29:08.957645] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"d7e830555f5849d4b807e3e9f2e7a44b"}}
+[2015-11-10 11:29:09.013156] [debug] Curl request completed!
+[2015-11-10 11:29:09.013464] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:a1431b69592649418ca8456f561f42f5
+[2015-11-10 11:29:09.013549] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"a1431b69592649418ca8456f561f42f5"}}
+[2015-11-10 11:29:09.066704] [debug] Curl request completed!
+[2015-11-10 11:29:09.066972] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:807e7cf83f7e4909b687defb25555ff6
+[2015-11-10 11:29:09.067049] [debug] {"success":{"userid":"994b8dcca2e744ac8702b8b62242846d","token":"807e7cf83f7e4909b687defb25555ff6"}}

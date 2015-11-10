@@ -1,0 +1,2 @@
+export OS_SERVICE_TOKEN=38fe279241ee7a1e470098d50bd4dda3
+export OS_SERVICE_ENDPOINT="http://localhost:35357/v2.0/"

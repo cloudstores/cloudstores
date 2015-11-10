@@ -1,0 +1,1113 @@
+[2015-10-31 0:04:10.421226] [info] Connecting to db..
+[2015-10-31 0:04:11.309757] [info]  Welcome asdfasdf, LastName:asdfasdf, 
+				Phone no:asdfasdf passwd:asdfasdfds
+[2015-10-31 0:04:11.628264] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:04:11.628385] [info] ( 5c71f01ecb6d4ae0b668ddd8d3ab483c , asdfasdf, asdfasdf, 
+				'x', asdfasdf, asdfasdf,$2y$10$t/DVg//q2YzeLkHmObqOdq)
+[2015-10-31 0:04:11.628535] [info] Connecting to db..
+[2015-10-31 0:04:11.672171] [info] password:$2y$10$t/DVg//q2YzeLkHmObqOde21o7cY7k3zLewPI2fbe/ko38ynReOiW
+[2015-10-31 0:06:38.537878] [info] Connecting to db..
+[2015-10-31 0:06:38.552618] [info]  Welcome qwerty, LastName:qwert, 
+				Phone no:asdfg passwd:asdfg
+[2015-10-31 0:06:38.849487] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:06:38.849611] [info] ( bee5b0c0fbf946a1933bce1657bdb645 , asdfg, qwerty, 
+				'x', qwert, asdfg,$2y$10$gPJMO.ox3GrPah2p.myI0H)
+[2015-10-31 0:06:38.849756] [info] Connecting to db..
+[2015-10-31 0:06:38.879301] [info] password:$2y$10$gPJMO.ox3GrPah2p.myI0.YWN7vYVnHbkSimg/20Gab0cp1q0Y2ZO
+[2015-10-31 0:08:44.838433] [info] Connecting to db..
+[2015-10-31 0:08:44.852380] [info]  Welcome suhas, LastName:asdfsad, 
+				Phone no:asdfdaf passwd:asdfadf
+[2015-10-31 0:08:45.639102] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:08:45.639210] [info] (  , asdfasdf, suhas, 
+				'x', asdfsad, asdfdaf,$2y$10$ZjPLj0H//YjptUhZazL6j4)
+[2015-10-31 0:08:45.639339] [info] Connecting to db..
+[2015-10-31 0:08:45.639410] [info] build insert query
+[2015-10-31 0:08:45.697524] [info] password:$2y$10$ZjPLj0H//YjptUhZazL6jud6E.PUOiscQeqd.gwsoYpBwr7LwoRF6
+[2015-10-31 0:10:08.944740] [info] Connecting to db..
+[2015-10-31 0:10:08.957376] [info]  Welcome hahsjfdk, LastName:sdfojajkfa, 
+				Phone no:adfasdf passwd:adsfasdfads
+[2015-10-31 0:10:09.242115] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:10:09.242233] [info] ( 56c908ef5575478a97b9e60aeb276564 , asdfdsf, hahsjfdk, 
+				'x', sdfojajkfa, adfasdf,$2y$10$MF3wMesfqBnr0bCCz/oCpE)
+[2015-10-31 0:10:09.242361] [info] Connecting to db..
+[2015-10-31 0:10:09.242438] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 56c908ef5575478a97b9e60aeb276564 , asdfdsf, hahsjfdk, 
+				'x', sdfojajkfa, adfasdf,$2y$10$MF3wMesfqBnr0bCCz/oCpE)
+[2015-10-31 0:10:09.242496] [info] Executing the query
+[2015-10-31 0:10:09.286477] [info] password:$2y$10$MF3wMesfqBnr0bCCz/oCp.MEdh6ZGDkxlK0A3Q6yi28y37OEFS9UO
+[2015-10-31 0:12:17.580173] [info] Connecting to db..
+[2015-10-31 0:12:17.580336] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 14c532ac-f5ae-479a-9d0a-36604732e013 , 'suhas@gmail.com', 'suhas',
+ 'male', 'heeraskar', '95810190114','abcd')
+[2015-10-31 0:12:17.580400] [info] Executing the query
+[2015-10-31 0:12:17.675472] [info] Executed the query
+[2015-10-31 0:14:13.321693] [info] Connecting to db..
+[2015-10-31 0:14:13.322182] [info]  Welcome suhas, LastName:heeraskar, 
+				Phone no:9581019014 passwd:jimmygallu
+[2015-10-31 0:14:13.608980] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:14:13.609117] [info] ( 112f23763bff485db7c71f514e3cb9e2 , suhasdheeraskar@gmail.com, suhas, 
+				'x', heeraskar, 9581019014,$2y$10$TKHpUj.9FfQ4ZEjM7Vuap/)
+[2015-10-31 0:14:13.609256] [info] Connecting to db..
+[2015-10-31 0:14:13.609335] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 112f23763bff485db7c71f514e3cb9e2 , suhasdheeraskar@gmail.com, suhas, 
+				'x', heeraskar, 9581019014,$2y$10$TKHpUj.9FfQ4ZEjM7Vuap/)
+[2015-10-31 0:14:13.609390] [info] Executing the query
+[2015-10-31 0:14:13.612046] [info] password:$2y$10$TKHpUj.9FfQ4ZEjM7Vuap.Moadq6oy9yguxZDMe./P53reuDL0O/S
+[2015-10-31 0:27:54.044884] [info] Connecting to db..
+[2015-10-31 0:27:54.089673] [info]  Welcome suhas, LastName:heeraskar, 
+				Phone no:958190189013 passwd:jimmygallu
+[2015-10-31 0:27:54.596719] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:27:54.596841] [info] ( 5d923108789d499782a0b8e2170fee10 , suhasdheeraskar@gmail.com, suhas, 
+				'x', heeraskar, 958190189013,$2y$10$2tIDgzkuLCs.QzDweQampO)
+[2015-10-31 0:27:54.596976] [info] Connecting to db..
+[2015-10-31 0:27:54.597053] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 5d923108789d499782a0b8e2170fee10 , suhasdheeraskar@gmail.com, suhas, 
+				'x', heeraskar, 958190189013,$2y$10$2tIDgzkuLCs.QzDweQampO)
+[2015-10-31 0:27:54.597105] [info] Executing the query
+[2015-10-31 0:27:54.598304] [info] password:$2y$10$2tIDgzkuLCs.QzDweQampOYa0rxVSZEY0HOI/uE9z0GS7yuPL8Zpe
+[2015-10-31 0:30:30.638243] [info] Connecting to db..
+[2015-10-31 0:30:30.638551] [info]  Welcome suhasdheeraskar, LastName:asfdfasd, 
+				Phone no:95810019014 passwd:asdfasdfsdaf
+[2015-10-31 0:30:30.918260] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:30:30.918380] [info] ( '8f265ec4529241aaba69b35edd3caa9b' , 'asfdasdffasd@gmail.com', 'suhasdheeraskar', 
+				'x', 'asfdfasd', '95810019014','$2y$10$RmFEXsKDlwPzOw8F6Yzd0C')
+[2015-10-31 0:30:30.918508] [info] Connecting to db..
+[2015-10-31 0:30:30.918582] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '8f265ec4529241aaba69b35edd3caa9b' , 'asfdasdffasd@gmail.com', 'suhasdheeraskar', 
+				'x', 'asfdfasd', '95810019014','$2y$10$RmFEXsKDlwPzOw8F6Yzd0C')
+[2015-10-31 0:30:30.918637] [info] Executing the query
+[2015-10-31 0:30:30.981023] [info] Executed the query
+[2015-10-31 0:30:30.981275] [info] password:$2y$10$RmFEXsKDlwPzOw8F6Yzd0.dFg67AMFmGB8kjtxZD0ro2gJXVALaR6
+[2015-10-31 0:38:59.811062] [info] Connecting to db..
+[2015-10-31 0:38:59.823333] [info]  Welcome suhas, LastName:Heeraskar, 
+				Phone no:9581019014 passwd:jimmygallu
+[2015-10-31 0:39:00.123826] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 0:39:00.123964] [info] ( 'f0deba6993a741d19588bad9b822a7a8' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'Heeraskar', '9581019014','$2y$10$slMF4eu8q27SvLc5k5mGtc')
+[2015-10-31 0:39:00.124125] [info] Connecting to db..
+[2015-10-31 0:39:00.124222] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'f0deba6993a741d19588bad9b822a7a8' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'Heeraskar', '9581019014','$2y$10$slMF4eu8q27SvLc5k5mGtc')
+[2015-10-31 0:39:00.124288] [info] Executing the query
+[2015-10-31 0:39:00.135335] [info] Executed the query
+[2015-10-31 0:39:00.135481] [info] password:$2y$10$slMF4eu8q27SvLc5k5mGtOvVEzPm2Kx3hjvIE0vJ3SP9/VV8hgi8e
+[2015-10-31 1:03:34.562670] [info] Connecting to db..
+[2015-10-31 1:03:34.618283] [info]  Welcome Sowmya, LastName:Prakash, 
+				Phone no:9844428800 passwd:jimmygallu
+[2015-10-31 1:03:35.136770] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 1:03:35.136898] [info] ( '6ef263f7beed48b2a6480db10ee50a2a' , 'sowmyaprakash@gmail.com', 'Sowmya', 
+				'x', 'Prakash', '9844428800','$2y$10$nJdJ9KbyDY6l4oTa7mwFGj')
+[2015-10-31 1:03:35.137033] [info] Connecting to db..
+[2015-10-31 1:03:35.137120] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '6ef263f7beed48b2a6480db10ee50a2a' , 'sowmyaprakash@gmail.com', 'Sowmya', 
+				'x', 'Prakash', '9844428800','$2y$10$nJdJ9KbyDY6l4oTa7mwFGj')
+[2015-10-31 1:03:35.137177] [info] Executing the query
+[2015-10-31 1:03:35.172091] [info] Executed the query
+[2015-10-31 1:03:35.172307] [info] password:$2y$10$nJdJ9KbyDY6l4oTa7mwFGekWPJlI3YqewGqDy9FJd0p13XnoRWBVe
+[2015-10-31 1:32:57.237025] [info] Connecting to db..
+[2015-10-31 1:32:57.267507] [info] Executing the query
+[2015-10-31 1:32:57.388005] [info] Executed the query
+[2015-10-31 1:33:38.886363] [info] Connecting to db..
+[2015-10-31 1:33:38.886769] [info] Executing the query
+[2015-10-31 1:33:38.996757] [info] Executed the query
+[2015-10-31 1:34:13.454298] [info] Connecting to db..
+[2015-10-31 1:34:13.454468] [info] Executing the query
+[2015-10-31 1:34:13.470799] [info] Executed the query
+[2015-10-31 1:39:30.323837] [info] Connecting to db..
+[2015-10-31 1:39:30.324023] [info] Executing the query
+[2015-10-31 1:39:30.326123] [info] Executed the query
+[2015-10-31 1:39:46.429996] [info] Connecting to db..
+[2015-10-31 1:39:46.430382] [info] Executing the query
+[2015-10-31 1:39:46.434221] [info] Executed the query
+[2015-10-31 1:40:37.276700] [info] Connecting to db..
+[2015-10-31 1:40:37.276899] [info] SELECT salt FROM credentials
+[2015-10-31 1:40:37.276973] [info] Executing the query
+[2015-10-31 1:40:37.298702] [info] Executed the query
+[2015-10-31 2:04:22.905385] [info] Connecting to db..
+[2015-10-31 2:04:22.905556] [info] SELECT salt FROM credentials WHERE userid=6ef263f7beed48b2a6480db10ee50a2a
+[2015-10-31 2:04:22.905636] [info] Executing the query
+[2015-10-31 2:09:06.409486] [info] Connecting to db..
+[2015-10-31 2:09:06.445916] [info] SELECT salt FROM credentials WHERE userid=6ef263f7beed48b2a6480db10ee50a2a
+[2015-10-31 2:09:06.446701] [info] Executing the query
+[2015-10-31 2:27:17.564949] [info] Connecting to db..
+[2015-10-31 2:27:17.596621] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:27:17.596740] [info] Executing the query
+[2015-10-31 2:27:17.817265] [info] Executed the query
+[2015-10-31 2:27:42.768273] [info] Connecting to db..
+[2015-10-31 2:27:42.768481] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:27:42.768563] [info] Executing the query
+[2015-10-31 2:27:42.776074] [info] Executed the query
+[2015-10-31 2:27:50.639220] [info] Connecting to db..
+[2015-10-31 2:27:50.639431] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:27:50.639508] [info] Executing the query
+[2015-10-31 2:27:50.655591] [info] Executed the query
+[2015-10-31 2:29:19.330624] [info] Connecting to db..
+[2015-10-31 2:29:19.330835] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:29:19.330907] [info] Executing the query
+[2015-10-31 2:29:19.338952] [info] Executed the query
+[2015-10-31 2:35:42.452632] [info] Connecting to db..
+[2015-10-31 2:35:42.506547] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:35:42.507165] [info] Executing the query
+[2015-10-31 2:35:42.760255] [info] Executed the query
+[2015-10-31 2:36:17.742418] [info] Connecting to db..
+[2015-10-31 2:36:17.754684] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:36:17.754766] [info] Executing the query
+[2015-10-31 2:36:17.765304] [info] Executed the query
+[2015-10-31 2:36:42.210289] [info] Connecting to db..
+[2015-10-31 2:36:42.210694] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:36:42.210776] [info] Executing the query
+[2015-10-31 2:36:42.218111] [info] Executed the query
+[2015-10-31 2:37:20.332686] [info] Connecting to db..
+[2015-10-31 2:37:20.332988] [info] SELECT salt FROM credentials WHERE userid='6ef263f7beed48b2a6480db10ee50a2a'
+[2015-10-31 2:37:20.333100] [info] Executing the query
+[2015-10-31 2:37:20.335397] [info] Executed the query
+[2015-10-31 2:38:35.758975] [info] Connecting to db..
+[2015-10-31 2:38:35.759180] [info] SELECT salt FROM credentials WHERE userid='sowmyaprakash@gmail.com'
+[2015-10-31 2:38:35.759258] [info] Executing the query
+[2015-10-31 2:38:35.762605] [info] Executed the query
+[2015-10-31 2:39:09.422225] [info] Connecting to db..
+[2015-10-31 2:39:09.422418] [info] SELECT salt FROM credentials WHERE email='sowmyaprakash@gmail.com'
+[2015-10-31 2:39:09.422489] [info] Executing the query
+[2015-10-31 2:40:09.658814] [info] Connecting to db..
+[2015-10-31 2:40:09.659310] [info] SELECT salt FROM credentials WHERE email='sowmyaprakash@gmail.com'
+[2015-10-31 2:40:09.659482] [info] Executing the query
+[2015-10-31 10:00:09.496609] [info] Connecting to db..
+[2015-10-31 10:00:09.741380] [info] SELECT salt FROM credentials WHERE email='sowmyaprakash@gmail.com'
+[2015-10-31 10:00:09.741509] [info] Executing the query
+[2015-10-31 10:00:09.747004] [info]  Welcome  passwd:jimmygallu
+[2015-10-31 10:00:09.747136] [info] Connecting to db..
+[2015-10-31 10:00:09.747221] [info] SELECT salt FROM  WHERE email=''
+[2015-10-31 10:00:09.747278] [info] Executing the query
+[2015-10-31 10:00:09.750890] [info] salt:
+[2015-10-31 10:06:32.845323] [info] Connecting to db..
+[2015-10-31 10:06:32.911109] [info]  Welcome  passwd:jimmygallu
+[2015-10-31 10:06:32.911247] [info] Connecting to db..
+[2015-10-31 10:06:32.911338] [info] SELECT salt FROM  WHERE email=''
+[2015-10-31 10:06:32.911396] [info] query:SELECT salt FROM  WHERE email=''
+[2015-10-31 10:06:32.911448] [info] Executing the query
+[2015-10-31 10:06:32.912606] [info] salt:
+[2015-10-31 10:08:20.276563] [info] Connecting to db..
+[2015-10-31 10:08:20.324707] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 10:08:20.324857] [info] Connecting to db..
+[2015-10-31 10:08:20.324939] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com'
+[2015-10-31 10:08:20.324995] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com'
+[2015-10-31 10:08:20.325054] [info] Executing the query
+[2015-10-31 10:08:20.326607] [info] salt:
+[2015-10-31 10:27:31.272087] [info] Connecting to db..
+[2015-10-31 10:27:31.306576] [info]  Welcome suhas, LastName:heeraskar, 
+				Phone no:9581019014 passwd:jimmygallu
+[2015-10-31 10:27:33.835853] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 10:27:33.835990] [info] ( '0c1c6c5bddf643839a185ca5a245fa6f' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'heeraskar', '9581019014','$2y$10$pfqw1k82/paU7s3FdO/FM3')
+[2015-10-31 10:27:33.836138] [info] Connecting to db..
+[2015-10-31 10:27:33.836219] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '0c1c6c5bddf643839a185ca5a245fa6f' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'heeraskar', '9581019014','$2y$10$pfqw1k82/paU7s3FdO/FM3')
+[2015-10-31 10:27:33.836275] [info] Executing the query
+[2015-10-31 10:27:33.937577] [info] Executed the query
+[2015-10-31 10:27:33.937716] [info] password:$2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y
+[2015-10-31 10:28:54.689930] [info] Connecting to db..
+[2015-10-31 10:28:54.733620] [info]  Welcome Sowmya, LastName:prakash, 
+				Phone no:9844428800 passwd:sowmya
+[2015-10-31 10:28:55.027209] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 10:28:55.027339] [info] ( '62f749c1a36b481bb67b42921ab39f68' , 'sowmyaprakash@gmail.com', 'Sowmya', 
+				'x', 'prakash', '9844428800','$2y$10$Y2n.NIQGzjXMP7nNuid8Tl')
+[2015-10-31 10:28:55.027481] [info] Connecting to db..
+[2015-10-31 10:28:55.027565] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '62f749c1a36b481bb67b42921ab39f68' , 'sowmyaprakash@gmail.com', 'Sowmya', 
+				'x', 'prakash', '9844428800','$2y$10$Y2n.NIQGzjXMP7nNuid8Tl')
+[2015-10-31 10:28:55.027631] [info] Executing the query
+[2015-10-31 10:28:55.029318] [info] Executed the query
+[2015-10-31 10:28:55.029453] [info] password:$2y$10$Y2n.NIQGzjXMP7nNuid8Teo.dwR7ORzIUfa0fUy6FgnHHpbo8RRMS
+[2015-10-31 10:29:36.808036] [info] Connecting to db..
+[2015-10-31 10:29:36.866254] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 10:29:36.866405] [info] Connecting to db..
+[2015-10-31 10:29:36.866489] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com'
+[2015-10-31 10:29:36.866545] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com'
+[2015-10-31 10:29:36.866595] [info] Executing the query
+[2015-10-31 10:29:36.908238] [info] salt:
+[2015-10-31 10:31:34.532696] [info] Connecting to db..
+[2015-10-31 10:31:34.562556] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 10:31:34.562788] [info] Connecting to db..
+[2015-10-31 10:31:34.562925] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 10:31:34.562988] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 10:31:34.563086] [info] Executing the query
+[2015-10-31 10:31:34.583287] [info] Executed the query
+[2015-10-31 10:31:34.583420] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 11:24:13.628377] [info] Connecting to db..
+[2015-10-31 11:24:13.737493] [info]  Welcome umesh, LastName:ramprakash, 
+				Phone no:9797979797 passwd:umesh
+[2015-10-31 11:24:18.069494] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 11:24:18.069603] [info] ( '3be942583f394c8089d0d1c1780a7539' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$Gp6Yg8TcsgH4UatgFK9udV')
+[2015-10-31 11:24:18.069730] [info] Connecting to db..
+[2015-10-31 11:24:18.069806] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '3be942583f394c8089d0d1c1780a7539' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$Gp6Yg8TcsgH4UatgFK9udV')
+[2015-10-31 11:24:18.069860] [info] Executing the query
+[2015-10-31 11:24:18.244060] [info] Executed the query
+[2015-10-31 11:24:18.244203] [info] password:$2y$10$Gp6Yg8TcsgH4UatgFK9udOdncnLcTPQj9rZfWH0lppAA51xC2ebki
+[2015-10-31 11:27:33.705993] [info] Connecting to db..
+[2015-10-31 11:27:33.706415] [info]  Welcome umesh, LastName:ramprakash, 
+				Phone no:9797979797 passwd:umesh
+[2015-10-31 11:27:34.206743] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 11:27:34.206860] [info] ( '' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$JGGQ3vCtlBz4YcypQ1kSj.')
+[2015-10-31 11:27:34.206995] [info] Connecting to db..
+[2015-10-31 11:27:34.207071] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$JGGQ3vCtlBz4YcypQ1kSj.')
+[2015-10-31 11:27:34.207133] [info] Executing the query
+[2015-10-31 11:27:34.282315] [info] password:$2y$10$JGGQ3vCtlBz4YcypQ1kSj.JFzvdJ4EdmQVQS4Pif44BYQMSIrxhTG
+[2015-10-31 11:30:28.184693] [info] Connecting to db..
+[2015-10-31 11:30:28.184994] [info]  Welcome umesh, LastName:ramprakash, 
+				Phone no:9797979797 passwd:umesh
+[2015-10-31 11:30:28.669675] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 11:30:28.669799] [info] ( '40ab0e4a63c340f2ae4b026ad631bc27' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$5QLEnmGXw8wwG6nPD7Gx8Q')
+[2015-10-31 11:30:28.669934] [info] Connecting to db..
+[2015-10-31 11:30:28.670021] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '40ab0e4a63c340f2ae4b026ad631bc27' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$5QLEnmGXw8wwG6nPD7Gx8Q')
+[2015-10-31 11:30:28.670078] [info] Executing the query
+[2015-10-31 11:30:28.677990] [info] Executed the query
+[2015-10-31 11:30:28.678138] [info] password:$2y$10$5QLEnmGXw8wwG6nPD7Gx8OKlPaCQwt76yOVso1JWAYPPKbMOcLNv2
+[2015-10-31 11:40:37.843775] [info] Connecting to db..
+[2015-10-31 11:40:37.844064] [info]  Welcome umesh, LastName:ramprakash, 
+				Phone no:9797979797 passwd:umesh
+[2015-10-31 11:40:38.065793] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 11:40:38.065912] [info] ( '1f17fd5d4fd8454dbf7881580b6a0031' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$86LTRlrBrfgbSIuY8OkpqK')
+[2015-10-31 11:40:38.066042] [info] Connecting to db..
+[2015-10-31 11:40:38.066147] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '1f17fd5d4fd8454dbf7881580b6a0031' , 'umeshramprakash@gmail.com', 'umesh', 
+				'x', 'ramprakash', '9797979797','$2y$10$86LTRlrBrfgbSIuY8OkpqK')
+[2015-10-31 11:40:38.066219] [info] Executing the query
+[2015-10-31 11:40:38.098647] [info] Executed the query
+[2015-10-31 11:40:38.098803] [info] password:$2y$10$86LTRlrBrfgbSIuY8Okpq.BzvaaoU9A9Ofu8Xl8tK2XQuPcy5VIvC
+[2015-10-31 11:54:52.252608] [info] Connecting to db..
+[2015-10-31 11:54:52.252836] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 11:54:52.252952] [info] Connecting to db..
+[2015-10-31 11:54:52.253024] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 11:54:52.253081] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 11:54:52.253134] [info] Executing the query
+[2015-10-31 11:54:52.352920] [info] Executed the query
+[2015-10-31 11:54:52.353049] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 11:54:52.383655] [info] Array
+[2015-10-31 11:56:27.928525] [info] Connecting to db..
+[2015-10-31 11:56:27.928738] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 11:56:27.928844] [info] Connecting to db..
+[2015-10-31 11:56:27.928914] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 11:56:27.928967] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 11:56:27.929019] [info] Executing the query
+[2015-10-31 11:56:27.931588] [info] Executed the query
+[2015-10-31 11:56:27.931729] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 11:56:27.932374] [info] Array
+[2015-10-31 11:58:25.945024] [info] Connecting to db..
+[2015-10-31 11:58:25.945241] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 11:58:25.945348] [info] Connecting to db..
+[2015-10-31 11:58:25.945415] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 11:58:25.945470] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 11:58:25.945522] [info] Executing the query
+[2015-10-31 11:58:25.950115] [info] Executed the query
+[2015-10-31 11:58:25.950254] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:00:49.091351] [info] Connecting to db..
+[2015-10-31 12:00:49.091608] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 12:00:49.091712] [info] Connecting to db..
+[2015-10-31 12:00:49.091783] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:00:49.091840] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:00:49.091892] [info] Executing the query
+[2015-10-31 12:00:49.094388] [info] Executed the query
+[2015-10-31 12:00:49.094527] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:02:56.570571] [info] Connecting to db..
+[2015-10-31 12:02:56.577696] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:02:56.578293] [info] Connecting to db..
+[2015-10-31 12:02:56.578406] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:02:56.578471] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:02:56.578528] [info] Executing the query
+[2015-10-31 12:02:56.584167] [info] Executed the query
+[2015-10-31 12:02:56.584316] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:04:51.755331] [info] Connecting to db..
+[2015-10-31 12:04:51.755656] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:04:51.755773] [info] Connecting to db..
+[2015-10-31 12:04:51.755842] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:04:51.755897] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:04:51.755948] [info] Executing the query
+[2015-10-31 12:04:51.759067] [info] Executed the query
+[2015-10-31 12:04:51.771575] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:04:51.950340] [info] Array
+[2015-10-31 12:06:58.419214] [info] Connecting to db..
+[2015-10-31 12:06:58.437472] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:06:58.437696] [info] Connecting to db..
+[2015-10-31 12:06:58.437800] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:06:58.437861] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:06:58.437920] [info] Executing the query
+[2015-10-31 12:06:58.443711] [info] Executed the query
+[2015-10-31 12:06:58.443857] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:06:58.614547] [info] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhasdheeraskar1988@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y"}}}}}
+[2015-10-31 12:06:58.614671] [info] $2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y
+[2015-10-31 12:13:55.607891] [info] Connecting to db..
+[2015-10-31 12:13:55.608164] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:13:55.608288] [info] Connecting to db..
+[2015-10-31 12:13:55.608362] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:13:55.608419] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:13:55.608474] [info] Executing the query
+[2015-10-31 12:13:55.688110] [info] Executed the query
+[2015-10-31 12:13:55.688241] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:13:55.816675] [info] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhasdheeraskar1988@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y"}}}}}
+[2015-10-31 12:13:55.816797] [info] $2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y
+[2015-10-31 12:14:33.291769] [info] Connecting to db..
+[2015-10-31 12:14:33.291986] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:14:33.292095] [info] Connecting to db..
+[2015-10-31 12:14:33.292164] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:14:33.292217] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:14:33.292265] [info] Executing the query
+[2015-10-31 12:14:33.296562] [info] Executed the query
+[2015-10-31 12:14:33.296699] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:14:33.465171] [info] $2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y
+[2015-10-31 12:15:23.499861] [info] Connecting to db..
+[2015-10-31 12:15:23.778033] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:15:23.778233] [info] Connecting to db..
+[2015-10-31 12:15:23.778311] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:15:23.778371] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:15:23.778422] [info] Executing the query
+[2015-10-31 12:15:23.780802] [info] Executed the query
+[2015-10-31 12:15:23.780946] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:15:23.910790] [info] $2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y
+[2015-10-31 12:18:11.290808] [info] Connecting to db..
+[2015-10-31 12:18:11.291071] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:18:11.291189] [info] Connecting to db..
+[2015-10-31 12:18:11.291264] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:18:11.291321] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:18:11.291376] [info] Executing the query
+[2015-10-31 12:18:11.298337] [info] Executed the query
+[2015-10-31 12:18:11.298527] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:18:11.446552] [info] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhasdheeraskar1988@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y"}}}}}
+[2015-10-31 12:18:11.446893] [info] $2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y
+[2015-10-31 12:23:29.483097] [info] Connecting to db..
+[2015-10-31 12:23:29.483351] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:23:29.483463] [info] Connecting to db..
+[2015-10-31 12:23:29.483534] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:23:29.483588] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:23:29.483639] [info] Executing the query
+[2015-10-31 12:23:29.487268] [info] Executed the query
+[2015-10-31 12:23:29.487488] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:23:29.644303] [info] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhasdheeraskar1988@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y"}}}}}
+[2015-10-31 12:23:29.887638] [info] {"token": {"issued_at": "2015-10-31T06:53:29.816279Z", "extras": {}, "methods": ["password"], "expires_at": "2015-10-31T07:53:29.816237Z", "user": {"domain": {"id": "default", "name": "Default"}, "id": "0c1c6c5bddf643839a185ca5a245fa6f", "name": "suhasdheeraskar1988@gmail.com"}}}
+[2015-10-31 12:30:14.103745] [info] Connecting to db..
+[2015-10-31 12:30:14.103960] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:
+[2015-10-31 12:30:14.104063] [info] Connecting to db..
+[2015-10-31 12:30:14.104130] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:30:14.104182] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 12:30:14.104229] [info] Executing the query
+[2015-10-31 12:30:14.113858] [info] Executed the query
+[2015-10-31 12:30:14.114015] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 12:30:14.292337] [info] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhasdheeraskar1988@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$pfqw1k82/paU7s3FdO/FMuJVw6c9/9sx99au6SoqMg92oclq00O1y"}}}}}
+[2015-10-31 12:30:14.509507] [info] 0c1c6c5bddf643839a185ca5a245fa6f
+[2015-10-31 17:54:29.389460] [info] Connecting to db..
+[2015-10-31 17:54:30.676614] [info]  Welcome aaaa, LastName:bbbb, 
+				Phone no:12345 passwd:
+[2015-10-31 17:54:31.064810] [info] {"user": {"name": "aaaa.bbbb@gmail.com", "links": {"self": "http://127.0.0.1:5000/v3/users/14292b32a0c04fa4aa8701cab768b420"}, "enabled": true, "id": "14292b3
+[2015-10-31 17:54:31.064984] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 17:54:31.065047] [info] ( '' , 'aaaa.bbbb@gmail.com', 'aaaa', 
+				'x', 'bbbb', '12345','$2y$10$tF7HVnAkZR9mht/PkIxb07')
+[2015-10-31 17:54:31.065268] [info] Connecting to db..
+[2015-10-31 17:54:31.065359] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaa.bbbb@gmail.com', 'aaaa', 
+				'x', 'bbbb', '12345','$2y$10$tF7HVnAkZR9mht/PkIxb07')
+[2015-10-31 17:54:31.065417] [info] Executing the query
+[2015-10-31 17:54:31.130923] [info] password:$2y$10$tF7HVnAkZR9mht/PkIxb0ulYXDg8nYYuZ8St55d12QYwg9t/ls2Fq
+[2015-10-31 18:04:24.412672] [info] Connecting to db..
+[2015-10-31 18:04:24.413480] [info]  Welcome aaaa, LastName:bbbb, 
+				Phone no:12345 passwd:
+[2015-10-31 18:04:25.266062] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:04:25.266208] [info] ( '' , 'aaaa.bbbb@gmail.com', 'aaaa', 
+				'x', 'bbbb', '12345','$2y$10$BwsLm2Gl3T0g3tJVkn6Wh4')
+[2015-10-31 18:04:25.266347] [info] Connecting to db..
+[2015-10-31 18:04:25.266428] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaa.bbbb@gmail.com', 'aaaa', 
+				'x', 'bbbb', '12345','$2y$10$BwsLm2Gl3T0g3tJVkn6Wh4')
+[2015-10-31 18:04:25.266495] [info] Executing the query
+[2015-10-31 18:04:25.296266] [info] password:$2y$10$BwsLm2Gl3T0g3tJVkn6WhuzrCxG/gGR7Chp8lTC/1mS3CMCQIVyl2
+[2015-10-31 18:05:35.558855] [info] Connecting to db..
+[2015-10-31 18:05:35.573045] [info]  Welcome aaaaa, LastName:bbbbb, 
+				Phone no:123456 passwd:
+[2015-10-31 18:05:35.827780] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:05:35.827900] [info] ( '' , 'aaaaa.bbbbb@gmail.com', 'aaaaa', 
+				'x', 'bbbbb', '123456','$2y$10$jSTXExvXOSrRBRP5We4njg')
+[2015-10-31 18:05:35.828030] [info] Connecting to db..
+[2015-10-31 18:05:35.828105] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaa.bbbbb@gmail.com', 'aaaaa', 
+				'x', 'bbbbb', '123456','$2y$10$jSTXExvXOSrRBRP5We4njg')
+[2015-10-31 18:05:35.828160] [info] Executing the query
+[2015-10-31 18:05:35.849770] [info] password:$2y$10$jSTXExvXOSrRBRP5We4njec4bSc6sBFSXvwvhsc3UGGmALqCeDSKq
+[2015-10-31 18:09:04.655977] [info] Connecting to db..
+[2015-10-31 18:09:04.656595] [info]  Welcome aaaaaa, LastName:bbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:09:04.892920] [info] Curl request completed!
+[2015-10-31 18:09:04.893119] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:09:04.893189] [info] ( '' , 'aaaaaa.bbbbbb@gmail.com', 'aaaaaa', 
+				'x', 'bbbbba', '1234556','$2y$10$9MEk.wCIFcXdSeCaBFrj6A')
+[2015-10-31 18:09:04.893310] [info] Connecting to db..
+[2015-10-31 18:09:04.893383] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaa.bbbbbb@gmail.com', 'aaaaaa', 
+				'x', 'bbbbba', '1234556','$2y$10$9MEk.wCIFcXdSeCaBFrj6A')
+[2015-10-31 18:09:04.893435] [info] Executing the query
+[2015-10-31 18:09:04.920475] [info] password:$2y$10$9MEk.wCIFcXdSeCaBFrj6.1UKHZqnXCIGKrR18XaNL7X1Km9x3eLi
+[2015-10-31 18:10:41.697665] [info] Connecting to db..
+[2015-10-31 18:10:41.698293] [info]  Welcome aaaaaaa, LastName:bbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:10:42.044759] [info] Curl request completed!
+[2015-10-31 18:10:42.045172] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:10:42.045277] [info] ( '' , 'aaaaaaa.bbbbbbb@gmail.com', 'aaaaaaa', 
+				'x', 'bbbbbba', '1234556','$2y$10$0Msq9RFmIVmiYT/Gi7uv.8')
+[2015-10-31 18:10:42.045574] [info] Connecting to db..
+[2015-10-31 18:10:42.045737] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaa.bbbbbbb@gmail.com', 'aaaaaaa', 
+				'x', 'bbbbbba', '1234556','$2y$10$0Msq9RFmIVmiYT/Gi7uv.8')
+[2015-10-31 18:10:42.045818] [info] Executing the query
+[2015-10-31 18:10:42.047348] [info] password:$2y$10$0Msq9RFmIVmiYT/Gi7uv.uqvLvv92rXhRegkyDsY2GkKMacZbo3YC
+[2015-10-31 18:11:56.919199] [info] Connecting to db..
+[2015-10-31 18:11:56.919393] [info]  Welcome aaaaaaaa, LastName:bbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:11:57.247392] [info] Curl request completed!
+[2015-10-31 18:11:57.247565] [info] "423ee544fbc644518761019d70ecb30a", "domain_id": "default"}}
+[2015-10-31 18:11:57.247664] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:11:57.247720] [info] ( '' , 'aaaaaaaa.bbbbbbbb@gmail.com', 'aaaaaaaa', 
+				'x', 'bbbbbbba', '1234556','$2y$10$AsVlijsIA8xCFvEi9mckcY')
+[2015-10-31 18:11:57.247842] [info] Connecting to db..
+[2015-10-31 18:11:57.247920] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaa.bbbbbbbb@gmail.com', 'aaaaaaaa', 
+				'x', 'bbbbbbba', '1234556','$2y$10$AsVlijsIA8xCFvEi9mckcY')
+[2015-10-31 18:11:57.247972] [info] Executing the query
+[2015-10-31 18:11:57.249142] [info] password:$2y$10$AsVlijsIA8xCFvEi9mckcOg/Ig31X16Wjl6NJ6SiTx1Met9uZ72DK
+[2015-10-31 18:13:33.005881] [info] Connecting to db..
+[2015-10-31 18:13:33.006407] [info]  Welcome aaaaaaaaa, LastName:bbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:13:33.309405] [info] Curl request completed!
+[2015-10-31 18:13:33.309602] [info] result_body:: "6430d78b2e2c40bd86e4e00c21f20b42", "domain_id": "default"}}
+[2015-10-31 18:13:33.309685] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:13:33.309741] [info] ( '' , 'aaaaaaaaa.bbbbbbbbb@gmail.com', 'aaaaaaaaa', 
+				'x', 'bbbbbbbba', '1234556','$2y$10$/44dS7FElF3vzCHdDmjYVH')
+[2015-10-31 18:13:33.309860] [info] Connecting to db..
+[2015-10-31 18:13:33.309936] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaa.bbbbbbbbb@gmail.com', 'aaaaaaaaa', 
+				'x', 'bbbbbbbba', '1234556','$2y$10$/44dS7FElF3vzCHdDmjYVH')
+[2015-10-31 18:13:33.309989] [info] Executing the query
+[2015-10-31 18:13:33.311120] [info] password:$2y$10$/44dS7FElF3vzCHdDmjYV.kAME7velmGNuk7uZtteQzomGNR1MsHS
+[2015-10-31 18:14:28.124627] [info] Connecting to db..
+[2015-10-31 18:14:28.124850] [info]  Welcome aaaaaaaaaa, LastName:bbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:14:28.447618] [info] Curl request completed!
+[2015-10-31 18:14:28.447833] [info] Actual result:Array
+[2015-10-31 18:14:28.447910] [info] result_body:d": "5bf4eb3d16064a06918cbd5998dbcba4", "domain_id": "default"}}
+[2015-10-31 18:14:28.447977] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:14:28.448028] [info] ( '' , 'aaaaaaaaaa.bbbbbbbbbb@gmail.com', 'aaaaaaaaaa', 
+				'x', 'bbbbbbbbba', '1234556','$2y$10$8XReiuYKA9.uR7bwqOjYku')
+[2015-10-31 18:14:28.448148] [info] Connecting to db..
+[2015-10-31 18:14:28.448223] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaaa.bbbbbbbbbb@gmail.com', 'aaaaaaaaaa', 
+				'x', 'bbbbbbbbba', '1234556','$2y$10$8XReiuYKA9.uR7bwqOjYku')
+[2015-10-31 18:14:28.448275] [info] Executing the query
+[2015-10-31 18:14:28.449706] [info] password:$2y$10$8XReiuYKA9.uR7bwqOjYkuBe7irgL6mh9NJPvn/AXvGhlNKrwvGXG
+[2015-10-31 18:15:56.337824] [info] Connecting to db..
+[2015-10-31 18:15:56.338031] [info]  Welcome aaaaaaaaaaa, LastName:bbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:15:56.620181] [info] Curl request completed!
+[2015-10-31 18:15:56.620378] [info] Actual result:Array
+[2015-10-31 18:15:56.620457] [info] result_body:{"header":"{\"user\": {\"name\": \"aaaaaaaaaaa.bbbbbbbbbbb@gmail.com\", \"links\": {\"self\": \"http:\/\/127.0.0.1:5000\/v3\/users\/4278c5e6fc19436bb5a80f8d0a5e9568\"}, \"enabled\": true, ","body":"\"id\": \"4278c5e6fc19436bb5a80f8d0a5e9568\", \"domain_id\": \"default\"}}","curl_error":"","http_code":201,"last_url":"http:\/\/127.0.0.1:5000\/v3\/users"}
+[2015-10-31 18:15:56.620524] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:15:56.620577] [info] ( '' , 'aaaaaaaaaaa.bbbbbbbbbbb@gmail.com', 'aaaaaaaaaaa', 
+				'x', 'bbbbbbbbbba', '1234556','$2y$10$H2UwQmrxdban81Alodr1Vo')
+[2015-10-31 18:15:56.620692] [info] Connecting to db..
+[2015-10-31 18:15:56.620764] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaaaa.bbbbbbbbbbb@gmail.com', 'aaaaaaaaaaa', 
+				'x', 'bbbbbbbbbba', '1234556','$2y$10$H2UwQmrxdban81Alodr1Vo')
+[2015-10-31 18:15:56.620815] [info] Executing the query
+[2015-10-31 18:15:56.642090] [info] password:$2y$10$H2UwQmrxdban81Alodr1VeglGciJdo9pjnh3pn2Z3NrdIs2.XXt.u
+[2015-10-31 18:17:34.561284] [info] Connecting to db..
+[2015-10-31 18:17:34.566871] [info]  Welcome aaaaaaaaaaaa, LastName:bbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:17:34.796029] [info] Curl request completed!
+[2015-10-31 18:17:34.796228] [info] Actual result:Array
+[2015-10-31 18:17:34.796315] [info] result_body:
+[2015-10-31 18:17:34.796386] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:17:34.796439] [info] ( '' , 'aaaaaaaaaaa.bbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbba', '1234556','$2y$10$J1eUp3LoXb7InfSqug9rai')
+[2015-10-31 18:17:34.796572] [info] Connecting to db..
+[2015-10-31 18:17:34.796646] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaaaa.bbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbba', '1234556','$2y$10$J1eUp3LoXb7InfSqug9rai')
+[2015-10-31 18:17:34.796700] [info] Executing the query
+[2015-10-31 18:17:34.797905] [info] password:$2y$10$J1eUp3LoXb7InfSqug9raekZf5KdXaMMDwKmxmWqHE/62dHQCMGA6
+[2015-10-31 18:20:13.379707] [info] Connecting to db..
+[2015-10-31 18:20:13.379895] [info]  Welcome aaaaaaaaaaaaa, LastName:bbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:20:13.678236] [info] Curl request completed!
+[2015-10-31 18:20:13.678441] [info] Actual result:Array
+[2015-10-31 18:20:13.678531] [info] result_body:
+[2015-10-31 18:20:13.678600] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:20:13.678654] [info] ( '' , 'aaaaaaaaaaaa.bbbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbba', '1234556','$2y$10$3ODDNe5E9J0wb6d4KZXTYG')
+[2015-10-31 18:20:13.678771] [info] Connecting to db..
+[2015-10-31 18:20:13.678845] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaaaaa.bbbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbba', '1234556','$2y$10$3ODDNe5E9J0wb6d4KZXTYG')
+[2015-10-31 18:20:13.678901] [info] Executing the query
+[2015-10-31 18:20:13.680000] [info] password:$2y$10$3ODDNe5E9J0wb6d4KZXTY.WnwFsBco4WwzedDYePxUycozgQs2fQK
+[2015-10-31 18:21:10.554794] [info] Connecting to db..
+[2015-10-31 18:21:10.554996] [info]  Welcome aaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:21:10.917812] [info] Curl request completed!
+[2015-10-31 18:21:10.918014] [info] Actual result:Array
+[2015-10-31 18:21:10.918132] [info] result_body:
+[2015-10-31 18:21:10.918205] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:21:10.918260] [info] ( '' , 'aaaaaaaaaaaaa.bbbbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbba', '1234556','$2y$10$cg3fTKXEc9l9iPWUYh7sla')
+[2015-10-31 18:21:10.918380] [info] Connecting to db..
+[2015-10-31 18:21:10.918458] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaaaaaa.bbbbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbba', '1234556','$2y$10$cg3fTKXEc9l9iPWUYh7sla')
+[2015-10-31 18:21:10.918514] [info] Executing the query
+[2015-10-31 18:21:10.919476] [info] password:$2y$10$cg3fTKXEc9l9iPWUYh7slO.7LeR8klZB8k7Pm2De.X5XyOONDylBi
+[2015-10-31 18:22:03.287517] [info] Connecting to db..
+[2015-10-31 18:22:03.287707] [info]  Welcome aaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:22:03.607019] [info] Curl request completed!
+[2015-10-31 18:22:03.607453] [info] Actual result:Array
+[2015-10-31 18:22:03.607572] [info] result_body:
+[2015-10-31 18:22:03.607647] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 18:22:03.607702] [info] ( '' , 'aaaaaaaaaaaaaa.bbbbbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbba', '1234556','$2y$10$fUB2GeLuM51OrpPyfsgO6u')
+[2015-10-31 18:22:03.607825] [info] Connecting to db..
+[2015-10-31 18:22:03.607898] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaaaaaaa.bbbbbbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbba', '1234556','$2y$10$fUB2GeLuM51OrpPyfsgO6u')
+[2015-10-31 18:22:03.607954] [info] Executing the query
+[2015-10-31 18:22:03.616564] [info] password:$2y$10$fUB2GeLuM51OrpPyfsgO6utSSWtTH.gu3MvD2HvSoIDyWFpyJNvf6
+[2015-10-31 18:23:19.041348] [info] Connecting to db..
+[2015-10-31 18:23:19.041549] [info]  Welcome aaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:23:19.398646] [info] Curl request completed!
+[2015-10-31 18:23:19.398863] [info] Actual result:Array
+[2015-10-31 18:23:59.778107] [info] Connecting to db..
+[2015-10-31 18:23:59.778299] [info]  Welcome aaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:24:00.063997] [info] Curl request completed!
+[2015-10-31 18:24:23.455311] [info] Connecting to db..
+[2015-10-31 18:24:23.455519] [info]  Welcome aaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:24:23.723767] [info] Curl request completed!
+[2015-10-31 18:24:52.386434] [info] Connecting to db..
+[2015-10-31 18:24:52.386624] [info]  Welcome aaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 18:24:52.685640] [info] Curl request completed!
+[2015-10-31 18:27:31.991935] [info] Connecting to db..
+[2015-10-31 18:27:31.992845] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:27:31.992964] [info] Connecting to db..
+[2015-10-31 18:27:31.993032] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:27:31.993092] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:27:31.993141] [info] Executing the query
+[2015-10-31 18:27:32.011953] [info] Executed the query
+[2015-10-31 18:27:32.012203] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:27:33.032069] [info] Curl request completed!
+[2015-10-31 18:28:36.883455] [info] Connecting to db..
+[2015-10-31 18:28:36.883656] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:28:36.883759] [info] Connecting to db..
+[2015-10-31 18:28:36.883826] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:28:36.883877] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:28:36.883927] [info] Executing the query
+[2015-10-31 18:28:36.984972] [info] Executed the query
+[2015-10-31 18:28:36.985124] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:28:37.321985] [info] Curl request completed!
+[2015-10-31 18:31:43.873764] [info] Connecting to db..
+[2015-10-31 18:31:43.873975] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:31:43.874078] [info] Connecting to db..
+[2015-10-31 18:31:43.874167] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:31:43.874222] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:31:43.874272] [info] Executing the query
+[2015-10-31 18:31:43.911741] [info] Executed the query
+[2015-10-31 18:31:43.911880] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:31:44.320913] [info] Curl request completed!
+[2015-10-31 18:33:02.185240] [info] Connecting to db..
+[2015-10-31 18:33:02.185441] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:33:02.185549] [info] Connecting to db..
+[2015-10-31 18:33:02.185619] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:33:02.185673] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:33:02.185725] [info] Executing the query
+[2015-10-31 18:33:02.188401] [info] Executed the query
+[2015-10-31 18:33:02.188556] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:33:02.693770] [info] Curl request completed!
+[2015-10-31 18:36:57.637398] [info] Connecting to db..
+[2015-10-31 18:36:57.637588] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:36:57.637690] [info] Connecting to db..
+[2015-10-31 18:36:57.637756] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:36:57.637808] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:36:57.637871] [info] Executing the query
+[2015-10-31 18:36:57.640670] [info] Executed the query
+[2015-10-31 18:36:57.640799] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:36:58.014020] [info] Curl request completed!
+[2015-10-31 18:41:26.647387] [info] Connecting to db..
+[2015-10-31 18:41:26.647643] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:41:26.647749] [info] Connecting to db..
+[2015-10-31 18:41:26.647819] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:41:26.647875] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:41:26.647926] [info] Executing the query
+[2015-10-31 18:41:26.699511] [info] Executed the query
+[2015-10-31 18:41:26.699650] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:41:27.077974] [info] Curl request completed!
+[2015-10-31 18:42:59.672259] [info] Connecting to db..
+[2015-10-31 18:42:59.672466] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:42:59.672569] [info] Connecting to db..
+[2015-10-31 18:42:59.672637] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:42:59.672693] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:42:59.672744] [info] Executing the query
+[2015-10-31 18:42:59.709615] [info] Executed the query
+[2015-10-31 18:42:59.709991] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:43:00.064541] [info] Curl request completed!
+[2015-10-31 18:44:13.087481] [info] Connecting to db..
+[2015-10-31 18:44:13.087971] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:44:13.088167] [info] Connecting to db..
+[2015-10-31 18:44:13.088290] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:44:13.088378] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:44:13.088449] [info] Executing the query
+[2015-10-31 18:44:13.100446] [info] Executed the query
+[2015-10-31 18:44:13.100589] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:44:13.499363] [info] Curl request completed!
+[2015-10-31 18:45:34.889645] [info] Connecting to db..
+[2015-10-31 18:45:34.889854] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:45:34.889955] [info] Connecting to db..
+[2015-10-31 18:45:34.890019] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:45:34.890072] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:45:34.890136] [info] Executing the query
+[2015-10-31 18:45:34.918457] [info] Executed the query
+[2015-10-31 18:45:34.918598] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:45:35.406672] [info] Curl request completed!
+[2015-10-31 18:49:28.732213] [info] Connecting to db..
+[2015-10-31 18:49:28.746191] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:49:28.746330] [info] Connecting to db..
+[2015-10-31 18:49:28.746402] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:49:28.746455] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:49:28.746505] [info] Executing the query
+[2015-10-31 18:49:28.748620] [info] Executed the query
+[2015-10-31 18:49:28.748756] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:49:29.244916] [info] Curl request completed!
+[2015-10-31 18:50:19.107068] [info] Connecting to db..
+[2015-10-31 18:50:19.107312] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:50:19.107417] [info] Connecting to db..
+[2015-10-31 18:50:19.107482] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:50:19.115684] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:50:19.115796] [info] Executing the query
+[2015-10-31 18:50:19.143699] [info] Executed the query
+[2015-10-31 18:50:19.143831] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:50:19.506555] [info] Curl request completed!
+[2015-10-31 18:50:47.756736] [info] Connecting to db..
+[2015-10-31 18:50:47.756963] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:50:47.757081] [info] Connecting to db..
+[2015-10-31 18:50:47.757152] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:50:47.757210] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:50:47.757268] [info] Executing the query
+[2015-10-31 18:50:47.809941] [info] Executed the query
+[2015-10-31 18:50:47.810086] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:50:48.149086] [info] Curl request completed!
+[2015-10-31 18:51:21.815253] [info] Connecting to db..
+[2015-10-31 18:51:21.815519] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:51:21.815627] [info] Connecting to db..
+[2015-10-31 18:51:21.815692] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:51:21.815747] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:51:21.815795] [info] Executing the query
+[2015-10-31 18:51:21.848845] [info] Executed the query
+[2015-10-31 18:51:21.848989] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:51:22.615129] [info] Curl request completed!
+[2015-10-31 18:52:28.857398] [info] Connecting to db..
+[2015-10-31 18:52:28.866677] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:52:28.866974] [info] Connecting to db..
+[2015-10-31 18:52:28.867052] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:52:28.867105] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:52:28.867153] [info] Executing the query
+[2015-10-31 18:52:28.943451] [info] Executed the query
+[2015-10-31 18:52:28.943629] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:52:29.274930] [info] Curl request completed!
+[2015-10-31 18:53:08.718400] [info] Connecting to db..
+[2015-10-31 18:53:08.718975] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:53:08.719187] [info] Connecting to db..
+[2015-10-31 18:53:08.719336] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:53:08.719466] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:53:08.719587] [info] Executing the query
+[2015-10-31 18:53:08.778908] [info] Executed the query
+[2015-10-31 18:53:08.779709] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:53:09.151868] [info] Curl request completed!
+[2015-10-31 18:53:32.024485] [info] Connecting to db..
+[2015-10-31 18:53:32.024673] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:53:32.024786] [info] Connecting to db..
+[2015-10-31 18:53:32.024854] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:53:32.024909] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:53:32.024960] [info] Executing the query
+[2015-10-31 18:53:32.026953] [info] Executed the query
+[2015-10-31 18:53:32.027092] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:53:32.434648] [info] Curl request completed!
+[2015-10-31 18:54:13.523614] [info] Connecting to db..
+[2015-10-31 18:54:13.523801] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:54:13.523905] [info] Connecting to db..
+[2015-10-31 18:54:13.523972] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:54:13.524038] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:54:13.524090] [info] Executing the query
+[2015-10-31 18:54:13.527172] [info] Executed the query
+[2015-10-31 18:54:13.527304] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:54:13.862848] [info] Curl request completed!
+[2015-10-31 18:54:53.187256] [info] Connecting to db..
+[2015-10-31 18:54:53.187761] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 18:54:53.187975] [info] Connecting to db..
+[2015-10-31 18:54:53.188108] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:54:53.188175] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 18:54:53.188280] [info] Executing the query
+[2015-10-31 18:54:53.193564] [info] Executed the query
+[2015-10-31 18:54:53.193717] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 18:54:53.599139] [info] Curl request completed!
+[2015-10-31 19:00:30.661788] [info] Connecting to db..
+[2015-10-31 19:00:30.721155] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:00:30.721303] [info] Connecting to db..
+[2015-10-31 19:00:30.721381] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:00:30.721435] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:00:30.721499] [info] Executing the query
+[2015-10-31 19:00:30.909815] [info] Executed the query
+[2015-10-31 19:00:30.964920] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:00:32.401923] [info] Curl request completed!
+[2015-10-31 19:01:29.698625] [info] Connecting to db..
+[2015-10-31 19:01:29.698874] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:01:29.698981] [info] Connecting to db..
+[2015-10-31 19:01:29.699048] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:01:29.699101] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:01:29.699152] [info] Executing the query
+[2015-10-31 19:01:29.731540] [info] Executed the query
+[2015-10-31 19:01:29.731679] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:01:30.094053] [info] Curl request completed!
+[2015-10-31 19:03:38.189670] [info] Connecting to db..
+[2015-10-31 19:03:38.189975] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:03:38.190175] [info] Connecting to db..
+[2015-10-31 19:03:38.190303] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:03:38.190363] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:03:38.190419] [info] Executing the query
+[2015-10-31 19:03:38.244502] [info] Executed the query
+[2015-10-31 19:03:38.244661] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:03:38.548680] [info] Curl request completed!
+[2015-10-31 19:04:00.377871] [info] Connecting to db..
+[2015-10-31 19:04:00.378129] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:04:00.378277] [info] Connecting to db..
+[2015-10-31 19:04:00.378366] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:04:00.378437] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:04:00.378503] [info] Executing the query
+[2015-10-31 19:04:00.416347] [info] Executed the query
+[2015-10-31 19:04:00.416477] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:04:00.813204] [info] Curl request completed!
+[2015-10-31 19:04:51.703373] [info] Connecting to db..
+[2015-10-31 19:04:51.703787] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:04:51.704145] [info] Connecting to db..
+[2015-10-31 19:04:51.704355] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:04:51.704413] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:04:51.704466] [info] Executing the query
+[2015-10-31 19:04:51.724208] [info] Executed the query
+[2015-10-31 19:04:51.724348] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:04:52.042880] [info] Curl request completed!
+[2015-10-31 19:05:48.145270] [info] Connecting to db..
+[2015-10-31 19:05:48.145777] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:05:48.146007] [info] Connecting to db..
+[2015-10-31 19:05:48.146174] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:05:48.146311] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:05:48.146435] [info] Executing the query
+[2015-10-31 19:05:48.157746] [info] Executed the query
+[2015-10-31 19:05:48.157891] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:05:48.454509] [info] Curl request completed!
+[2015-10-31 19:08:26.312478] [info] Connecting to db..
+[2015-10-31 19:08:26.312750] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:08:26.312859] [info] Connecting to db..
+[2015-10-31 19:08:26.312927] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:08:26.312980] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:08:26.313030] [info] Executing the query
+[2015-10-31 19:08:26.316801] [info] Executed the query
+[2015-10-31 19:08:26.316937] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:08:26.769948] [info] Curl request completed!
+[2015-10-31 19:09:41.806440] [info] Connecting to db..
+[2015-10-31 19:09:41.806688] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:09:41.806796] [info] Connecting to db..
+[2015-10-31 19:09:41.806869] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:09:41.806925] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:09:41.806977] [info] Executing the query
+[2015-10-31 19:09:41.821511] [info] Executed the query
+[2015-10-31 19:09:41.821652] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:09:42.273396] [info] Curl request completed!
+[2015-10-31 19:23:31.190466] [info] Connecting to db..
+[2015-10-31 19:23:31.215552] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:23:31.215708] [info] Connecting to db..
+[2015-10-31 19:23:31.215797] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:23:31.215867] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:23:31.215929] [info] Executing the query
+[2015-10-31 19:23:31.221877] [info] Executed the query
+[2015-10-31 19:23:31.222011] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:23:31.719167] [info] Curl request completed!
+[2015-10-31 19:25:21.027591] [info] Connecting to db..
+[2015-10-31 19:25:21.027806] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:25:21.027905] [info] Connecting to db..
+[2015-10-31 19:25:21.027971] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:25:21.028023] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:25:21.028070] [info] Executing the query
+[2015-10-31 19:25:21.031151] [info] Executed the query
+[2015-10-31 19:25:21.031367] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:25:21.562205] [debug] Curl request completed!
+[2015-10-31 19:26:53.598040] [info] Connecting to db..
+[2015-10-31 19:26:53.598270] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:26:53.598378] [info] Connecting to db..
+[2015-10-31 19:26:53.598449] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:26:53.598505] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:26:53.598556] [info] Executing the query
+[2015-10-31 19:26:53.602390] [info] Executed the query
+[2015-10-31 19:26:53.602530] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:26:53.959043] [debug] Curl request completed!
+[2015-10-31 19:53:33.084867] [info] Connecting to db..
+[2015-10-31 19:53:33.085077] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 19:53:33.085191] [info] Connecting to db..
+[2015-10-31 19:53:33.085261] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:53:33.085315] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 19:53:33.085366] [info] Executing the query
+[2015-10-31 19:53:33.122662] [info] Executed the query
+[2015-10-31 19:53:33.122797] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 19:53:33.767333] [debug] Curl request completed!
+[2015-10-31 20:05:47.268300] [info] Connecting to db..
+[2015-10-31 20:05:47.268513] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:05:47.268621] [info] Connecting to db..
+[2015-10-31 20:05:47.268691] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:05:47.268744] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:05:47.268795] [info] Executing the query
+[2015-10-31 20:05:47.274307] [info] Executed the query
+[2015-10-31 20:05:47.274441] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:05:47.608515] [debug] Curl request completed!
+[2015-10-31 20:10:16.445583] [info] Connecting to db..
+[2015-10-31 20:10:16.445801] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:10:16.445910] [info] Connecting to db..
+[2015-10-31 20:10:16.445981] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:10:16.446037] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:10:16.446088] [info] Executing the query
+[2015-10-31 20:10:16.451560] [info] Executed the query
+[2015-10-31 20:10:16.451692] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:10:16.803632] [debug] Curl request completed!
+[2015-10-31 20:10:34.964063] [info] Connecting to db..
+[2015-10-31 20:10:34.964298] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:10:34.964413] [info] Connecting to db..
+[2015-10-31 20:10:34.964488] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:10:34.964545] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:10:34.964597] [info] Executing the query
+[2015-10-31 20:10:34.968266] [info] Executed the query
+[2015-10-31 20:10:34.968400] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:10:35.316762] [debug] Curl request completed!
+[2015-10-31 20:10:58.544120] [info] Connecting to db..
+[2015-10-31 20:10:58.544318] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:10:58.544428] [info] Connecting to db..
+[2015-10-31 20:10:58.544497] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:10:58.544553] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:10:58.544605] [info] Executing the query
+[2015-10-31 20:10:58.553174] [info] Executed the query
+[2015-10-31 20:10:58.553323] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:10:59.042767] [debug] Curl request completed!
+[2015-10-31 20:11:37.646702] [info] Connecting to db..
+[2015-10-31 20:11:37.646888] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:11:37.646994] [info] Connecting to db..
+[2015-10-31 20:11:37.647062] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:11:37.647116] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:11:37.647167] [info] Executing the query
+[2015-10-31 20:11:37.688446] [info] Executed the query
+[2015-10-31 20:11:37.688585] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:11:38.148677] [debug] Curl request completed!
+[2015-10-31 20:13:18.655576] [info] Connecting to db..
+[2015-10-31 20:13:18.655793] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:13:18.655901] [info] Connecting to db..
+[2015-10-31 20:13:18.655971] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:13:18.656027] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:13:18.656078] [info] Executing the query
+[2015-10-31 20:13:18.659735] [info] Executed the query
+[2015-10-31 20:13:18.659986] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:13:19.050986] [debug] Curl request completed!
+[2015-10-31 20:14:26.733711] [info] Connecting to db..
+[2015-10-31 20:14:26.733923] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:14:26.734031] [info] Connecting to db..
+[2015-10-31 20:14:26.734112] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:14:26.734172] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:14:26.734222] [info] Executing the query
+[2015-10-31 20:14:26.736325] [info] Executed the query
+[2015-10-31 20:14:26.736464] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:14:27.105858] [debug] Curl request completed!
+[2015-10-31 20:15:34.984961] [info] Connecting to db..
+[2015-10-31 20:15:34.985178] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:15:34.985287] [info] Connecting to db..
+[2015-10-31 20:15:34.985357] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:15:34.985411] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:15:34.985464] [info] Executing the query
+[2015-10-31 20:15:34.992561] [info] Executed the query
+[2015-10-31 20:15:34.992691] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:15:35.351880] [debug] Curl request completed!
+[2015-10-31 20:16:17.476633] [info] Connecting to db..
+[2015-10-31 20:16:17.476841] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:16:17.476944] [info] Connecting to db..
+[2015-10-31 20:16:17.477010] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:16:17.477062] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:16:17.477112] [info] Executing the query
+[2015-10-31 20:16:17.479254] [info] Executed the query
+[2015-10-31 20:16:17.479420] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:16:17.820740] [debug] Curl request completed!
+[2015-10-31 20:16:54.773407] [info] Connecting to db..
+[2015-10-31 20:16:54.773621] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:16:54.773730] [info] Connecting to db..
+[2015-10-31 20:16:54.773801] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:16:54.773855] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:16:54.773921] [info] Executing the query
+[2015-10-31 20:16:54.776612] [info] Executed the query
+[2015-10-31 20:16:54.776756] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:16:55.163516] [debug] Curl request completed!
+[2015-10-31 20:19:02.004398] [info] Connecting to db..
+[2015-10-31 20:19:02.004594] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:19:02.004694] [info] Connecting to db..
+[2015-10-31 20:19:02.004760] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:19:02.004813] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:19:02.004862] [info] Executing the query
+[2015-10-31 20:19:02.006877] [info] Executed the query
+[2015-10-31 20:19:02.007011] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:19:02.382756] [debug] Curl request completed!
+[2015-10-31 20:20:54.014266] [info] Connecting to db..
+[2015-10-31 20:20:54.014725] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:20:54.014949] [info] Connecting to db..
+[2015-10-31 20:20:54.015094] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:20:54.015223] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:20:54.015341] [info] Executing the query
+[2015-10-31 20:20:54.019023] [info] Executed the query
+[2015-10-31 20:20:54.019328] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:20:54.365639] [debug] Curl request completed!
+[2015-10-31 20:22:22.953504] [info] Connecting to db..
+[2015-10-31 20:22:22.953700] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:22:22.953800] [info] Connecting to db..
+[2015-10-31 20:22:22.953866] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:22:22.953917] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:22:22.953964] [info] Executing the query
+[2015-10-31 20:22:22.956734] [info] Executed the query
+[2015-10-31 20:22:22.956892] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:22:23.345304] [debug] Curl request completed!
+[2015-10-31 20:22:57.056744] [info] Connecting to db..
+[2015-10-31 20:22:57.056940] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:22:57.057046] [info] Connecting to db..
+[2015-10-31 20:22:57.057115] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:22:57.057169] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:22:57.057221] [info] Executing the query
+[2015-10-31 20:22:57.087980] [info] Executed the query
+[2015-10-31 20:22:57.088459] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:22:57.433103] [debug] Curl request completed!
+[2015-10-31 20:23:57.787859] [info] Connecting to db..
+[2015-10-31 20:23:57.788058] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:23:57.788160] [info] Connecting to db..
+[2015-10-31 20:23:57.788224] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:23:57.788276] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:23:57.788325] [info] Executing the query
+[2015-10-31 20:23:57.834209] [info] Executed the query
+[2015-10-31 20:23:57.834357] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:23:58.172585] [debug] Curl request completed!
+[2015-10-31 20:27:25.855159] [info] Connecting to db..
+[2015-10-31 20:27:25.855380] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:27:25.855494] [info] Connecting to db..
+[2015-10-31 20:27:25.855567] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:27:25.855628] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:27:25.855696] [info] Executing the query
+[2015-10-31 20:27:25.857682] [info] Executed the query
+[2015-10-31 20:27:25.857826] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:27:26.190907] [debug] Curl request completed!
+[2015-10-31 20:30:04.322228] [info] Connecting to db..
+[2015-10-31 20:30:04.322493] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:30:04.322622] [info] Connecting to db..
+[2015-10-31 20:30:04.322705] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:30:04.322767] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:30:04.322823] [info] Executing the query
+[2015-10-31 20:30:04.327584] [info] Executed the query
+[2015-10-31 20:30:04.327744] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:30:04.673820] [debug] Curl request completed!
+[2015-10-31 20:30:25.939824] [info] Connecting to db..
+[2015-10-31 20:30:25.940038] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:30:25.940145] [info] Connecting to db..
+[2015-10-31 20:30:25.940215] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:30:25.940269] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:30:25.940320] [info] Executing the query
+[2015-10-31 20:30:25.999202] [info] Executed the query
+[2015-10-31 20:30:25.999336] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:30:26.306723] [debug] Curl request completed!
+[2015-10-31 20:35:59.201256] [info] Connecting to db..
+[2015-10-31 20:35:59.201461] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:35:59.201560] [info] Connecting to db..
+[2015-10-31 20:35:59.201626] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:35:59.201677] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:35:59.201725] [info] Executing the query
+[2015-10-31 20:35:59.209235] [info] Executed the query
+[2015-10-31 20:35:59.209371] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:35:59.534954] [debug] Curl request completed!
+[2015-10-31 20:35:59.535267] [info] 0c1c6c5bddf643839a185ca5a245fa6f
+[2015-10-31 20:37:47.725167] [info] Connecting to db..
+[2015-10-31 20:37:47.725374] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:37:47.725476] [info] Connecting to db..
+[2015-10-31 20:37:47.725541] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:37:47.725605] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:37:47.725656] [info] Executing the query
+[2015-10-31 20:37:47.728034] [info] Executed the query
+[2015-10-31 20:37:47.728214] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:37:48.109899] [debug] Curl request completed!
+[2015-10-31 20:37:48.110188] [info] 0c1c6c5bddf643839a185ca5a245fa6f
+[2015-10-31 20:38:56.718681] [info] Connecting to db..
+[2015-10-31 20:38:56.718887] [info]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 20:38:56.718987] [info] Connecting to db..
+[2015-10-31 20:38:56.719052] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:38:56.719104] [info] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 20:38:56.719151] [info] Executing the query
+[2015-10-31 20:38:56.725461] [info] Executed the query
+[2015-10-31 20:38:56.725702] [info] salt:$2y$10$pfqw1k82/paU7s3FdO/FM3
+[2015-10-31 20:38:57.092644] [debug] Curl request completed!
+[2015-10-31 20:38:57.092888] [info] userid:0c1c6c5bddf643839a185ca5a245fa6f
+[2015-10-31 20:38:57.092962] [info] subject token:67d153874b7c4f5b80a823ccd35673f7
+[2015-10-31 20:41:22.838351] [info] Connecting to db..
+[2015-10-31 20:41:22.838553] [info]  Welcome aaaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbbba, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 20:41:23.395761] [debug] Curl request completed!
+[2015-10-31 20:43:28.833961] [info] Connecting to db..
+[2015-10-31 20:43:28.834181] [info]  Welcome aaaaaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbbbbbbb, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 20:43:29.120249] [debug] Curl request completed!
+[2015-10-31 20:43:29.120537] [info] User ID upon registration:
+[2015-10-31 20:44:31.787626] [info] Connecting to db..
+[2015-10-31 20:44:31.787827] [info]  Welcome aaaaaaaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbbbbbbbbb, 
+				Phone no:1234556 passwd:abcd
+[2015-10-31 20:44:32.104001] [debug] Curl request completed!
+[2015-10-31 20:44:32.104249] [info] User ID upon registration:d97850fe87134ee3b636d5f4b18da020
+[2015-10-31 20:50:44.677998] [info] Connecting to db..
+[2015-10-31 20:50:44.678204] [info]  Welcome Suhas, LastName:Heeraskar, 
+				Phone no:9581019014 passwd:jimmygallu
+[2015-10-31 20:50:44.924237] [debug] Curl request completed!
+[2015-10-31 20:50:44.924504] [info] User ID upon registration:10befa9ee15643029e1d92654a6551a0
+[2015-10-31 20:50:44.924596] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 20:50:44.924652] [debug] ( '10befa9ee15643029e1d92654a6551a0' , 'suhasdheeraskar1988@gmail.com', 'Suhas', 
+				'x', 'Heeraskar', '9581019014','$2y$10$ao8AKRdgVRPE0B3y6qkw4u')
+[2015-10-31 20:50:44.924772] [info] Connecting to db..
+[2015-10-31 20:50:44.924848] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '10befa9ee15643029e1d92654a6551a0' , 'suhasdheeraskar1988@gmail.com', 'Suhas', 
+				'x', 'Heeraskar', '9581019014','$2y$10$ao8AKRdgVRPE0B3y6qkw4u')
+[2015-10-31 20:50:44.924902] [info] Executing the query
+[2015-10-31 20:50:45.000571] [info] Executed the query
+[2015-10-31 20:52:46.016377] [info] Connecting to db..
+[2015-10-31 20:52:46.016592] [info]  Welcome Suhas, LastName:Heeraskar, 
+				Phone no:9581019014 passwd:jimmygallu
+[2015-10-31 20:52:46.342276] [debug] Curl request completed!
+[2015-10-31 20:52:46.342727] [info] User ID upon registration:
+[2015-10-31 20:52:46.342950] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 20:52:46.343089] [debug] ( '' , 'suhasdheeraskar1988@gmail.com', 'Suhas', 
+				'x', 'Heeraskar', '9581019014','$2y$10$eJCHTyrJsF4.bTlHYrMwNT')
+[2015-10-31 20:52:46.343388] [info] Connecting to db..
+[2015-10-31 20:52:46.343466] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'suhasdheeraskar1988@gmail.com', 'Suhas', 
+				'x', 'Heeraskar', '9581019014','$2y$10$eJCHTyrJsF4.bTlHYrMwNT')
+[2015-10-31 20:53:38.688519] [info] Connecting to db..
+[2015-10-31 20:53:38.688721] [info]  Welcome Sowmya, LastName:Prakash, 
+				Phone no:9844428800 passwd:sowmya
+[2015-10-31 20:53:38.957325] [debug] Curl request completed!
+[2015-10-31 20:53:38.957554] [info] User ID upon registration:66d04aefc23a421986a3ae15af3fc35e
+[2015-10-31 20:53:38.957628] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 20:53:38.957679] [debug] ( '66d04aefc23a421986a3ae15af3fc35e' , 'sowmyaprakash@gmail.com', 'Sowmya', 
+				'x', 'Prakash', '9844428800','$2y$10$rFcq0nW.vsCvgYPUkD0ziG')
+[2015-10-31 20:53:38.957797] [info] Connecting to db..
+[2015-10-31 20:53:38.957870] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '66d04aefc23a421986a3ae15af3fc35e' , 'sowmyaprakash@gmail.com', 'Sowmya', 
+				'x', 'Prakash', '9844428800','$2y$10$rFcq0nW.vsCvgYPUkD0ziG')
+[2015-10-31 21:06:10.443826] [info] Connecting to db..
+[2015-10-31 21:06:10.463033] [debug]  Welcome Umesh, LastName:Ramprakash, 
+				Phone no:9797979797 passwd:umesh
+[2015-10-31 21:06:10.909251] [debug] Curl request completed!
+[2015-10-31 21:06:10.909502] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-31 21:06:10.923449] [debug] ( '59f944e15b274c218f6b5f9a8624091e' , 'umeshramprakash@gmail.com', 'Umesh', 
+				'x', 'Ramprakash', '9797979797','$2y$10$NEIWrSWNFelF1ZT5PPlq.Y')
+[2015-10-31 21:06:10.923707] [info] Connecting to db..
+[2015-10-31 21:06:10.923799] [info] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '59f944e15b274c218f6b5f9a8624091e' , 'umeshramprakash@gmail.com', 'Umesh', 
+				'x', 'Ramprakash', '9797979797','$2y$10$NEIWrSWNFelF1ZT5PPlq.Y')
+[2015-10-31 21:06:10.925414] [info] Registration successful for user:umeshramprakash@gmail.com with id:59f944e15b274c218f6b5f9a8624091e
+[2015-10-31 21:07:40.045794] [info] Connecting to db..
+[2015-10-31 21:07:40.046212] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-10-31 21:07:40.046459] [info] Connecting to db..
+[2015-10-31 21:07:40.046610] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 21:07:40.046679] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-10-31 21:07:40.471388] [debug] Curl request completed!
+[2015-10-31 21:07:40.471857] [info] userid: has logged in with the subject token:

@@ -1,0 +1,231 @@
+[2015-11-07 16:56:28.968700] [info] Connecting to db..
+[2015-11-07 16:56:29.123209] [debug]  Welcome suhas, LastName:heeraskar, 
+				Phone no:9581019014 passwd:jimmygallu
+[2015-11-07 16:56:31.335165] [debug] Curl request completed!
+[2015-11-07 16:56:31.335408] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-07 16:56:31.335479] [debug] ( '994b8dcca2e744ac8702b8b62242846d' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'heeraskar', '9581019014','$2y$10$BWCyJvGWfbEqa4yoemDKIC')
+[2015-11-07 16:56:31.335602] [info] Connecting to db..
+[2015-11-07 16:56:31.335675] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '994b8dcca2e744ac8702b8b62242846d' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'heeraskar', '9581019014','$2y$10$BWCyJvGWfbEqa4yoemDKIC')
+[2015-11-07 16:56:31.402760] [info] Registration successful for user:suhasdheeraskar1988@gmail.com with id:994b8dcca2e744ac8702b8b62242846d
+[2015-11-07 16:57:29.023854] [info] Connecting to db..
+[2015-11-07 16:57:29.077636] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 16:57:29.077780] [info] Connecting to db..
+[2015-11-07 16:57:29.077856] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 16:57:29.077914] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 16:57:29.130728] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 16:57:29.253185] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 16:57:29.410351] [debug] Curl request completed!
+[2015-11-07 16:57:29.429821] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:65e03e70d51147f79284f383a4004ee0
+[2015-11-07 16:58:06.608489] [info] Connecting to db..
+[2015-11-07 16:58:06.645068] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 16:58:06.645217] [info] Connecting to db..
+[2015-11-07 16:58:06.645289] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 16:58:06.645342] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 16:58:06.648400] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 16:58:06.777338] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 16:58:06.931535] [debug] Curl request completed!
+[2015-11-07 16:58:06.931894] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:5babbf10a3104137985e047462ff7269
+[2015-11-07 16:59:15.674880] [info] Connecting to db..
+[2015-11-07 16:59:15.737926] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 16:59:15.738059] [info] Connecting to db..
+[2015-11-07 16:59:15.738131] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 16:59:15.738183] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 16:59:15.741121] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 16:59:15.872355] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 16:59:16.050448] [debug] Curl request completed!
+[2015-11-07 16:59:16.050761] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:d3e1143f886d4be292146a4c78136a52
+[2015-11-07 17:00:03.010730] [info] Connecting to db..
+[2015-11-07 17:00:03.047816] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 17:00:03.047949] [info] Connecting to db..
+[2015-11-07 17:00:03.048019] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:00:03.048070] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:00:03.051220] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 17:00:03.172780] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 17:00:03.338810] [debug] Curl request completed!
+[2015-11-07 17:00:03.339124] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:524bd9ff49d84444989ec66d20e74faa
+[2015-11-07 17:50:54.358336] [info] Connecting to db..
+[2015-11-07 17:50:54.520206] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 17:50:54.520339] [info] Connecting to db..
+[2015-11-07 17:50:54.520411] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:50:54.520462] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:50:54.524575] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 17:50:54.647485] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 17:50:54.867949] [debug] Curl request completed!
+[2015-11-07 17:50:54.895443] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:c0369279aa1744a49427e35cf358b462
+[2015-11-07 17:51:40.194200] [info] Connecting to db..
+[2015-11-07 17:51:40.194606] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 17:51:40.194808] [info] Connecting to db..
+[2015-11-07 17:51:40.194938] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:51:40.195101] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:51:40.199045] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 17:51:40.324533] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 17:51:40.479067] [debug] Curl request completed!
+[2015-11-07 17:51:40.493426] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:8c319e88519541ea995a5ea4cb0c1050
+[2015-11-07 17:51:58.427220] [info] Connecting to db..
+[2015-11-07 17:51:58.427454] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 17:51:58.427587] [info] Connecting to db..
+[2015-11-07 17:51:58.427664] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:51:58.427721] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 17:51:58.432081] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 17:51:58.554225] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 17:51:58.716639] [debug] Curl request completed!
+[2015-11-07 17:51:58.717205] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:97e49ab6282247cdbe8c67726df268a3
+[2015-11-07 18:01:15.429035] [info] Connecting to db..
+[2015-11-07 18:01:15.487684] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 18:01:15.487847] [info] Connecting to db..
+[2015-11-07 18:01:15.487936] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:01:15.488002] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:01:15.510886] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 18:01:15.655494] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 18:01:16.453114] [debug] Curl request completed!
+[2015-11-07 18:01:16.453454] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:2ced20a8d5e4432788f948251510bff4
+[2015-11-07 18:04:53.090142] [info] Connecting to db..
+[2015-11-07 18:04:53.111747] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 18:04:53.112181] [info] Connecting to db..
+[2015-11-07 18:04:53.112257] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:04:53.112320] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:04:53.115154] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 18:04:53.244184] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 18:04:53.439960] [debug] Curl request completed!
+[2015-11-07 18:04:53.440277] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:fbaa5642bbfb47f6b005f0e2ccfb5614
+[2015-11-07 18:07:39.431612] [info] Connecting to db..
+[2015-11-07 18:07:39.842942] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 18:07:39.843100] [info] Connecting to db..
+[2015-11-07 18:07:39.843172] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:07:39.843223] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:07:39.845506] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 18:07:39.964370] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 18:07:40.231543] [debug] Curl request completed!
+[2015-11-07 18:07:40.231852] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:bdfaf3cc0854409aa2b5de19e16659e1
+[2015-11-07 18:07:47.484054] [info] Connecting to db..
+[2015-11-07 18:07:47.484297] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 18:07:47.484395] [info] Connecting to db..
+[2015-11-07 18:07:47.484457] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:07:47.484505] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:07:47.488450] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 18:07:47.608673] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 18:07:47.773119] [debug] Curl request completed!
+[2015-11-07 18:07:47.773437] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:35a89684a71f41fbbd507bb5abefb0ac
+[2015-11-07 18:07:58.244354] [info] Connecting to db..
+[2015-11-07 18:07:58.298918] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 18:07:58.299061] [info] Connecting to db..
+[2015-11-07 18:07:58.299134] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:07:58.299185] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:07:58.301213] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 18:07:58.429691] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.oCRz3NvxTljOOo7NTyULHUxgLhzhCx2
+[2015-11-07 18:07:58.667375] [debug] Curl request completed!
+[2015-11-07 18:07:58.667675] [info] userid: has logged in with the subject token:
+[2015-11-07 18:08:08.096050] [info] Connecting to db..
+[2015-11-07 18:08:08.096295] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 18:08:08.096394] [info] Connecting to db..
+[2015-11-07 18:08:08.096457] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:08:08.096507] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 18:08:08.099045] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 18:08:08.227503] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.4VBYrKd7oOujmKrZn..eLHtN0pM57F6
+[2015-11-07 18:08:08.386058] [debug] Curl request completed!
+[2015-11-07 18:08:08.386352] [info] userid: has logged in with the subject token:
+[2015-11-07 22:36:09.298683] [info] Connecting to db..
+[2015-11-07 22:36:09.682065] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:36:09.682216] [info] Connecting to db..
+[2015-11-07 22:36:09.682297] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:36:09.682372] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:36:09.793848] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:36:09.934839] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.giPE6TbxcSMYgGHdOgT12vV3Gsk5FUu
+[2015-11-07 22:36:12.036562] [debug] Curl request completed!
+[2015-11-07 22:36:12.051769] [info] userid:994b8dcca2e744ac8702b8b62242846d has logged in with the subject token:a953aef319a544c19f517d954ef21e2f
+[2015-11-07 22:36:43.343204] [info] Connecting to db..
+[2015-11-07 22:36:43.404742] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:36:43.405169] [info] Connecting to db..
+[2015-11-07 22:36:43.405339] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:36:43.405410] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:36:43.409399] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:36:43.542634] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.hN3phM6JUsWTKyaMOTQGQKsgGK2kzlm
+[2015-11-07 22:36:43.646326] [debug] Curl request completed!
+[2015-11-07 22:36:43.682246] [info] userid: has logged in with the subject token:
+[2015-11-07 22:37:38.527417] [info] Connecting to db..
+[2015-11-07 22:37:38.568960] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:37:38.569097] [info] Connecting to db..
+[2015-11-07 22:37:38.569174] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:37:38.569226] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:37:38.573508] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:37:38.702117] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.xVNZ7Zg7/M1SDH4KQDgHNlLbGOLkcTG
+[2015-11-07 22:37:38.805810] [debug] Curl request completed!
+[2015-11-07 22:37:38.806178] [info] userid: has logged in with the subject token:
+[2015-11-07 22:37:45.172749] [info] Connecting to db..
+[2015-11-07 22:37:45.209481] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:37:45.209619] [info] Connecting to db..
+[2015-11-07 22:37:45.209708] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:37:45.209764] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:37:45.213397] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:37:45.336713] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.oCRz3NvxTljOOo7NTyULHUxgLhzhCx2
+[2015-11-07 22:37:45.430357] [debug] Curl request completed!
+[2015-11-07 22:37:45.430672] [info] userid: has logged in with the subject token:
+[2015-11-07 22:39:14.700408] [info] Connecting to db..
+[2015-11-07 22:39:14.700582] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:39:14.700679] [info] Connecting to db..
+[2015-11-07 22:39:14.700741] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:39:14.700792] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:39:14.709908] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:39:14.835597] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.hN3phM6JUsWTKyaMOTQGQKsgGK2kzlm
+[2015-11-07 22:39:14.937218] [debug] Curl request completed!
+[2015-11-07 22:39:14.937489] [info] userid: has logged in with the subject token:
+[2015-11-07 22:39:56.398066] [info] Connecting to db..
+[2015-11-07 22:39:56.398241] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:39:56.398340] [info] Connecting to db..
+[2015-11-07 22:39:56.398403] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:39:56.398467] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:39:56.403506] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:39:56.538623] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.d1j1ysLbe87O73tlCNLdIy/hZpVSAwa
+[2015-11-07 22:39:56.639419] [debug] Curl request completed!
+[2015-11-07 22:39:56.639693] [info] userid: has logged in with the subject token:
+[2015-11-07 22:41:23.763885] [info] Connecting to db..
+[2015-11-07 22:41:23.764062] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:41:23.764159] [info] Connecting to db..
+[2015-11-07 22:41:23.764221] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:41:23.764273] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:41:23.767940] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:41:23.898885] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.11lEELTkVBzCwhgRjD6GTLicppoMaoa
+[2015-11-07 22:41:24.001184] [debug] Curl request completed!
+[2015-11-07 22:41:24.001447] [info] userid: has logged in with the subject token:
+[2015-11-07 22:43:06.551142] [info] Connecting to db..
+[2015-11-07 22:43:06.594449] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:43:06.594603] [info] Connecting to db..
+[2015-11-07 22:43:06.594681] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:06.594739] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:06.597959] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:43:06.725934] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.u6a2inpmr7rxTUWCFFhQrLLVYePBI7K
+[2015-11-07 22:43:06.824603] [debug] Curl request completed!
+[2015-11-07 22:43:30.095185] [info] Connecting to db..
+[2015-11-07 22:43:30.133634] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:43:30.133790] [info] Connecting to db..
+[2015-11-07 22:43:30.133866] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:30.133918] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:30.136599] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:43:30.268639] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.1JzOJT1eGqDAyAnO3Sogf0pe024Clk6
+[2015-11-07 22:43:30.369863] [debug] Curl request completed!
+[2015-11-07 22:43:56.146490] [info] Connecting to db..
+[2015-11-07 22:43:56.146802] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:43:56.147097] [info] Connecting to db..
+[2015-11-07 22:43:56.147296] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:56.147450] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:56.151604] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:43:56.279683] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.oCRz3NvxTljOOo7NTyULHUxgLhzhCx2
+[2015-11-07 22:43:56.385201] [debug] Curl request completed!
+[2015-11-07 22:43:58.936831] [info] Connecting to db..
+[2015-11-07 22:43:58.937011] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:43:58.937108] [info] Connecting to db..
+[2015-11-07 22:43:58.937171] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:58.937222] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:43:58.941824] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:43:59.069801] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI.oCRz3NvxTljOOo7NTyULHUxgLhzhCx2
+[2015-11-07 22:43:59.166019] [debug] Curl request completed!
+[2015-11-07 22:44:18.268217] [info] Connecting to db..
+[2015-11-07 22:44:18.268403] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-07 22:44:18.268505] [info] Connecting to db..
+[2015-11-07 22:44:18.268568] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:44:18.268620] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-07 22:44:18.274199] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$BWCyJvGWfbEqa4yoemDKIC
+[2015-11-07 22:44:18.401513] [info] passwd:$2y$10$BWCyJvGWfbEqa4yoemDKI..7EAJF6R144vZICTetu44CfPvNP80/6
+[2015-11-07 22:44:18.512891] [debug] Curl request completed!

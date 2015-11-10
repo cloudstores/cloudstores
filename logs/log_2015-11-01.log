@@ -1,0 +1,853 @@
+[2015-11-01 1:34:16.070704] [info] Connecting to db..
+[2015-11-01 1:34:16.127022] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-11-01 1:34:16.127171] [info] Connecting to db..
+[2015-11-01 1:34:16.127243] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:34:16.127294] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:34:24.716428] [debug] Curl request completed!
+[2015-11-01 1:34:24.817581] [info] userid: has logged in with the subject token:
+[2015-11-01 1:35:28.285943] [info] Connecting to db..
+[2015-11-01 1:35:28.291804] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-11-01 1:35:28.291923] [info] Connecting to db..
+[2015-11-01 1:35:28.291995] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:35:28.292047] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:35:28.566037] [debug] Curl request completed!
+[2015-11-01 1:35:28.582289] [info] userid: has logged in with the subject token:
+[2015-11-01 1:36:55.706342] [info] Connecting to db..
+[2015-11-01 1:36:55.718967] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-11-01 1:36:55.719095] [info] Connecting to db..
+[2015-11-01 1:36:55.719172] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:36:55.719224] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:36:55.988059] [debug] Curl request completed!
+[2015-11-01 1:36:55.992434] [info] userid: has logged in with the subject token:
+[2015-11-01 1:39:05.893316] [info] Connecting to db..
+[2015-11-01 1:39:05.907746] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-11-01 1:39:05.907866] [info] Connecting to db..
+[2015-11-01 1:39:05.907938] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:39:05.907990] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:39:06.177793] [debug] Curl request completed!
+[2015-11-01 1:39:06.200987] [info] userid: has logged in with the subject token:
+[2015-11-01 1:41:10.139888] [info] Connecting to db..
+[2015-11-01 1:41:10.156066] [debug]  Welcome umeshramprakash@gmail.com passwd:umesh
+[2015-11-01 1:41:10.156187] [info] Connecting to db..
+[2015-11-01 1:41:10.156255] [info] SELECT salt FROM credentials WHERE email='umeshramprakash@gmail.com' ALLOW FILTERING
+[2015-11-01 1:41:10.156306] [debug] query:SELECT salt FROM credentials WHERE email='umeshramprakash@gmail.com' ALLOW FILTERING
+[2015-11-01 1:41:10.435702] [debug] Curl request completed!
+[2015-11-01 1:41:10.477492] [info] userid: has logged in with the subject token:
+[2015-11-01 1:42:31.049034] [info] Connecting to db..
+[2015-11-01 1:42:31.049495] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:jimmygallu
+[2015-11-01 1:42:31.049599] [info] Connecting to db..
+[2015-11-01 1:42:31.049664] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:42:31.049715] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 1:42:31.294925] [debug] Curl request completed!
+[2015-11-01 1:42:31.295290] [info] userid: has logged in with the subject token:
+[2015-11-01 1:43:22.667978] [info] Connecting to db..
+[2015-11-01 1:43:22.679600] [debug]  Welcome suhas, LastName:heeraskar, 
+				Phone no:1234567890 passwd:suhas
+[2015-11-01 1:43:23.207707] [debug] Curl request completed!
+[2015-11-01 1:43:23.224632] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 1:43:23.224750] [debug] ( '2ebbaef292af401bb8fbe7d3f6d5621d' , 'suhas.heeraskar@gmail.com', 'suhas', 
+				'x', 'heeraskar', '1234567890','$2y$10$81MTnYoHs7lASGdxQvhJsm')
+[2015-11-01 1:43:23.224878] [info] Connecting to db..
+[2015-11-01 1:43:23.224962] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '2ebbaef292af401bb8fbe7d3f6d5621d' , 'suhas.heeraskar@gmail.com', 'suhas', 
+				'x', 'heeraskar', '1234567890','$2y$10$81MTnYoHs7lASGdxQvhJsm')
+[2015-11-01 1:43:23.299002] [info] Registration successful for user:suhas.heeraskar@gmail.com with id:2ebbaef292af401bb8fbe7d3f6d5621d
+[2015-11-01 1:44:55.881783] [info] Connecting to db..
+[2015-11-01 1:44:55.881974] [debug]  Welcome suhas, LastName:heeraskar, 
+				Phone no:1234567890 passwd:suhas
+[2015-11-01 1:44:56.251452] [debug] Curl request completed!
+[2015-11-01 1:44:56.251760] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 1:44:56.251841] [debug] ( '' , 'suhas.heeraskar@gmail.com', 'suhas', 
+				'x', 'heeraskar', '1234567890','$2y$10$VKZSbWuEgeitwMzxV4hSNh')
+[2015-11-01 1:44:56.251974] [info] Connecting to db..
+[2015-11-01 1:44:56.252052] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'suhas.heeraskar@gmail.com', 'suhas', 
+				'x', 'heeraskar', '1234567890','$2y$10$VKZSbWuEgeitwMzxV4hSNh')
+[2015-11-01 1:44:56.272921] [info] Registration successful for user:suhas.heeraskar@gmail.com with id:
+[2015-11-01 1:45:31.845104] [info] Connecting to db..
+[2015-11-01 1:45:31.845344] [debug]  Welcome suhas.heeraskar@gmail.com passwd:suhas
+[2015-11-01 1:45:31.845482] [info] Connecting to db..
+[2015-11-01 1:45:31.845570] [info] SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 1:45:31.845642] [debug] query:SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 1:45:32.077367] [debug] Curl request completed!
+[2015-11-01 1:45:32.077652] [info] userid: has logged in with the subject token:
+[2015-11-01 1:46:46.670099] [info] Connecting to db..
+[2015-11-01 1:46:46.670291] [debug]  Welcome suhas.heeraskar@gmail.com passwd:suhas
+[2015-11-01 1:46:46.670408] [info] Connecting to db..
+[2015-11-01 1:46:46.670480] [info] SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 1:46:46.670537] [debug] query:SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 1:46:46.891287] [debug] Curl request completed!
+[2015-11-01 1:46:46.891627] [info] userid: has logged in with the subject token:
+[2015-11-01 1:53:55.058873] [info] Connecting to db..
+[2015-11-01 1:53:55.072865] [debug]  Welcome umeshramprakash@gmail.com passwd:umesh
+[2015-11-01 1:53:55.072990] [info] Connecting to db..
+[2015-11-01 1:53:55.073064] [info] SELECT salt FROM credentials WHERE email='umeshramprakash@gmail.com' ALLOW FILTERING
+[2015-11-01 1:53:55.073121] [debug] query:SELECT salt FROM credentials WHERE email='umeshramprakash@gmail.com' ALLOW FILTERING
+[2015-11-01 1:53:55.295161] [info] passwd:$2y$10$NEIWrSWNFelF1ZT5PPlq.ONHtMqIjzmyxtEpQGQVR6w17UDCKX24u
+[2015-11-01 1:53:55.443252] [debug] Curl request completed!
+[2015-11-01 1:53:55.443625] [info] userid: has logged in with the subject token:
+[2015-11-01 2:12:42.623289] [info] Connecting to db..
+[2015-11-01 2:12:42.703557] [debug]  Welcome suhas.heeraskar@gmail.com passwd:suhas
+[2015-11-01 2:12:42.703718] [info] Connecting to db..
+[2015-11-01 2:12:42.703804] [info] SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 2:12:42.703866] [debug] query:SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 2:12:42.837292] [info] passwd:$2y$10$81MTnYoHs7lASGdxQvhJseNh8tf9zc8y/31i68zEJnPvFWcdPRcfO
+[2015-11-01 2:12:42.945215] [debug] Curl request completed!
+[2015-11-01 2:14:58.772878] [info] Connecting to db..
+[2015-11-01 2:14:58.874219] [debug]  Welcome suhas.heeraskar@gmail.com passwd:suhas
+[2015-11-01 2:14:58.874392] [info] Connecting to db..
+[2015-11-01 2:14:58.874480] [info] SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 2:14:58.874540] [debug] query:SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 2:14:58.890067] [debug] userId:suhas.heeraskar@gmail.com salt:$2y$10$81MTnYoHs7lASGdxQvhJsm
+[2015-11-01 2:14:59.074803] [info] passwd:$2y$10$81MTnYoHs7lASGdxQvhJseNh8tf9zc8y/31i68zEJnPvFWcdPRcfO
+[2015-11-01 2:14:59.181468] [debug] Curl request completed!
+[2015-11-01 2:18:13.313308] [info] Connecting to db..
+[2015-11-01 2:18:13.358481] [debug]  Welcome suhas, LastName:heeraskar, 
+				Phone no:9581019014 passwd:suhas
+[2015-11-01 2:18:13.576203] [debug] Curl request completed!
+[2015-11-01 2:18:13.576477] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 2:18:13.576553] [debug] ( 'c3e90e9e697549b7a03e9366d6e488a1' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'heeraskar', '9581019014','$2y$10$g7rJU5S0iHaUqQA///OTXV')
+[2015-11-01 2:18:13.576678] [info] Connecting to db..
+[2015-11-01 2:18:13.576756] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'c3e90e9e697549b7a03e9366d6e488a1' , 'suhasdheeraskar1988@gmail.com', 'suhas', 
+				'x', 'heeraskar', '9581019014','$2y$10$g7rJU5S0iHaUqQA///OTXV')
+[2015-11-01 2:18:13.605422] [info] Registration successful for user:suhasdheeraskar1988@gmail.com with id:c3e90e9e697549b7a03e9366d6e488a1
+[2015-11-01 2:18:52.328490] [info] Connecting to db..
+[2015-11-01 2:18:52.385539] [debug]  Welcome suhas.heeraskar@gmail.com passwd:suhas
+[2015-11-01 2:18:52.385699] [info] Connecting to db..
+[2015-11-01 2:18:52.385804] [info] SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 2:18:52.385860] [debug] query:SELECT salt FROM credentials WHERE email='suhas.heeraskar@gmail.com' ALLOW FILTERING
+[2015-11-01 2:18:52.391638] [debug] userId:suhas.heeraskar@gmail.com salt:
+[2015-11-01 2:18:52.392220] [info] passwd:$1$SqqHx01f$fMkcniOBKiuyKENXVR2YF/
+[2015-11-01 2:18:52.465500] [debug] Curl request completed!
+[2015-11-01 2:20:24.664268] [info] Connecting to db..
+[2015-11-01 2:20:24.664457] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:suhas
+[2015-11-01 2:20:24.664556] [info] Connecting to db..
+[2015-11-01 2:20:24.664619] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 2:20:24.664669] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 2:20:24.676309] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$g7rJU5S0iHaUqQA///OTXV
+[2015-11-01 2:20:24.804598] [info] passwd:$2y$10$g7rJU5S0iHaUqQA///OTXOhvEu2qZqcCrjqk60DR/svxYbdcGdm2G
+[2015-11-01 2:20:24.908438] [debug] Curl request completed!
+[2015-11-01 2:34:30.046732] [info] Connecting to db..
+[2015-11-01 2:34:30.316468] [debug]  Welcome suhasdheeraskar1988@gmail.com passwd:suhas
+[2015-11-01 2:34:30.316629] [info] Connecting to db..
+[2015-11-01 2:34:30.316715] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 2:34:30.316777] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 2:34:30.410860] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$g7rJU5S0iHaUqQA///OTXV
+[2015-11-01 2:34:30.537971] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhasdheeraskar1988@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$g7rJU5S0iHaUqQA///OTXOhvEu2qZqcCrjqk60DR/svxYbdcGdm2G"}}}}}
+[2015-11-01 2:34:30.538176] [info] passwd:$2y$10$g7rJU5S0iHaUqQA///OTXOhvEu2qZqcCrjqk60DR/svxYbdcGdm2G
+[2015-11-01 2:34:31.521464] [debug] Curl request completed!
+[2015-11-01 2:35:10.137411] [info] Connecting to db..
+[2015-11-01 2:35:10.192933] [debug]  Welcome sowmya, LastName:prakash, 
+				Phone no:123 passwd:sowmya
+[2015-11-01 2:35:10.402597] [debug] Curl request completed!
+[2015-11-01 2:35:10.402870] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 2:35:10.402950] [debug] ( 'a713f1a319e54979a82d3c5166144c1e' , 'sowmya@gmail.com', 'sowmya', 
+				'x', 'prakash', '123','$2y$10$IHB91lNDLcjrZhTQBNjCJ3')
+[2015-11-01 2:35:10.403084] [info] Connecting to db..
+[2015-11-01 2:35:10.403161] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'a713f1a319e54979a82d3c5166144c1e' , 'sowmya@gmail.com', 'sowmya', 
+				'x', 'prakash', '123','$2y$10$IHB91lNDLcjrZhTQBNjCJ3')
+[2015-11-01 2:35:10.436701] [info] Registration successful for user:sowmya@gmail.com with id:a713f1a319e54979a82d3c5166144c1e
+[2015-11-01 2:36:21.800101] [info] Connecting to db..
+[2015-11-01 2:36:21.839102] [debug]  Welcome sowmya@gmail.com passwd:sowmya
+[2015-11-01 2:36:21.839278] [info] Connecting to db..
+[2015-11-01 2:36:21.839375] [info] SELECT salt FROM credentials WHERE email='sowmya@gmail.com' ALLOW FILTERING
+[2015-11-01 2:36:21.839435] [debug] query:SELECT salt FROM credentials WHERE email='sowmya@gmail.com' ALLOW FILTERING
+[2015-11-01 2:36:21.845115] [debug] userId:sowmya@gmail.com salt:$2y$10$IHB91lNDLcjrZhTQBNjCJ3
+[2015-11-01 2:36:21.969340] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"sowmya@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$IHB91lNDLcjrZhTQBNjCJuMBFNMgfiQ27HCm5Z2vwNhwZdb6Q2uEa"}}}}}
+[2015-11-01 2:36:21.969537] [info] passwd:$2y$10$IHB91lNDLcjrZhTQBNjCJuMBFNMgfiQ27HCm5Z2vwNhwZdb6Q2uEa
+[2015-11-01 2:36:22.070327] [debug] Curl request completed!
+[2015-11-01 2:45:50.513349] [info] Connecting to db..
+[2015-11-01 2:45:50.513542] [debug]  Welcome prakash, LastName:asdf, 
+				Phone no:2345 passwd:prakash
+[2015-11-01 2:45:50.639580] [debug] $2y$10$urDzet5MfhH.jkUsj97fYOu2at50k226NtLMaFDy2tnRTRqJ2GEg.
+[2015-11-01 2:45:50.755027] [debug] Curl request completed!
+[2015-11-01 2:45:50.755260] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 2:45:50.755333] [debug] ( '983c135159b24d7d80becc2172584887' , 'prakash@gmail.com', 'prakash', 
+				'x', 'asdf', '2345','$2y$10$urDzet5MfhH.jkUsj97fYc')
+[2015-11-01 2:45:50.755451] [info] Connecting to db..
+[2015-11-01 2:45:50.755534] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '983c135159b24d7d80becc2172584887' , 'prakash@gmail.com', 'prakash', 
+				'x', 'asdf', '2345','$2y$10$urDzet5MfhH.jkUsj97fYc')
+[2015-11-01 2:45:50.758600] [info] Registration successful for user:prakash@gmail.com with id:983c135159b24d7d80becc2172584887
+[2015-11-01 2:46:32.079566] [info] Connecting to db..
+[2015-11-01 2:46:32.079755] [debug]  Welcome prakash@gmail.com passwd:prakash
+[2015-11-01 2:46:32.079859] [info] Connecting to db..
+[2015-11-01 2:46:32.079927] [info] SELECT salt FROM credentials WHERE email='prakash@gmail.com' ALLOW FILTERING
+[2015-11-01 2:46:32.079982] [debug] query:SELECT salt FROM credentials WHERE email='prakash@gmail.com' ALLOW FILTERING
+[2015-11-01 2:46:32.101241] [debug] userId:prakash@gmail.com salt:$2y$10$urDzet5MfhH.jkUsj97fYc
+[2015-11-01 2:46:32.236310] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"prakash@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10$urDzet5MfhH.jkUsj97fYOu2at50k226NtLMaFDy2tnRTRqJ2GEg."}}}}}
+[2015-11-01 2:46:32.236474] [info] passwd:$2y$10$urDzet5MfhH.jkUsj97fYOu2at50k226NtLMaFDy2tnRTRqJ2GEg.
+[2015-11-01 2:46:32.333920] [debug] Curl request completed!
+[2015-11-01 3:00:23.271507] [info] Connecting to db..
+[2015-11-01 3:00:23.322837] [debug]  Welcome rama passwd:prakash
+[2015-11-01 3:00:23.322937] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama",
+				"domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 3:00:23.323055] [info] passwd:krishna
+[2015-11-01 3:00:23.525569] [debug] Curl request completed!
+[2015-11-01 3:01:30.320817] [info] Connecting to db..
+[2015-11-01 3:01:30.393906] [debug]  Welcome suhas, LastName:heeraskar, 
+				Phone no:1233456778 passwd:suhas
+[2015-11-01 3:01:30.529700] [debug] $2y$10$k1G/emthIhiqXfhj1JLW7Oj88fh2ibnpnT0DfAfLD/ZpYXmSjPwpO
+[2015-11-01 3:01:30.628243] [debug] Curl request completed!
+[2015-11-01 3:01:30.628526] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 3:01:30.628613] [debug] ( '7fc91da6ceae49ffa9fa6d4ad70fa132' , 'suhas@gmail.com', 'suhas', 
+				'x', 'heeraskar', '1233456778','$2y$10$k1G/emthIhiqXfhj1JLW7b')
+[2015-11-01 3:01:30.628743] [info] Connecting to db..
+[2015-11-01 3:01:30.628822] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '7fc91da6ceae49ffa9fa6d4ad70fa132' , 'suhas@gmail.com', 'suhas', 
+				'x', 'heeraskar', '1233456778','$2y$10$k1G/emthIhiqXfhj1JLW7b')
+[2015-11-01 3:01:30.632189] [info] Registration successful for user:suhas@gmail.com with id:7fc91da6ceae49ffa9fa6d4ad70fa132
+[2015-11-01 3:02:32.848318] [info] Connecting to db..
+[2015-11-01 3:02:32.848586] [debug]  Welcome suhas@gmail.com passwd:
+[2015-11-01 3:02:32.848671] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhas@gmail.com",
+				"domain":{"id":"default"},"password":"$2y$10/emthIhiqXfhj1JLW7Oj88fh2ibnpnT0DfAfLD/ZpYXmSjPwpO"}}}}}
+[2015-11-01 3:02:32.848763] [info] passwd:$2y$10/emthIhiqXfhj1JLW7Oj88fh2ibnpnT0DfAfLD/ZpYXmSjPwpO
+[2015-11-01 3:02:32.980820] [debug] Curl request completed!
+[2015-11-01 3:14:17.200412] [info] Connecting to db..
+[2015-11-01 3:14:17.200644] [debug]  Welcome umesh, LastName:asdf, 
+				Phone no:1234567 passwd:umesh
+[2015-11-01 3:14:17.312829] [debug] Curl request completed!
+[2015-11-01 3:14:17.313062] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 3:14:17.313134] [debug] ( '1796d13999f646f09d151e7ed7199eb9' , 'umesh@gmail.com', 'umesh', 
+				'x', 'asdf', '1234567','$2y$10$OfbqTD5sEalelMSh0uvcav')
+[2015-11-01 3:14:17.313255] [info] Connecting to db..
+[2015-11-01 3:14:17.313329] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '1796d13999f646f09d151e7ed7199eb9' , 'umesh@gmail.com', 'umesh', 
+				'x', 'asdf', '1234567','$2y$10$OfbqTD5sEalelMSh0uvcav')
+[2015-11-01 3:14:17.316241] [info] Registration successful for user:umesh@gmail.com with id:1796d13999f646f09d151e7ed7199eb9
+[2015-11-01 3:14:48.730650] [info] Connecting to db..
+[2015-11-01 3:14:48.730899] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:14:48.730969] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"umesh@gmail.com",
+				"domain":{"id":"default"},"password":"umesh"}}}}}
+[2015-11-01 3:14:48.731057] [info] passwd:umesh
+[2015-11-01 3:14:48.798470] [debug] Curl request completed!
+[2015-11-01 3:23:29.732551] [info] Connecting to db..
+[2015-11-01 3:23:29.732749] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:23:29.732817] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:23:29.732898] [info] passwd:umesh
+[2015-11-01 3:23:29.911043] [debug] Curl request completed!
+[2015-11-01 3:25:19.103486] [info] Connecting to db..
+[2015-11-01 3:25:19.103828] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:19.103955] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:19.104110] [info] passwd:umesh
+[2015-11-01 3:25:19.290585] [debug] Curl request completed!
+[2015-11-01 3:25:22.508289] [info] Connecting to db..
+[2015-11-01 3:25:22.556761] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:22.556979] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:22.557244] [info] passwd:umesh
+[2015-11-01 3:25:22.711770] [debug] Curl request completed!
+[2015-11-01 3:25:23.092866] [info] Connecting to db..
+[2015-11-01 3:25:23.093051] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:23.093120] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:23.093214] [info] passwd:umesh
+[2015-11-01 3:25:23.232089] [debug] Curl request completed!
+[2015-11-01 3:25:23.421294] [info] Connecting to db..
+[2015-11-01 3:25:23.421663] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:23.421808] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:23.421972] [info] passwd:umesh
+[2015-11-01 3:25:23.542076] [debug] Curl request completed!
+[2015-11-01 3:25:23.596924] [info] Connecting to db..
+[2015-11-01 3:25:23.597122] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:23.597193] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:23.597276] [info] passwd:umesh
+[2015-11-01 3:25:23.719856] [debug] Curl request completed!
+[2015-11-01 3:25:23.787703] [info] Connecting to db..
+[2015-11-01 3:25:23.788007] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:23.788111] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:23.788228] [info] passwd:umesh
+[2015-11-01 3:25:23.896920] [debug] Curl request completed!
+[2015-11-01 3:25:23.977395] [info] Connecting to db..
+[2015-11-01 3:25:24.044455] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:24.044603] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:24.044751] [info] passwd:umesh
+[2015-11-01 3:25:24.181597] [info] Connecting to db..
+[2015-11-01 3:25:24.181802] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:24.181869] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:24.181951] [info] passwd:umesh
+[2015-11-01 3:25:24.197159] [debug] Curl request completed!
+[2015-11-01 3:25:24.318979] [debug] Curl request completed!
+[2015-11-01 3:25:24.354338] [info] Connecting to db..
+[2015-11-01 3:25:24.354764] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:25:24.354906] [debug] { "auth": {"identity": {"methods": ["password"],"password": {"user": {"name": "rama","domain": { "id": "default" },"password": "krishna"}}}}}
+[2015-11-01 3:25:24.355068] [info] passwd:umesh
+[2015-11-01 3:25:24.474170] [debug] Curl request completed!
+[2015-11-01 3:26:32.904547] [info] Connecting to db..
+[2015-11-01 3:26:33.002690] [debug]  Welcome  passwd:
+[2015-11-01 3:26:33.032617] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 3:26:33.032814] [info] passwd:
+[2015-11-01 3:26:33.190478] [debug] Curl request completed!
+[2015-11-01 3:27:10.360212] [info] Connecting to db..
+[2015-11-01 3:27:10.360430] [debug]  Welcome rama passwd:krishna
+[2015-11-01 3:27:10.360502] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 3:27:10.360590] [info] passwd:krishna
+[2015-11-01 3:27:10.500855] [debug] Curl request completed!
+[2015-11-01 3:27:31.578569] [info] Connecting to db..
+[2015-11-01 3:27:31.578778] [debug]  Welcome umesh@gmail.com passwd:umesh
+[2015-11-01 3:27:31.578845] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"umesh@gmail.com","domain":{"id":"default"},"password":"umesh"}}}}}
+[2015-11-01 3:27:31.578924] [info] passwd:umesh
+[2015-11-01 3:27:31.643848] [debug] Curl request completed!
+[2015-11-01 3:28:10.924267] [info] Connecting to db..
+[2015-11-01 3:28:10.924474] [debug]  Welcome shantala, LastName:asdf, 
+				Phone no:123 passwd:abc
+[2015-11-01 3:28:11.048739] [debug] Curl request completed!
+[2015-11-01 3:28:11.049030] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 3:28:11.049133] [debug] ( '901f6a0b808c42479e156d5fb3fde61e' , 'shantala@gmail.com', 'shantala', 
+				'x', 'asdf', '123','$2y$10$slcALj3DSxEHLD3svS2W8B')
+[2015-11-01 3:28:11.049278] [info] Connecting to db..
+[2015-11-01 3:28:11.049367] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '901f6a0b808c42479e156d5fb3fde61e' , 'shantala@gmail.com', 'shantala', 
+				'x', 'asdf', '123','$2y$10$slcALj3DSxEHLD3svS2W8B')
+[2015-11-01 3:28:11.051474] [info] Registration successful for user:shantala@gmail.com with id:901f6a0b808c42479e156d5fb3fde61e
+[2015-11-01 3:28:25.834784] [info] Connecting to db..
+[2015-11-01 3:28:25.835037] [debug]  Welcome shantala@gmail.com passwd:abc
+[2015-11-01 3:28:25.835124] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"shantala@gmail.com","domain":{"id":"default"},"password":"abc"}}}}}
+[2015-11-01 3:28:25.835218] [info] passwd:abc
+[2015-11-01 3:28:25.898644] [debug] Curl request completed!
+[2015-11-01 3:30:14.946897] [info] Connecting to db..
+[2015-11-01 3:30:14.947087] [debug]  Welcome shantala@gmail.com passwd:abc
+[2015-11-01 3:30:14.947154] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"shantala@gmail.com","domain":{"id":"default"},"password":"abc"}}}}}
+[2015-11-01 3:30:14.947238] [info] passwd:abc
+[2015-11-01 3:30:15.052719] [debug] Curl request completed!
+[2015-11-01 9:36:43.504532] [info] Connecting to db..
+[2015-11-01 9:36:43.774322] [debug]  Welcome  passwd:
+[2015-11-01 9:36:43.774441] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:36:43.774569] [info] passwd:
+[2015-11-01 9:36:44.750844] [debug] Curl request completed!
+[2015-11-01 9:37:51.296555] [info] Connecting to db..
+[2015-11-01 9:37:51.399393] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:51.399493] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:51.399614] [info] passwd:krishna
+[2015-11-01 9:37:51.592899] [debug] Curl request completed!
+[2015-11-01 9:37:54.428565] [info] Connecting to db..
+[2015-11-01 9:37:54.428930] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:54.429063] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:54.429224] [info] passwd:krishna
+[2015-11-01 9:37:54.546679] [debug] Curl request completed!
+[2015-11-01 9:37:54.988449] [info] Connecting to db..
+[2015-11-01 9:37:54.988626] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:54.988687] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:54.988764] [info] passwd:krishna
+[2015-11-01 9:37:55.155272] [debug] Curl request completed!
+[2015-11-01 9:37:55.190696] [info] Connecting to db..
+[2015-11-01 9:37:55.251805] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:55.251912] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:55.252032] [info] passwd:krishna
+[2015-11-01 9:37:55.398979] [debug] Curl request completed!
+[2015-11-01 9:37:55.413347] [info] Connecting to db..
+[2015-11-01 9:37:55.488864] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:55.488976] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:55.489226] [info] passwd:krishna
+[2015-11-01 9:37:55.590028] [info] Connecting to db..
+[2015-11-01 9:37:55.621094] [debug] Curl request completed!
+[2015-11-01 9:37:55.671026] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:55.671144] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:55.671291] [info] passwd:krishna
+[2015-11-01 9:37:55.774888] [info] Connecting to db..
+[2015-11-01 9:37:55.809454] [debug] Curl request completed!
+[2015-11-01 9:37:55.851111] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:55.851224] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:55.851350] [info] passwd:krishna
+[2015-11-01 9:37:55.916990] [info] Connecting to db..
+[2015-11-01 9:37:55.917184] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:55.917251] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:55.917331] [info] passwd:krishna
+[2015-11-01 9:37:56.065319] [debug] Curl request completed!
+[2015-11-01 9:37:56.099107] [info] Connecting to db..
+[2015-11-01 9:37:56.099334] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:56.099412] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:56.099504] [info] passwd:krishna
+[2015-11-01 9:37:56.119885] [debug] Curl request completed!
+[2015-11-01 9:37:56.211976] [info] Connecting to db..
+[2015-11-01 9:37:56.212168] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:37:56.212235] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:37:56.212320] [info] passwd:krishna
+[2015-11-01 9:37:56.241298] [debug] Curl request completed!
+[2015-11-01 9:37:56.363194] [debug] Curl request completed!
+[2015-11-01 9:38:32.007255] [info] Connecting to db..
+[2015-11-01 9:38:32.007473] [debug]  Welcome shantala@gmail.com passwd:abc
+[2015-11-01 9:38:32.007544] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"shantala@gmail.com","domain":{"id":"default"},"password":"abc"}}}}}
+[2015-11-01 9:38:32.007627] [info] passwd:abc
+[2015-11-01 9:38:32.076448] [debug] Curl request completed!
+[2015-11-01 9:40:16.041759] [info] Connecting to db..
+[2015-11-01 9:40:16.041964] [debug]  Welcome Dasharatha, LastName:rao, 
+				Phone no:8989898989 passwd:bdr
+[2015-11-01 9:40:16.138828] [debug] Curl request completed!
+[2015-11-01 9:40:16.139062] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 9:40:16.139133] [debug] ( 'a1fc8e7dcb5d489b867d4776fa4c1757' , 'dasharatharao@gmail.com', 'Dasharatha', 
+				'x', 'rao', '8989898989','$2y$10$Yvyjcx3TrdwGlHsmhM6PmR')
+[2015-11-01 9:40:16.139252] [info] Connecting to db..
+[2015-11-01 9:40:16.139328] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'a1fc8e7dcb5d489b867d4776fa4c1757' , 'dasharatharao@gmail.com', 'Dasharatha', 
+				'x', 'rao', '8989898989','$2y$10$Yvyjcx3TrdwGlHsmhM6PmR')
+[2015-11-01 9:40:16.177809] [info] Registration successful for user:dasharatharao@gmail.com with id:a1fc8e7dcb5d489b867d4776fa4c1757
+[2015-11-01 9:41:11.535445] [info] Connecting to db..
+[2015-11-01 9:41:11.535635] [debug]  Welcome dasharatharao@gmail.com passwd:bdr
+[2015-11-01 9:41:11.535703] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"dasharatharao@gmail.com","domain":{"id":"default"},"password":"bdr"}}}}}
+[2015-11-01 9:41:11.535788] [info] passwd:bdr
+[2015-11-01 9:41:11.630053] [debug] Curl request completed!
+[2015-11-01 9:45:27.999241] [info] Connecting to db..
+[2015-11-01 9:45:27.999468] [debug]  Welcome rama passwd:krishna
+[2015-11-01 9:45:27.999542] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 9:45:27.999633] [info] passwd:krishna
+[2015-11-01 9:45:28.141120] [debug] Curl request completed!
+[2015-11-01 9:45:46.900769] [info] Connecting to db..
+[2015-11-01 9:45:46.900952] [debug]  Welcome abc passwd:xyz
+[2015-11-01 9:45:46.901019] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"abc","domain":{"id":"default"},"password":"xyz"}}}}}
+[2015-11-01 9:45:46.901112] [info] passwd:xyz
+[2015-11-01 9:45:46.974059] [debug] Curl request completed!
+[2015-11-01 10:21:24.575422] [info] Connecting to db..
+[2015-11-01 10:21:25.591345] [debug]  Welcome umesh, LastName:, 
+				Phone no: passwd:umesh
+[2015-11-01 10:21:26.078509] [debug] Curl request completed!
+[2015-11-01 10:21:26.078764] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 10:21:26.078840] [debug] ( '72518624fdb345dc84cdb0c7b979de14' , 'umesh', 'umesh', 
+				'x', '', '','$2y$10$pWTwzfrCGjynQuCyaC90en')
+[2015-11-01 10:21:26.078958] [info] Connecting to db..
+[2015-11-01 10:21:26.079034] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '72518624fdb345dc84cdb0c7b979de14' , 'umesh', 'umesh', 
+				'x', '', '','$2y$10$pWTwzfrCGjynQuCyaC90en')
+[2015-11-01 10:21:26.163980] [info] Registration successful for user:umesh with id:72518624fdb345dc84cdb0c7b979de14
+[2015-11-01 10:25:16.611270] [info] Connecting to db..
+[2015-11-01 10:25:17.050867] [debug]  Welcome suhas passwd:suhas
+[2015-11-01 10:25:17.050970] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhas","domain":{"id":"default"},"password":"suhas"}}}}}
+[2015-11-01 10:25:17.125586] [info] passwd:suhas
+[2015-11-01 10:25:17.401902] [debug] Curl request completed!
+[2015-11-01 10:26:55.636943] [info] Connecting to db..
+[2015-11-01 10:26:55.783894] [debug]  Welcome sowmya, LastName:, 
+				Phone no: passwd:sowmya
+[2015-11-01 10:26:56.119811] [debug] Curl request completed!
+[2015-11-01 10:26:56.149276] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 10:26:56.149409] [debug] ( 'e2bcdaf24fb44ea090f1fcd95432a968' , 'sowmya', 'sowmya', 
+				'x', '', '','$2y$10$0GgtRTIDA4cIF7TYpi1mtr')
+[2015-11-01 10:26:56.149553] [info] Connecting to db..
+[2015-11-01 10:26:56.149636] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'e2bcdaf24fb44ea090f1fcd95432a968' , 'sowmya', 'sowmya', 
+				'x', '', '','$2y$10$0GgtRTIDA4cIF7TYpi1mtr')
+[2015-11-01 10:26:56.433707] [info] Registration successful for user:sowmya with id:e2bcdaf24fb44ea090f1fcd95432a968
+[2015-11-01 10:28:26.750003] [info] Connecting to db..
+[2015-11-01 10:28:27.033349] [debug]  Welcome sowmya passwd:sowmya
+[2015-11-01 10:28:27.033447] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"sowmya","domain":{"id":"default"},"password":"sowmya"}}}}}
+[2015-11-01 10:28:27.053994] [info] passwd:sowmya
+[2015-11-01 10:28:27.350231] [debug] Curl request completed!
+[2015-11-01 10:45:50.814359] [info] Connecting to db..
+[2015-11-01 10:45:51.295804] [debug]  Welcome rama passwd:krishna
+[2015-11-01 10:45:51.295906] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rama","domain":{"id":"default"},"password":"krishna"}}}}}
+[2015-11-01 10:45:51.317620] [info] passwd:krishna
+[2015-11-01 10:45:52.541582] [debug] Curl request completed!
+[2015-11-01 10:46:31.554496] [info] Connecting to db..
+[2015-11-01 10:46:31.554780] [debug]  Welcome abdul, LastName:, 
+				Phone no: passwd:abdul
+[2015-11-01 10:46:31.706943] [debug] Curl request completed!
+[2015-11-01 10:46:31.707222] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 10:46:31.707297] [debug] ( 'c0263ce4c5424e82935cd02101bec7ab' , 'abdul', 'abdul', 
+				'x', '', '','$2y$10$k4B9LfEpcHooNiiURqGE6s')
+[2015-11-01 10:46:31.707418] [info] Connecting to db..
+[2015-11-01 10:46:31.707493] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'c0263ce4c5424e82935cd02101bec7ab' , 'abdul', 'abdul', 
+				'x', '', '','$2y$10$k4B9LfEpcHooNiiURqGE6s')
+[2015-11-01 10:46:31.751833] [info] Registration successful for user:abdul with id:c0263ce4c5424e82935cd02101bec7ab
+[2015-11-01 10:47:19.181843] [info] Connecting to db..
+[2015-11-01 10:47:19.253308] [debug]  Welcome abdul passwd:abdul
+[2015-11-01 10:47:19.253423] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"abdul","domain":{"id":"default"},"password":"abdul"}}}}}
+[2015-11-01 10:47:19.253540] [info] passwd:abdul
+[2015-11-01 10:47:19.377954] [debug] Curl request completed!
+[2015-11-01 10:56:49.421564] [info] Connecting to db..
+[2015-11-01 10:56:49.491337] [debug]  Welcome heeraskar, LastName:suhas, 
+				Phone no:123 passwd:abc
+[2015-11-01 10:56:50.139130] [debug] Curl request completed!
+[2015-11-01 10:56:50.139425] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 10:56:50.139512] [debug] ( 'f0fc37d1fbe940f8a6efd2829e29ef97' , 'heeraskar', 'heeraskar', 
+				'x', 'suhas', '123','$2y$10$10eqA5THKHouAFzaKWs65D')
+[2015-11-01 10:56:50.139668] [info] Connecting to db..
+[2015-11-01 10:56:50.139755] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'f0fc37d1fbe940f8a6efd2829e29ef97' , 'heeraskar', 'heeraskar', 
+				'x', 'suhas', '123','$2y$10$10eqA5THKHouAFzaKWs65D')
+[2015-11-01 10:56:50.256234] [info] Registration successful for user:heeraskar with id:f0fc37d1fbe940f8a6efd2829e29ef97
+[2015-11-01 10:57:15.818620] [info] Connecting to db..
+[2015-11-01 10:57:15.819083] [debug]  Welcome abdul passwd:abdul
+[2015-11-01 10:57:15.819207] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"abdul","domain":{"id":"default"},"password":"abdul"}}}}}
+[2015-11-01 10:57:15.897785] [info] passwd:abdul
+[2015-11-01 10:57:15.968940] [debug] Curl request completed!
+[2015-11-01 10:58:29.127634] [info] Connecting to db..
+[2015-11-01 10:58:29.127891] [debug]  Welcome abdul passwd:abdul
+[2015-11-01 10:58:29.127959] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"abdul","domain":{"id":"default"},"password":"abdul"}}}}}
+[2015-11-01 10:58:29.128055] [info] passwd:abdul
+[2015-11-01 10:58:29.145747] [debug] Curl request completed!
+[2015-11-01 10:59:24.156193] [info] Connecting to db..
+[2015-11-01 10:59:24.156419] [debug]  Welcome suhas passwd:suhas
+[2015-11-01 10:59:24.156508] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhas","domain":{"id":"default"},"password":"suhas"}}}}}
+[2015-11-01 10:59:24.156595] [info] passwd:suhas
+[2015-11-01 10:59:24.293934] [debug] Curl request completed!
+[2015-11-01 10:59:36.448697] [info] Connecting to db..
+[2015-11-01 10:59:36.448940] [debug]  Welcome heeraskar passwd:abc
+[2015-11-01 10:59:36.449006] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"heeraskar","domain":{"id":"default"},"password":"abc"}}}}}
+[2015-11-01 10:59:36.449109] [info] passwd:abc
+[2015-11-01 10:59:36.516308] [debug] Curl request completed!
+[2015-11-01 10:59:45.242208] [info] Connecting to db..
+[2015-11-01 10:59:45.242544] [debug]  Welcome  passwd:
+[2015-11-01 10:59:45.242671] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"","domain":{"id":"default"},"password":""}}}}}
+[2015-11-01 10:59:45.242763] [info] passwd:
+[2015-11-01 10:59:45.268685] [debug] Curl request completed!
+[2015-11-01 10:59:56.728332] [info] Connecting to db..
+[2015-11-01 10:59:57.130117] [debug]  Welcome suhas passwd:suhas
+[2015-11-01 10:59:57.130228] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"suhas","domain":{"id":"default"},"password":"suhas"}}}}}
+[2015-11-01 10:59:57.166028] [info] passwd:suhas
+[2015-11-01 10:59:57.331218] [debug] Curl request completed!
+[2015-11-01 11:00:34.175674] [info] Connecting to db..
+[2015-11-01 11:00:34.175909] [debug]  Welcome rao, LastName:, 
+				Phone no: passwd:rao
+[2015-11-01 11:00:34.286417] [debug] Curl request completed!
+[2015-11-01 11:00:34.286681] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:00:34.286756] [debug] ( '0473cbe4a7a442c2af38e74f94cc1a89' , 'rao', 'rao', 
+				'x', '', '','$2y$10$m.BlpCymnbargXfivgVFwC')
+[2015-11-01 11:00:34.286878] [info] Connecting to db..
+[2015-11-01 11:00:34.286952] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '0473cbe4a7a442c2af38e74f94cc1a89' , 'rao', 'rao', 
+				'x', '', '','$2y$10$m.BlpCymnbargXfivgVFwC')
+[2015-11-01 11:00:34.302407] [info] Registration successful for user:rao with id:0473cbe4a7a442c2af38e74f94cc1a89
+[2015-11-01 11:00:47.655589] [info] Connecting to db..
+[2015-11-01 11:00:47.655783] [debug]  Welcome rao passwd:rao
+[2015-11-01 11:00:47.655847] [debug] {"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"rao","domain":{"id":"default"},"password":"rao"}}}}}
+[2015-11-01 11:00:47.655929] [info] passwd:rao
+[2015-11-01 11:00:47.717495] [debug] Curl request completed!
+[2015-11-01 11:16:03.019386] [info] Connecting to db..
+[2015-11-01 11:16:03.090002] [debug]  Welcome aaaaaaaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbbbbbbbbb, 
+				Phone no:1234556 passwd:abcd
+[2015-11-01 11:16:04.036482] [debug] Curl request completed!
+[2015-11-01 11:16:04.036756] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:16:04.036830] [debug] ( 'cdf117dafab1448b93be44afe33d326d' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$/jTnWsRJR1KLneT2q6o9Rr')
+[2015-11-01 11:16:04.036952] [info] Connecting to db..
+[2015-11-01 11:16:04.037028] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'cdf117dafab1448b93be44afe33d326d' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$/jTnWsRJR1KLneT2q6o9Rr')
+[2015-11-01 11:16:04.123008] [info] Registration successful for user:aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com with id:cdf117dafab1448b93be44afe33d326d
+[2015-11-01 11:20:45.476855] [debug] Curl request completed!
+[2015-11-01 11:21:37.393043] [debug] Curl request completed!
+[2015-11-01 11:21:37.393512] [info] Connecting to db..
+[2015-11-01 11:21:37.393728] [debug]  Welcome aaaaaaaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbbbbbbbbb, 
+				Phone no:1234556 passwd:abcd
+[2015-11-01 11:21:37.765563] [debug] Curl request completed!
+[2015-11-01 11:21:37.765875] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:21:37.765957] [debug] ( '' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$5sLfolSRoLd1vMH9Caq82i')
+[2015-11-01 11:21:37.766077] [info] Connecting to db..
+[2015-11-01 11:21:37.766150] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$5sLfolSRoLd1vMH9Caq82i')
+[2015-11-01 11:21:37.900998] [info] Registration successful for user:aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com with id:
+[2015-11-01 11:21:44.656871] [debug] Curl request completed!
+[2015-11-01 11:23:40.753252] [debug] Curl request completed!
+[2015-11-01 11:24:15.075737] [debug] Curl request completed!
+[2015-11-01 11:31:10.223351] [info] Connecting to db..
+[2015-11-01 11:31:10.243593] [debug]  Welcome  passwd:
+[2015-11-01 11:31:10.243738] [info] passwd:
+[2015-11-01 11:31:10.404614] [debug] Curl request completed!
+[2015-11-01 11:32:18.604283] [info] Connecting to db..
+[2015-11-01 11:32:18.604542] [debug]  Welcome  passwd:
+[2015-11-01 11:32:18.604623] [info] passwd:
+[2015-11-01 11:32:18.771847] [debug] Curl request completed!
+[2015-11-01 11:34:09.344039] [info] Connecting to db..
+[2015-11-01 11:34:09.344278] [debug]  Welcome aaaaaaaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbbbbbbbbb, 
+				Phone no:1234556 passwd:abcd
+[2015-11-01 11:34:09.507656] [debug] Curl request completed!
+[2015-11-01 11:34:09.507911] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:34:09.507985] [debug] ( 'b4ee6ccfc33e440a824be7b0c88ef8d4' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$iotWpX/0.TJ9iT0Osd/jVt')
+[2015-11-01 11:34:09.524967] [info] Connecting to db..
+[2015-11-01 11:34:09.525078] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'b4ee6ccfc33e440a824be7b0c88ef8d4' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$iotWpX/0.TJ9iT0Osd/jVt')
+[2015-11-01 11:34:09.559833] [info] Registration successful for user:aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com with id:b4ee6ccfc33e440a824be7b0c88ef8d4
+[2015-11-01 11:34:22.586205] [info] Connecting to db..
+[2015-11-01 11:34:22.586476] [debug]  Welcome  passwd:
+[2015-11-01 11:34:22.586550] [info] passwd:
+[2015-11-01 11:34:22.759517] [debug] Curl request completed!
+[2015-11-01 11:37:01.478609] [info] Connecting to db..
+[2015-11-01 11:37:01.478872] [debug]  Welcome aaaaaaaaaaaaaaaaaaaaa, LastName:bbbbbbbbbbbbbbbbbbbbbb, 
+				Phone no:1234556 passwd:abcd
+[2015-11-01 11:37:01.582910] [debug] Curl request completed!
+[2015-11-01 11:37:01.583164] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:37:01.583235] [debug] ( '24f2e9374fa8431db22e9e47574dc2a9' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$oN.Dw9aXgvYLHM5OIOimA0')
+[2015-11-01 11:37:01.583359] [info] Connecting to db..
+[2015-11-01 11:37:01.583435] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '24f2e9374fa8431db22e9e47574dc2a9' , 'aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com', 'aaaaaaaaaaaaaaaaaaaaa', 
+				'x', 'bbbbbbbbbbbbbbbbbbbbbb', '1234556','$2y$10$oN.Dw9aXgvYLHM5OIOimA0')
+[2015-11-01 11:37:01.589917] [info] Registration successful for user:aaaaaaaaaaaabbaaaaaa.bbbbbbbbaabbbbbbbbbb@gmail.com with id:24f2e9374fa8431db22e9e47574dc2a9
+[2015-11-01 11:37:05.498508] [info] Connecting to db..
+[2015-11-01 11:37:05.522856] [debug]  Welcome  passwd:
+[2015-11-01 11:37:05.522994] [info] passwd:
+[2015-11-01 11:37:05.701536] [debug] Curl request completed!
+[2015-11-01 11:37:33.336071] [info] Connecting to db..
+[2015-11-01 11:37:33.336400] [debug]  Welcome  passwd:
+[2015-11-01 11:37:33.336491] [info] passwd:
+[2015-11-01 11:37:33.501029] [debug] Curl request completed!
+[2015-11-01 11:40:25.115487] [info] Connecting to db..
+[2015-11-01 11:40:25.115731] [debug]  Welcome chaitu, LastName:pai, 
+				Phone no:7878787878 passwd:chaitu
+[2015-11-01 11:40:25.248090] [debug] Curl request completed!
+[2015-11-01 11:40:25.248342] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:40:25.248414] [debug] ( '9ec39e1b20da4d58bfaa209eb3ef7b37' , 'chaitu@gmail.com', 'chaitu', 
+				'x', 'pai', '7878787878','$2y$10$mkzUKylMTlGlVA7RYu4PU2')
+[2015-11-01 11:40:25.248532] [info] Connecting to db..
+[2015-11-01 11:40:25.248604] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '9ec39e1b20da4d58bfaa209eb3ef7b37' , 'chaitu@gmail.com', 'chaitu', 
+				'x', 'pai', '7878787878','$2y$10$mkzUKylMTlGlVA7RYu4PU2')
+[2015-11-01 11:40:25.254328] [info] Registration successful for user:chaitu@gmail.com with id:9ec39e1b20da4d58bfaa209eb3ef7b37
+[2015-11-01 11:40:42.148216] [info] Connecting to db..
+[2015-11-01 11:40:42.148690] [debug]  Welcome chaitu@gmail.com passwd:chaitu
+[2015-11-01 11:40:42.148797] [info] passwd:chaitu
+[2015-11-01 11:40:42.299503] [debug] Curl request completed!
+[2015-11-01 11:44:37.069984] [info] Connecting to db..
+[2015-11-01 11:44:37.070197] [debug]  Welcome suman, LastName:hd, 
+				Phone no:4545454545 passwd:suman
+[2015-11-01 11:44:37.257749] [debug] 
+[2015-11-01 11:44:37.338022] [debug] Curl request completed!
+[2015-11-01 11:44:37.338283] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:44:37.338361] [debug] ( '4eb282ad471146af9bfe31438fdffc02' , 'suman@gmail.com', 'suman', 
+				'x', 'hd', '4545454545','$2y$10$vqOShyvp.GHj0Gf3k1.lgU')
+[2015-11-01 11:44:37.338500] [info] Connecting to db..
+[2015-11-01 11:44:37.338577] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '4eb282ad471146af9bfe31438fdffc02' , 'suman@gmail.com', 'suman', 
+				'x', 'hd', '4545454545','$2y$10$vqOShyvp.GHj0Gf3k1.lgU')
+[2015-11-01 11:44:37.342019] [info] Registration successful for user:suman@gmail.com with id:4eb282ad471146af9bfe31438fdffc02
+[2015-11-01 11:44:51.868913] [info] Connecting to db..
+[2015-11-01 11:44:51.869180] [debug]  Welcome suman@gmail.com passwd:suman
+[2015-11-01 11:44:51.869317] [info] Connecting to db..
+[2015-11-01 11:44:51.869405] [info] SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 11:44:51.869477] [debug] query:SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 11:44:52.060446] [debug] userId:suman@gmail.com salt:$2y$10$vqOShyvp.GHj0Gf3k1.lgU
+[2015-11-01 11:44:52.181982] [info] passwd:
+[2015-11-01 11:44:52.296262] [debug] Curl request completed!
+[2015-11-01 11:46:11.124042] [info] Connecting to db..
+[2015-11-01 11:46:11.124269] [debug]  Welcome sandhya, LastName:hd, 
+				Phone no:6767676767 passwd:sandhya
+[2015-11-01 11:46:11.253154] [debug] 
+[2015-11-01 11:46:11.665638] [debug] Curl request completed!
+[2015-11-01 11:46:11.665957] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:46:11.666047] [debug] ( '265d83324e244dcc82cd24d277ae7cdc' , 'sandhya@gmail.com', 'sandhya', 
+				'x', 'hd', '6767676767','$2y$10$6K3D91AaeB.j.9tgl/btgd')
+[2015-11-01 11:46:11.666182] [info] Connecting to db..
+[2015-11-01 11:46:11.666265] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '265d83324e244dcc82cd24d277ae7cdc' , 'sandhya@gmail.com', 'sandhya', 
+				'x', 'hd', '6767676767','$2y$10$6K3D91AaeB.j.9tgl/btgd')
+[2015-11-01 11:46:11.668313] [info] Registration successful for user:sandhya@gmail.com with id:265d83324e244dcc82cd24d277ae7cdc
+[2015-11-01 11:46:54.386476] [info] Connecting to db..
+[2015-11-01 11:46:54.386714] [debug]  Welcome sandhya@gmail.com passwd:sandhya
+[2015-11-01 11:46:54.386825] [info] Connecting to db..
+[2015-11-01 11:46:54.386895] [info] SELECT salt FROM credentials WHERE email='sandhya@gmail.com' ALLOW FILTERING
+[2015-11-01 11:46:54.386950] [debug] query:SELECT salt FROM credentials WHERE email='sandhya@gmail.com' ALLOW FILTERING
+[2015-11-01 11:46:54.405005] [debug] userId:sandhya@gmail.com salt:$2y$10$6K3D91AaeB.j.9tgl/btgd
+[2015-11-01 11:46:54.530204] [info] passwd:
+[2015-11-01 11:46:54.631606] [debug] Curl request completed!
+[2015-11-01 11:47:25.967488] [info] Connecting to db..
+[2015-11-01 11:47:25.967714] [debug]  Welcome sandhya@gmail.com passwd:sandhya
+[2015-11-01 11:47:25.967818] [info] Connecting to db..
+[2015-11-01 11:47:25.967881] [info] SELECT salt FROM credentials WHERE email='sandhya@gmail.com' ALLOW FILTERING
+[2015-11-01 11:47:25.967932] [debug] query:SELECT salt FROM credentials WHERE email='sandhya@gmail.com' ALLOW FILTERING
+[2015-11-01 11:47:25.971913] [debug] userId:sandhya@gmail.com salt:$2y$10$6K3D91AaeB.j.9tgl/btgd
+[2015-11-01 11:47:26.096756] [info] passwd:
+[2015-11-01 11:47:26.180788] [debug] Curl request completed!
+[2015-11-01 11:49:20.210006] [info] Connecting to db..
+[2015-11-01 11:49:20.210215] [debug]  Welcome sandhya@gmail.com passwd:sandhhya
+[2015-11-01 11:49:20.210315] [info] Connecting to db..
+[2015-11-01 11:49:20.210378] [info] SELECT salt FROM credentials WHERE email='sandhya@gmail.com' ALLOW FILTERING
+[2015-11-01 11:49:20.210431] [debug] query:SELECT salt FROM credentials WHERE email='sandhya@gmail.com' ALLOW FILTERING
+[2015-11-01 11:49:20.223210] [debug] userId:sandhya@gmail.com salt:$2y$10$6K3D91AaeB.j.9tgl/btgd
+[2015-11-01 11:49:20.349529] [info] passwd:
+[2015-11-01 11:49:20.412174] [debug] Curl request completed!
+[2015-11-01 11:49:38.338551] [info] Connecting to db..
+[2015-11-01 11:49:38.338769] [debug]  Welcome suman@gmail.com passwd:suman
+[2015-11-01 11:49:38.338893] [info] Connecting to db..
+[2015-11-01 11:49:38.338963] [info] SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 11:49:38.339019] [debug] query:SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 11:49:38.376200] [debug] userId:suman@gmail.com salt:$2y$10$vqOShyvp.GHj0Gf3k1.lgU
+[2015-11-01 11:49:38.501779] [info] passwd:
+[2015-11-01 11:49:38.621113] [debug] Curl request completed!
+[2015-11-01 11:54:07.453412] [info] Connecting to db..
+[2015-11-01 11:54:07.453593] [debug]  Welcome rakesh, LastName:rak, 
+				Phone no:2323232323 passwd:rakesh
+[2015-11-01 11:54:07.579010] [debug] 
+[2015-11-01 11:54:07.674604] [debug] Curl request completed!
+[2015-11-01 11:54:07.674875] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 11:54:07.674951] [debug] ( 'a524b24ad16c40d989853c796f1b49ce' , 'rakesh@gmail.com', 'rakesh', 
+				'x', 'rak', '2323232323','$2y$10$BnS528FNeAZGXyusE0WwuO')
+[2015-11-01 11:54:07.675081] [info] Connecting to db..
+[2015-11-01 11:54:07.675156] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'a524b24ad16c40d989853c796f1b49ce' , 'rakesh@gmail.com', 'rakesh', 
+				'x', 'rak', '2323232323','$2y$10$BnS528FNeAZGXyusE0WwuO')
+[2015-11-01 11:54:07.676590] [info] Registration successful for user:rakesh@gmail.com with id:a524b24ad16c40d989853c796f1b49ce
+[2015-11-01 11:54:40.881113] [info] Connecting to db..
+[2015-11-01 11:54:40.881302] [debug]  Welcome rakesh@gmail.com passwd:rakesh
+[2015-11-01 11:54:40.881401] [info] Connecting to db..
+[2015-11-01 11:54:40.881464] [info] SELECT salt FROM credentials WHERE email='rakesh@gmail.com' ALLOW FILTERING
+[2015-11-01 11:54:40.881515] [debug] query:SELECT salt FROM credentials WHERE email='rakesh@gmail.com' ALLOW FILTERING
+[2015-11-01 11:54:40.885626] [debug] userId:rakesh@gmail.com salt:$2y$10$BnS528FNeAZGXyusE0WwuO
+[2015-11-01 11:54:41.017376] [info] passwd:
+[2015-11-01 11:54:41.132380] [debug] Curl request completed!
+[2015-11-01 11:58:08.171149] [info] Connecting to db..
+[2015-11-01 11:58:08.171343] [debug]  Welcome rakesh@gmail.com passwd:rakesh
+[2015-11-01 11:58:08.171452] [info] Connecting to db..
+[2015-11-01 11:58:08.171519] [info] SELECT salt FROM credentials WHERE email='rakesh@gmail.com' ALLOW FILTERING
+[2015-11-01 11:58:08.171574] [debug] query:SELECT salt FROM credentials WHERE email='rakesh@gmail.com' ALLOW FILTERING
+[2015-11-01 11:58:08.215033] [debug] userId:rakesh@gmail.com salt:$2y$10$BnS528FNeAZGXyusE0WwuO
+[2015-11-01 11:58:08.353516] [info] passwd:
+[2015-11-01 11:58:08.570576] [debug] Curl request completed!
+[2015-11-01 11:58:08.570830] [info] userid:a524b24ad16c40d989853c796f1b49ce has logged in with the subject token:1cf6155055704c4fb7954caa7fb7931c
+[2015-11-01 12:04:17.081221] [info] Connecting to db..
+[2015-11-01 12:04:17.081582] [debug]  Welcome chilli, LastName:ch, 
+				Phone no:1212121212 passwd:chilli
+[2015-11-01 12:04:17.333712] [debug] Curl request completed!
+[2015-11-01 12:04:17.333971] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 12:04:17.334044] [debug] ( 'f50ce5c1a05a4b9b86ece8abe8111745' , 'chilli@gmail.com', 'chilli', 
+				'x', 'ch', '1212121212','$2y$10$.WdnQvxEWx/BDBBzp1kK6S')
+[2015-11-01 12:04:17.334167] [info] Connecting to db..
+[2015-11-01 12:04:17.334247] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'f50ce5c1a05a4b9b86ece8abe8111745' , 'chilli@gmail.com', 'chilli', 
+				'x', 'ch', '1212121212','$2y$10$.WdnQvxEWx/BDBBzp1kK6S')
+[2015-11-01 12:04:17.335848] [info] Registration successful for user:chilli@gmail.com with id:f50ce5c1a05a4b9b86ece8abe8111745
+[2015-11-01 12:04:44.920797] [info] Connecting to db..
+[2015-11-01 12:04:44.921008] [debug]  Welcome chilli@gmail.com
+[2015-11-01 12:04:44.921226] [info] Connecting to db..
+[2015-11-01 12:04:44.921310] [info] SELECT salt FROM credentials WHERE email='chilli@gmail.com' ALLOW FILTERING
+[2015-11-01 12:04:44.921379] [debug] query:SELECT salt FROM credentials WHERE email='chilli@gmail.com' ALLOW FILTERING
+[2015-11-01 12:04:44.928004] [debug] userId:chilli@gmail.com salt:$2y$10$.WdnQvxEWx/BDBBzp1kK6S
+[2015-11-01 12:04:45.055054] [info] passwd:$2y$10$.WdnQvxEWx/BDBBzp1kK6OW4TnSL7Mhlu/8Ody1DX5yVf/nf8JEBW
+[2015-11-01 12:04:45.200016] [debug] Curl request completed!
+[2015-11-01 12:04:45.200336] [info] userid:f50ce5c1a05a4b9b86ece8abe8111745 has logged in with the subject token:b86dfbcd5e584d63a8ab471c885a6613
+[2015-11-01 12:33:00.262056] [info] Connecting to db..
+[2015-11-01 12:33:00.280833] [debug]  Welcome ramprakash, LastName:bodke, 
+				Phone no:1212121212 passwd:jimmygallu
+[2015-11-01 12:33:00.643475] [debug] Curl request completed!
+[2015-11-01 12:33:00.643712] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 12:33:00.643786] [debug] ( 'a1ce90c9a5e94ae9832686d185f6e568' , 'ramprakash@gmail.com', 'ramprakash', 
+				'x', 'bodke', '1212121212','$2y$10$zoC42iDjfQjSDES3NpwdCf')
+[2015-11-01 12:33:00.643907] [info] Connecting to db..
+[2015-11-01 12:33:00.643981] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( 'a1ce90c9a5e94ae9832686d185f6e568' , 'ramprakash@gmail.com', 'ramprakash', 
+				'x', 'bodke', '1212121212','$2y$10$zoC42iDjfQjSDES3NpwdCf')
+[2015-11-01 12:33:00.645796] [info] Registration successful for user:ramprakash@gmail.com with id:a1ce90c9a5e94ae9832686d185f6e568
+[2015-11-01 12:33:37.810448] [info] Connecting to db..
+[2015-11-01 12:33:37.810668] [debug]  Welcome ramprakash@gmail.com
+[2015-11-01 12:33:37.810770] [info] Connecting to db..
+[2015-11-01 12:33:37.810834] [info] SELECT salt FROM credentials WHERE email='ramprakash@gmail.com' ALLOW FILTERING
+[2015-11-01 12:33:37.810887] [debug] query:SELECT salt FROM credentials WHERE email='ramprakash@gmail.com' ALLOW FILTERING
+[2015-11-01 12:33:37.863209] [debug] userId:ramprakash@gmail.com salt:$2y$10$zoC42iDjfQjSDES3NpwdCf
+[2015-11-01 12:33:37.988599] [info] passwd:$2y$10$zoC42iDjfQjSDES3NpwdCeO.s8mMBBNPIFpeeJqCVIYk0HMVQEL/q
+[2015-11-01 12:33:38.197841] [debug] Curl request completed!
+[2015-11-01 12:33:38.198088] [info] userid:a1ce90c9a5e94ae9832686d185f6e568 has logged in with the subject token:bf116e51fc6f41079e51289beb2f1dac
+[2015-11-01 12:46:00.465179] [info] Connecting to db..
+[2015-11-01 12:46:00.485452] [debug]  Welcome suji, LastName:mallige, 
+				Phone no:12 passwd:suji
+[2015-11-01 12:46:00.739411] [debug] Curl request completed!
+[2015-11-01 12:46:00.739670] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 12:46:00.739758] [debug] ( '3ebf9a32b2c940ec8dc7e6202b5b9095' , 'suji@gmail.com', 'suji', 
+				'x', 'mallige', '12','$2y$10$Jsgr1SfwpeuLRE/S7xBiqF')
+[2015-11-01 12:46:00.739972] [info] Connecting to db..
+[2015-11-01 12:46:00.740052] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '3ebf9a32b2c940ec8dc7e6202b5b9095' , 'suji@gmail.com', 'suji', 
+				'x', 'mallige', '12','$2y$10$Jsgr1SfwpeuLRE/S7xBiqF')
+[2015-11-01 12:46:00.744895] [info] Registration successful for user:suji@gmail.com with id:3ebf9a32b2c940ec8dc7e6202b5b9095
+[2015-11-01 12:46:19.974010] [info] Connecting to db..
+[2015-11-01 12:46:19.974231] [debug]  Welcome suji@gmail.com
+[2015-11-01 12:46:19.974335] [info] Connecting to db..
+[2015-11-01 12:46:19.974401] [info] SELECT salt FROM credentials WHERE email='suji@gmail.com' ALLOW FILTERING
+[2015-11-01 12:46:19.974456] [debug] query:SELECT salt FROM credentials WHERE email='suji@gmail.com' ALLOW FILTERING
+[2015-11-01 12:46:19.994291] [debug] userId:suji@gmail.com salt:$2y$10$Jsgr1SfwpeuLRE/S7xBiqF
+[2015-11-01 12:46:20.133151] [info] passwd:$2y$10$Jsgr1SfwpeuLRE/S7xBiq.1Wn8ITL58NAkNqkXTMQkDsR2KFfwqqq
+[2015-11-01 12:46:20.459698] [debug] Curl request completed!
+[2015-11-01 12:46:20.460066] [info] userid:3ebf9a32b2c940ec8dc7e6202b5b9095 has logged in with the subject token:3a6cceadfaa040c5881b17382e12eee6
+[2015-11-01 12:46:39.667450] [info] Connecting to db..
+[2015-11-01 12:46:39.667686] [debug]  Welcome as, LastName:, 
+				Phone no:fasd passwd:a
+[2015-11-01 12:46:39.945904] [debug] Curl request completed!
+[2015-11-01 12:46:39.946132] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 12:46:39.946206] [debug] ( '3c03aa71393f41a7bb499680fca8a5e0' , 'asf', 'as', 
+				'x', '', 'fasd','$2y$10$XrOEyvJGAmyVfFE5M9/UFD')
+[2015-11-01 12:46:39.946326] [info] Connecting to db..
+[2015-11-01 12:46:39.946402] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '3c03aa71393f41a7bb499680fca8a5e0' , 'asf', 'as', 
+				'x', '', 'fasd','$2y$10$XrOEyvJGAmyVfFE5M9/UFD')
+[2015-11-01 12:46:39.947786] [info] Registration successful for user:asf with id:3c03aa71393f41a7bb499680fca8a5e0
+[2015-11-01 12:46:47.272852] [info] Connecting to db..
+[2015-11-01 12:46:47.273427] [debug]  Welcome as, LastName:, 
+				Phone no:fasd passwd:a
+[2015-11-01 12:46:47.681363] [debug] Curl request completed!
+[2015-11-01 12:46:47.713113] [debug] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-11-01 12:46:47.713244] [debug] ( '' , 'asf', 'as', 
+				'x', '', 'fasd','$2y$10$buJjHgoqgqrJXfYgRi29Pr')
+[2015-11-01 12:46:47.713392] [info] Connecting to db..
+[2015-11-01 12:46:47.713474] [debug] query:INSERT INTO credentials( userid, email , firstname , gender , lastname , phone , salt ) VALUES ( '' , 'asf', 'as', 
+				'x', '', 'fasd','$2y$10$buJjHgoqgqrJXfYgRi29Pr')
+[2015-11-01 12:46:47.917740] [info] Registration successful for user:asf with id:
+[2015-11-01 12:50:26.274509] [info] Connecting to db..
+[2015-11-01 12:50:26.344264] [debug]  Welcome cvf
+[2015-11-01 12:50:26.344419] [info] Connecting to db..
+[2015-11-01 12:50:26.344499] [info] SELECT salt FROM credentials WHERE email='cvf' ALLOW FILTERING
+[2015-11-01 12:50:26.344574] [debug] query:SELECT salt FROM credentials WHERE email='cvf' ALLOW FILTERING
+[2015-11-01 12:50:26.544533] [debug] userId:cvf salt:
+[2015-11-01 12:50:26.556689] [info] passwd:$1$4SCTm3vV$UBD4EDfcQUusYo0TzxGPB.
+[2015-11-01 12:50:27.057393] [debug] Curl request completed!
+[2015-11-01 12:50:27.119807] [info] userid: has logged in with the subject token:
+[2015-11-01 12:59:53.660443] [info] Connecting to db..
+[2015-11-01 12:59:53.677830] [debug]  Welcome asdf
+[2015-11-01 12:59:53.677956] [info] Connecting to db..
+[2015-11-01 12:59:53.678024] [info] SELECT salt FROM credentials WHERE email='asdf' ALLOW FILTERING
+[2015-11-01 12:59:53.678077] [debug] query:SELECT salt FROM credentials WHERE email='asdf' ALLOW FILTERING
+[2015-11-01 12:59:53.752891] [debug] userId:asdf salt:
+[2015-11-01 12:59:53.753387] [info] passwd:$1$7GflmEvO$MM9pDCm0A5envS4UpUdZT/
+[2015-11-01 12:59:53.826057] [debug] Curl request completed!
+[2015-11-01 12:59:53.923532] [info] userid: has logged in with the subject token:
+[2015-11-01 12:59:59.787755] [info] Connecting to db..
+[2015-11-01 12:59:59.788029] [debug]  Welcome asf
+[2015-11-01 12:59:59.788142] [info] Connecting to db..
+[2015-11-01 12:59:59.788216] [info] SELECT salt FROM credentials WHERE email='asf' ALLOW FILTERING
+[2015-11-01 12:59:59.788274] [debug] query:SELECT salt FROM credentials WHERE email='asf' ALLOW FILTERING
+[2015-11-01 12:59:59.834492] [debug] userId:asf salt:$2y$10$XrOEyvJGAmyVfFE5M9/UFD
+[2015-11-01 12:59:59.985043] [info] passwd:$2y$10$XrOEyvJGAmyVfFE5M9/UF.TSW4ajH56l07YJu3zxfVxYd3sbWLheC
+[2015-11-01 13:00:00.237073] [debug] Curl request completed!
+[2015-11-01 13:00:00.269824] [info] userid: has logged in with the subject token:
+[2015-11-01 13:00:12.412394] [info] Connecting to db..
+[2015-11-01 13:00:12.412647] [debug]  Welcome asdf
+[2015-11-01 13:00:12.412754] [info] Connecting to db..
+[2015-11-01 13:00:12.412822] [info] SELECT salt FROM credentials WHERE email='asdf' ALLOW FILTERING
+[2015-11-01 13:00:12.412875] [debug] query:SELECT salt FROM credentials WHERE email='asdf' ALLOW FILTERING
+[2015-11-01 13:00:12.423815] [debug] userId:asdf salt:
+[2015-11-01 13:00:12.424422] [info] passwd:$1$cEjGgjkc$aw7t0GyS6JD2A5A86Q9/Y0
+[2015-11-01 13:00:12.462730] [debug] Curl request completed!
+[2015-11-01 13:00:12.463031] [info] userid: has logged in with the subject token:
+[2015-11-01 13:00:15.081234] [info] Connecting to db..
+[2015-11-01 13:00:15.099358] [debug]  Welcome asdf
+[2015-11-01 13:00:15.099499] [info] Connecting to db..
+[2015-11-01 13:00:15.099581] [info] SELECT salt FROM credentials WHERE email='asdf' ALLOW FILTERING
+[2015-11-01 13:00:15.099639] [debug] query:SELECT salt FROM credentials WHERE email='asdf' ALLOW FILTERING
+[2015-11-01 13:00:15.104762] [debug] userId:asdf salt:
+[2015-11-01 13:00:15.107650] [info] passwd:$1$Gjm76TWr$Wy89H8/tfoeMNvHtF4OjU0
+[2015-11-01 13:00:15.227803] [debug] Curl request completed!
+[2015-11-01 13:00:15.228377] [info] userid: has logged in with the subject token:
+[2015-11-01 13:00:27.276875] [info] Connecting to db..
+[2015-11-01 13:00:27.277101] [debug]  Welcome suman@gmail.com
+[2015-11-01 13:00:27.277200] [info] Connecting to db..
+[2015-11-01 13:00:27.277264] [info] SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 13:00:27.277316] [debug] query:SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 13:00:27.289186] [debug] userId:suman@gmail.com salt:$2y$10$vqOShyvp.GHj0Gf3k1.lgU
+[2015-11-01 13:00:27.414182] [info] passwd:$2y$10$vqOShyvp.GHj0Gf3k1.lgOHALq8trzlPdro5WVtHV9k2/6IOPQm/C
+[2015-11-01 13:00:27.513959] [debug] Curl request completed!
+[2015-11-01 13:00:27.514487] [info] userid: has logged in with the subject token:
+[2015-11-01 13:00:48.127079] [info] Connecting to db..
+[2015-11-01 13:00:48.127361] [debug]  Welcome suman@gmail.com
+[2015-11-01 13:00:48.127473] [info] Connecting to db..
+[2015-11-01 13:00:48.127540] [info] SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 13:00:48.127594] [debug] query:SELECT salt FROM credentials WHERE email='suman@gmail.com' ALLOW FILTERING
+[2015-11-01 13:00:48.157289] [debug] userId:suman@gmail.com salt:$2y$10$vqOShyvp.GHj0Gf3k1.lgU
+[2015-11-01 13:00:48.285300] [info] passwd:$2y$10$vqOShyvp.GHj0Gf3k1.lgOHALq8trzlPdro5WVtHV9k2/6IOPQm/C
+[2015-11-01 13:00:48.389327] [debug] Curl request completed!
+[2015-11-01 13:00:48.389647] [info] userid: has logged in with the subject token:
+[2015-11-01 17:40:18.964082] [info] Connecting to db..
+[2015-11-01 17:40:19.029469] [debug]  Welcome asdfas
+[2015-11-01 17:40:19.029598] [info] Connecting to db..
+[2015-11-01 17:40:19.029758] [info] SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-01 17:40:19.029895] [debug] query:SELECT salt FROM credentials WHERE email='asdfas' ALLOW FILTERING
+[2015-11-01 17:40:19.767734] [debug] userId:asdfas salt:
+[2015-11-01 17:40:19.793292] [info] passwd:$1$iZU3Hpj8$xfP3TGeyhvjjmHMYlDzEM/
+[2015-11-01 17:40:25.657339] [debug] Curl request completed!
+[2015-11-01 17:40:25.685892] [info] userid: has logged in with the subject token:
+[2015-11-01 17:40:44.249110] [info] Connecting to db..
+[2015-11-01 17:40:44.256442] [debug]  Welcome umesh@gmail.com
+[2015-11-01 17:40:44.256557] [info] Connecting to db..
+[2015-11-01 17:40:44.256628] [info] SELECT salt FROM credentials WHERE email='umesh@gmail.com' ALLOW FILTERING
+[2015-11-01 17:40:44.256684] [debug] query:SELECT salt FROM credentials WHERE email='umesh@gmail.com' ALLOW FILTERING
+[2015-11-01 17:40:44.287322] [debug] userId:umesh@gmail.com salt:$2y$10$OfbqTD5sEalelMSh0uvcav
+[2015-11-01 17:40:44.431391] [info] passwd:$2y$10$OfbqTD5sEalelMSh0uvcauTGLhkG0SuODLLt/Vs0lAd7feyHNl2k6
+[2015-11-01 17:40:44.639432] [debug] Curl request completed!
+[2015-11-01 17:40:44.647337] [info] userid: has logged in with the subject token:
+[2015-11-01 17:41:30.416456] [info] Connecting to db..
+[2015-11-01 17:41:30.423542] [debug]  Welcome suhasdheeraskar1988@gmail.com
+[2015-11-01 17:41:30.423660] [info] Connecting to db..
+[2015-11-01 17:41:30.423736] [info] SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 17:41:30.423791] [debug] query:SELECT salt FROM credentials WHERE email='suhasdheeraskar1988@gmail.com' ALLOW FILTERING
+[2015-11-01 17:41:30.461639] [debug] userId:suhasdheeraskar1988@gmail.com salt:$2y$10$g7rJU5S0iHaUqQA///OTXV
+[2015-11-01 17:41:30.582573] [info] passwd:$2y$10$g7rJU5S0iHaUqQA///OTXO7SnQ2jejelj1UPoAnVIh.t.WVOk222m
+[2015-11-01 17:41:30.619384] [debug] Curl request completed!
+[2015-11-01 17:41:30.625772] [info] userid: has logged in with the subject token:

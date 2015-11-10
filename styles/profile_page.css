@@ -1,0 +1,154 @@
+@CHARSET "UTF-8";
+body{
+	background-color: #CCC6C6;
+	color:#000305;
+	font-size:87.5%;
+	font-family:serif;
+	line-height: 1.5;
+	text-align: left;
+}
+a {
+	text-decoration: none;
+}
+a:link, a:visited{
+}
+a:hover, a:active{
+	
+	text-shadow: none;
+}
+.body{
+	margin-left:auto;
+    margin-right:auto;
+	width: 90%;
+	clear: both;
+}
+.mainheader nav#toolbar{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: 30px;
+}
+.mainheader nav#toolbar ul{
+	list-style: none;
+	margin:0 auto;
+}
+.mainheader nav#toolbar ul li {
+	float:right;
+	display: inline;
+	height: 5px;
+}
+.mainheader nav#toolbar a:link {
+	color: black;
+	display: inline-block;
+	padding: 5px 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.mainheader img{
+	height: 100px;
+	width: 100px;
+	margin: 2% 0;
+}
+.mainheader nav{
+	background-color: #5CA2E4;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: 30px;
+}
+.mainheader nav ul {
+	list-style: none;
+	margin:0 auto;
+}
+.mainheader nav ul li {
+	float:left;
+	display: inline;
+	height: 5px;
+}
+.mainheader nav a:link {
+	color: black;
+	display: inline-block;
+	padding: 5px 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.mainheader nav a:visted {
+	display: inline-block;
+	padding: 10px 25px;
+}
+.mainheader nav a:hover, .mainheader nav a:active,
+.mainheader nav .active a:link, .mainheader nav .active a:visited{
+	text-shadow: none;
+	
+}
+.maincontent{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	line-height:25px;
+}
+.content{
+	width:70%;
+	float:left;
+}
+.topcontent{
+	background-color:white;
+	padding: 3% 5%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-top:2%;
+	
+}
+.bottomcontent{
+	background-color:white;
+	padding: 3% 5%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-top:2%;
+	
+}
+.sidebar1{
+	width:21%;
+	float:left;
+	background-color:white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin:2% 0 1% 2%;
+}
+.sidebar2{
+	width:21%;
+	float:left;
+	background-color:white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin:2% 0 1% 2%;
+}
+.sidebar3{	
+	width:21%;
+	float:left;
+	background-color:white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin:2% 0 1% 2%;
+}
+.mainfooter{
+	width:100%;
+	float:left;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.mainfooter p {
+	width:98%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin:0 auto;
+}

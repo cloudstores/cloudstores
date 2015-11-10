@@ -1,0 +1,9 @@
+[2015-10-30 23:45:25.715320] [info] Logging is enabled
+[2015-10-30 23:50:23.625766] [info] Logging is enabled
+[2015-10-30 23:59:09.514081] [info]  Welcome suhas, LastName:asdf, 
+				Phone no:adsfasdf passwd:asdfdf
+[2015-10-30 23:59:20.323637] [info] ( userid, email , firstname , gender , lastname , phone , salt )
+[2015-10-30 23:59:20.323771] [info] ( c09a58940b984860997681162313d50e , asdfd, suhas, 
+				'x', asdf, adsfasdf,$2y$10$YMj0ASRzZCmpTHDES/4YjJ)
+[2015-10-30 23:59:20.671766] [info] password:$2y$10$YMj0ASRzZCmpTHDES/4Yj.eUk6OVBdEYMRLFq0LziWf6NL6X9JMWm
+[2015-10-30 23:59:20.671879] [info] Array
