@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+ 	<title>Cloud infrastructure for e-commerce in domestic and export market of India</title>
+ 	<meta charset="utf-8" />
+ 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<meta name="keyword" content="Manufacturers, suppliers, sellers, wholesale, retailers" />
+	<meta name="description" content="Find wholesale and retial SME products manufactured in India and are available for exports as well as in domestic markets"/>
+	<link rel="stylesheet" type="text/css" href="normalize.css"></link>
+	<link rel="stylesheet" type="text/css" href="home_page.css"></link>
+</head>
+
+<body class="body">
+	<header class="mainheader">
+		<img src="suhas_profile.jpg" />
+		<nav><ul>
+			<li class="active"><a href="#">Home</a>
+			<li><a href="#">Products</a>
+			<li><a href="#">Categories</a>
+			<li><a href="#">Merchants</a>
+			<li><a href="#">Suppliers</a>
+			<li><a href="#">Sellers</a>
+		</ul></nav>
+	</header>
+	<div class="maincontent">
+		<div class="content">
+			<article class="topcontent">
+				<header><h2>First post</h2>
+				</header>
+				<content>
+				<p>Forbes while releasing the list today at the same time said governing 1.2 billion people 
+				in India requires more than “shaking hands” and that Mr. Modi must pass his party BJP’s reform 
+				agenda and keep “fractious opposition” under control</p>
+				<p>Forbes while releasing the list today at the same time said governing 1.2 billion people 
+				in India requires more than “shaking hands” and that Mr. Modi must pass his party BJP’s reform 
+				agenda and keep “fractious opposition” under control</p>
+				</content>
+			</article>
+			<article class="bottomcontent">
+				<header><h2>Second post</h2>
+				</header>
+				<content>
+				<p>Forbes while releasing the list today at the same time said governing 1.2 billion people 
+				in India requires more than “shaking hands” and that Mr. Modi must pass his party BJP’s reform 
+				agenda and keep “fractious opposition” under control</p>
+				<p>Forbes while releasing the list today at the same time said governing 1.2 billion people 
+				in India requires more than “shaking hands” and that Mr. Modi must pass his party BJP’s reform 
+				agenda and keep “fractious opposition” under control</p>
+				</content>
+			</article>
+		</div>
+	</div>
+	<aside class="sidebar1">
+		<article>
+			<header><p>Advertisement: Forbes while releasing the list today at the same time said governing 1.2 billion people 
+				in India requires more than “shaking hands” and that Mr. Modi must pass his party BJP’s reform 
+				agenda and keep “fractious opposition” under controle</p>
+			</header>
+		</article>
+	</aside>
+	<aside class="sidebar2">
+		<article>
+			<header><p>Advertisement: checking how well it will fit here</p>
+			</header>
+		</article>
+	</aside>
+	<aside class="sidebar3">
+		<article>
+			<header><p>Advertisement: checking how well it will fit here</p>
+			</header>
+		</article>
+	</aside>
+	<footer class="mainfooter">
+		<p> Copyrigts &copy; <a href="#" title="commerce">www.commerce.com</a></p>
+	</footer>
+</body>
+</html>
