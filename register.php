@@ -19,9 +19,12 @@ class Register{
 	private $email;
 	private $passwd;
 	private $cost=10;
-	private $registrationurl = "http://127.0.0.1:5000/v3/users";
+	private $registrationurl = "http://localhost:5000/v3/users";
+	
+	private $authurl='http://localhost:5000/v3/auth/tokens';
+	
 	private $content_type = array("X-Auth-Token:38fe279241ee7a1e470098d50bd4dda3",
-									"Content-Type:application/json");
+			"Content-Type:application/json");
 	
 	
 	public function __construct(){
@@ -43,6 +46,16 @@ class Register{
 		return $body;
 	}
 	
+	private function generate_token($user, $passwd){
+		$json_str='{"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"'.$user.'",
+			"domain":{"id":"default"},"password":"'.$passwd.'"}}}}}';
+		$body = json_decode($json_str,TRUE);
+		
+		$identity_service = new keystone(); //1-POST,0-GET
+		$result = $identity_service->http_request($this->authurl,$body,1,$this->content_type);
+		return $result;
+	}
+	
 	private function validateRegistration(){
 		if($_POST["FirstName"]=='')
 			return FALSE;
@@ -60,8 +73,11 @@ class Register{
 	}
 	
 	public function doRegistration(){
+		session_start();
+		
 		if(! $this->validateRegistration()){
-			printf("Registration is not complete. Please fill all the fields for successful registration.");
+			session_abort();
+			echo "Registration is incomplete. Please fill all the fields for successful registration.";
 		}
 		$this->FirstName = $_POST["FirstName"];
 		$this->LastName = $_POST["LastName"];
@@ -70,14 +86,30 @@ class Register{
 		$this->log->debug(" Welcome {$this->FirstName}, LastName:{$_POST["LastName"]}, 
 				Phone no:{$_POST["phone"]} passwd:{$_POST["passwd"]}");
 		
+		//Create the user in keystone.
 		$salt = $this->generateSalt();
-		
 		$password = crypt($_POST["passwd"],$salt);
 		$body = $this->generate_httpbody($this->email, $password);
 		$identity_service = new keystone(); //1-POST,0-GET
 		$result = $identity_service->http_request($this->registrationurl,$body,1,$this->content_type);
 		/* echo "<pre>";
 		print_r($result); */
+		if($result['error']!=''){
+			$this->log->error("Registration failed in keystone");
+			$this->log->error(json_encode(array('error'=>(array('code'=>$result['error']['code'],
+					'title'=>$result["error"]["title"],
+					'message'=>$result["error"]["message"]
+			))), true ));
+			echo json_encode(array('error'=>(array('code'=>$result['error']['code'],
+					'title'=>$result["error"]["title"],
+					'message'=>"Registration failed in keystone!"
+			))), true );
+				
+			session_abort();
+			return ;
+		}
+		
+		//Make an entry into Credentials table of cassandra DB.
 		$this->userId = $result['user']['id'];
 		
 		$columns = "( userid, email , firstname , gender , lastname , phone , salt )";
@@ -90,7 +122,34 @@ class Register{
 		$query = $cassandra->buildQuery_insert("credentials", $columns, $values);
 		$db = $cassandra->execute($query);
 		$this->log->info("Registration successful for user:{$this->email} with id:{$this->userId}");
-		if($this->userId!=null && $this->email!=null){
+		
+		//Generate token for login the just registered user.
+		$token = $this->generate_token($this->email, $password);
+		
+		if($token['error']!=''){
+			$this->log->error("Keystone token generation for {$this->email} failed while logging in.");
+			$this->log->error(json_encode(array('error'=>(array('code'=>$token['error']['code'],
+					'title'=>$token["error"]["title"],
+					'message'=>$token["error"]["message"]
+			))), true ));
+			echo json_encode(array('error'=>(array('code'=>$token['error']['code'],
+					'title'=>$token["error"]["title"],
+					'message'=>"Keystone token generation for {$this->email} failed while logging in"
+			))), true );
+		
+			session_abort();
+			return ;
+		}
+		$id = $token['token']['user']['id'];
+		$subject_token = $token['header']['X-Subject-Token'];
+		
+		$this->log->info("userid:{$id} has logged in with the subject token:{$subject_token}");
+		$this->log->debug(json_encode( array('success'=>array('userid'=>$id,'token'=>$subject_token)), true ));
+		
+		//Redirect the user to his profile page.
+		if($id!=null && $subject_token!=null){
+			$_SESSION['userid']=$id;
+			$_SESSION['token']=$subject_token;
 			header('Location: http://localhost/knitpeer-UX/profile_page.html');
 		}
 	}
